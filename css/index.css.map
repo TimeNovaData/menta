@@ -1,0 +1,1 @@
+{"mappings":"ACAA;;;;;AASA;;;;AAGA;;;;AAGA;;;;;AAIA;;;;AAIA;;;;;;AAKA;;;;;;AAKE;;;;AAGA;;;;AAGF;;;;;AAIA;;;;;;;;;;;;;AAkBA;;;;;;AAOA;;;;AAKA;;;;AAGA","sources":["sass/index.sass","sass/reset.sass"],"sourcesContent":["@import './responsivo'\r\n@import './reset'\r\n",null],"names":[],"version":3,"file":"index.css.map","sourceRoot":"../"}

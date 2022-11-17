@@ -1,0 +1,40 @@
+// min2xl: { min: "1441px" },
+// 			// => @media (max-width: 1535px) { ... }
+
+// 			"2xl": { max: "1667px" },
+// 			// => @media (max-width: 1535px) { ... }
+
+// 			xl: { max: "1367px" },
+// 			// => @media (max-width: 1279px) { ... }
+
+// 			lg: { max: "1281px" },
+// 			// => @media (max-width: 1023px) { ... }
+
+// 			md2: { max: "1180px" },
+// 			// => @media (max-width: 767px) { ... }
+
+// 			md: { max: "767px" },
+// 			// => @media (max-width: 767px) { ... }
+
+// 			sm: { max: "639px" },
+// 			// => @media (max-width: 639px) { ... }
+
+$min2xl: 1441px
+$max2xl: 1667px
+$xl: 1367px
+$lg: 1281px
+$md2: 1180px
+$md: 767px
+$sm: 639px
+
+//mixin media querie
+
+@mixin d($size)
+  @if $size== md2
+    @media screen and (max-width: $md2)
+      //acima do medio
+      @content
+
+  @else if $size==sm
+    @media screen and (max-width: $sm)
+      @content

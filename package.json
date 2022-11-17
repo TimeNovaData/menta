@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "parcel": "^2.8.0"
+  },
+  "name": "menta",
+  "version": "1.0.0",
+  "author": "natalia",
+  "license": "MIT",
+  "scripts": {
+    "sass": "parcel watch sass/index.sass --dist-dir css --no-cache -p 2367"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.8.0"
+  }
+}
