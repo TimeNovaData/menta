@@ -76,4 +76,130 @@ input[type="submit"] {
   appearance: none;
 }
 
+body {
+  overflow: hidden;
+}
+
+body header {
+  background: #4f37ff;
+  border-bottom: 1px solid #0000001a;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 5rem;
+}
+
+body .conteudo .img-clouds img {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  top: 200px;
+  bottom: 0;
+  left: 0;
+}
+
+body .conteudo .img-circle img {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  top: 300px;
+  bottom: 0;
+  left: 0;
+}
+
+body .conteudo .conteudo-intermediario {
+  gap: 4rem;
+  display: flex;
+}
+
+body .conteudo .conteudo-intermediario .img-airplane img {
+  width: 647.29px;
+  height: 198.76px;
+  position: absolute;
+  bottom: 15vh;
+  right: 50vh;
+}
+
+body .conteudo .conteudo-intermediario .card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  position: absolute;
+  bottom: 15vh;
+  left: 35vh;
+  box-shadow: 0 1px 4px #100b3733, 0 3px 16px #100b371a;
+}
+
+body .conteudo .conteudo-intermediario .card h2 {
+  color: #4f37ff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2rem;
+}
+
+body .conteudo .conteudo-intermediario .card p {
+  width: 25rem;
+  color: #0f0f0f;
+  margin-top: 1rem;
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+}
+
+body .conteudo .conteudo-intermediario .formulario .input-icon {
+  position: relative;
+}
+
+body .conteudo .conteudo-intermediario .formulario .input-icon img {
+  left: .75rem;
+  right: initial;
+  width: 24px;
+  height: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: 40px;
+  bottom: 0;
+}
+
+body .conteudo .conteudo-intermediario .formulario .input-icon input {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #c8c2ff;
+  border-radius: .75rem;
+  margin-top: 2rem;
+  padding: .75rem 1rem .75rem 2.5rem;
+}
+
+body .conteudo .conteudo-intermediario .formulario .conteudo-final {
+  align-items: center;
+  gap: .5rem;
+  margin-top: 1.5rem;
+  display: flex;
+}
+
+body .conteudo .conteudo-intermediario .formulario .conteudo-final .icon-question {
+  border: 1px solid #4f37ff;
+  border-radius: 12px;
+  padding: .875rem;
+}
+
+body .conteudo .conteudo-intermediario .formulario .conteudo-final .icon-question img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+body .conteudo .conteudo-intermediario .formulario .conteudo-final button {
+  width: 100%;
+  color: #fff;
+  cursor: pointer;
+  background: #857aea;
+  border-radius: .75rem;
+  padding: .75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+
 /*# sourceMappingURL=index.css.map */
