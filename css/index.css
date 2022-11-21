@@ -386,6 +386,12 @@ body .conteudo .conteudo-intermediario {
   }
 }
 
+@media screen and (max-width: 1447px) {
+  .conteudo-intermediario .card .formulario .input-icon-right img {
+    right: 25%;
+  }
+}
+
 .conteudo-intermediario .card .formulario .conteudo-final {
   align-items: center;
   gap: .5rem;
