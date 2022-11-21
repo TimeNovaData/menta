@@ -16,12 +16,18 @@ body
       padding: 0 1.5rem
       margin: 0 auto
       margin-top: 15vh
+      @include d(sm)
+        margin-top: 7vh
       h1
         color: #4F37FF
         font-weight: 900
         font-size: 5.5rem
         line-height: 7rem
-
+        @include d(sm)
+        font-size: 3rem
+        text-align: center
+        line-height: 3.5rem
+        width: min-content
     .img-clouds
       img
         width: 100%
@@ -31,6 +37,8 @@ body
         bottom: 0
         left: 0
         z-index: -1
+        @include d(sm)
+          top: -10vh
 
     .img-circle
       img
@@ -56,6 +64,11 @@ body
           position: absolute
           bottom: 15vh
           right: 50vh
+          @include d(sm)
+            width: 400px
+            top: 30vh
+            bottom: 0
+            right: 1vh
 
       .card
         background: white
@@ -71,17 +84,21 @@ body
           color: #4F37FF
           line-height: 2rem
         p
-          max-width: 22rem
+          width: 22rem
           font-weight: 400
           font-size: .875rem
           line-height: 1.375rem
           color: #0F0F0F
           margin-top: 1rem
         @include d(sm)
-          left: 2vh
+          left: 4.5vh
           h2
             font-size: 1.25rem
             line-height: 1.5rem
+          p
+            font-size: .75rem
+            line-height: 1.25rem
+            width: 17.5rem
 
       .formulario
         .input-icon-left
@@ -103,6 +120,10 @@ body
             padding: .75rem 1rem
             width: 100%
             padding-left: 2.5rem
+            font-weight: 400
+            font-size: 1rem
+            line-height: 1.5rem
+            color: #666666
 
         .input-icon-right
           position: relative
@@ -116,6 +137,8 @@ body
             margin: 0 auto
             width: 24px
             height: 24px
+            @include d(sm)
+              right: 15%
 
         .conteudo-final
           display: flex

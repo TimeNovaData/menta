@@ -102,11 +102,19 @@ body .conteudo .intro {
   transform: rotate(-10deg);
 }
 
+@media screen and (max-width: 639px) {
+  body .conteudo .intro {
+    margin-top: 7vh;
+  }
+}
+
 body .conteudo .intro h1 {
   color: #4f37ff;
-  font-size: 5.5rem;
+  text-align: center;
+  width: min-content;
+  font-size: 3rem;
   font-weight: 900;
-  line-height: 7rem;
+  line-height: 3.5rem;
 }
 
 body .conteudo .img-clouds img {
@@ -117,6 +125,12 @@ body .conteudo .img-clouds img {
   top: 200px;
   bottom: 0;
   left: 0;
+}
+
+@media screen and (max-width: 639px) {
+  body .conteudo .img-clouds img {
+    top: -10vh;
+  }
 }
 
 body .conteudo .img-circle img {
@@ -149,6 +163,15 @@ body .conteudo .conteudo-intermediario .img-airplane img {
   right: 50vh;
 }
 
+@media screen and (max-width: 639px) {
+  body .conteudo .conteudo-intermediario .img-airplane img {
+    width: 400px;
+    top: 30vh;
+    bottom: 0;
+    right: 1vh;
+  }
+}
+
 body .conteudo .conteudo-intermediario .card {
   background: #fff;
   border-radius: 1rem;
@@ -167,7 +190,7 @@ body .conteudo .conteudo-intermediario .card h2 {
 }
 
 body .conteudo .conteudo-intermediario .card p {
-  max-width: 22rem;
+  width: 22rem;
   color: #0f0f0f;
   margin-top: 1rem;
   font-size: .875rem;
@@ -177,12 +200,18 @@ body .conteudo .conteudo-intermediario .card p {
 
 @media screen and (max-width: 639px) {
   body .conteudo .conteudo-intermediario .card {
-    left: 2vh;
+    left: 4.5vh;
   }
 
   body .conteudo .conteudo-intermediario .card h2 {
     font-size: 1.25rem;
     line-height: 1.5rem;
+  }
+
+  body .conteudo .conteudo-intermediario .card p {
+    width: 17.5rem;
+    font-size: .75rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -204,10 +233,14 @@ body .conteudo .conteudo-intermediario .formulario .input-icon-left img {
 
 body .conteudo .conteudo-intermediario .formulario .input-icon-left input {
   width: 100%;
+  color: #666;
   background: #fff;
   border: 1px solid #c8c2ff;
   border-radius: .75rem;
   padding: .75rem 1rem .75rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
 }
 
 body .conteudo .conteudo-intermediario .formulario .input-icon-right {
@@ -224,6 +257,12 @@ body .conteudo .conteudo-intermediario .formulario .input-icon-right img {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+}
+
+@media screen and (max-width: 639px) {
+  body .conteudo .conteudo-intermediario .formulario .input-icon-right img {
+    right: 15%;
+  }
 }
 
 body .conteudo .conteudo-intermediario .formulario .conteudo-final {
