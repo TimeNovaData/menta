@@ -18,16 +18,20 @@ body
       margin-top: 15vh
       @include d(sm)
         margin-top: 7vh
+      @include d(max2xl)
+        margin-top: 10vh
       h1
         color: #4F37FF
         font-weight: 900
         font-size: 5.5rem
         line-height: 7rem
         @include d(sm)
-        font-size: 3rem
-        text-align: center
-        line-height: 3.5rem
-        width: min-content
+          font-size: 3rem
+          text-align: center
+          line-height: 3.5rem
+          width: min-content
+        @include d(max2xl)
+          font-size: 4.5rem
     .img-clouds
       img
         width: 100%
@@ -53,31 +57,43 @@ body
         img
           width: fit-content
 
+      @include d(max2xl)
+        img
+          top: 265px
+
     .conteudo-intermediario
       display: flex
       gap: 4rem
 
       .img-airplane
         img
-          width: 647.29px
-          height: 198.76px
+          width: 40%
+          height: 40%
           position: absolute
-          bottom: 15vh
-          right: 50vh
+          bottom: 13vh
+          right: 30vh
+          object-fit: contain
           @include d(sm)
             width: 400px
             top: 30vh
             bottom: 0
             right: 1vh
+          @include d(max2xl)
+            bottom: 10vh
 
       .card
+        width: 488px
         background: white
         padding: 2rem 1.5rem
         border-radius: 1rem
         box-shadow: 0px 1px 4px rgba(16, 11, 55, 0.2), 0px 3px 16px rgba(16, 11, 55, 0.1)
         position: absolute
-        bottom: 13vh
-        left: 40vh
+        bottom: 13.5vh
+        left: 35vh
+        @include d(sm)
+          left: 4.5vh
+        @include d(max2xl)
+          bottom: 10vh
         h2
           font-size: 1.5rem
           font-weight: 700
@@ -91,7 +107,6 @@ body
           color: #0F0F0F
           margin-top: 1rem
         @include d(sm)
-          left: 4.5vh
           h2
             font-size: 1.25rem
             line-height: 1.5rem

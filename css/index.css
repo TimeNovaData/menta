@@ -108,13 +108,32 @@ body .conteudo .intro {
   }
 }
 
+@media screen and (max-width: 1667px) {
+  body .conteudo .intro {
+    margin-top: 10vh;
+  }
+}
+
 body .conteudo .intro h1 {
   color: #4f37ff;
-  text-align: center;
-  width: min-content;
-  font-size: 3rem;
+  font-size: 5.5rem;
   font-weight: 900;
-  line-height: 3.5rem;
+  line-height: 7rem;
+}
+
+@media screen and (max-width: 639px) {
+  body .conteudo .intro h1 {
+    text-align: center;
+    width: min-content;
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 1667px) {
+  body .conteudo .intro h1 {
+    font-size: 4.5rem;
+  }
 }
 
 body .conteudo .img-clouds img {
@@ -150,17 +169,24 @@ body .conteudo .img-circle img {
   }
 }
 
+@media screen and (max-width: 1667px) {
+  body .conteudo .img-circle img {
+    top: 265px;
+  }
+}
+
 body .conteudo .conteudo-intermediario {
   gap: 4rem;
   display: flex;
 }
 
 body .conteudo .conteudo-intermediario .img-airplane img {
-  width: 647.29px;
-  height: 198.76px;
+  width: 40%;
+  height: 40%;
+  object-fit: contain;
   position: absolute;
-  bottom: 15vh;
-  right: 50vh;
+  bottom: 13vh;
+  right: 30vh;
 }
 
 @media screen and (max-width: 639px) {
@@ -172,14 +198,33 @@ body .conteudo .conteudo-intermediario .img-airplane img {
   }
 }
 
+@media screen and (max-width: 1667px) {
+  body .conteudo .conteudo-intermediario .img-airplane img {
+    bottom: 10vh;
+  }
+}
+
 body .conteudo .conteudo-intermediario .card {
+  width: 488px;
   background: #fff;
   border-radius: 1rem;
   padding: 2rem 1.5rem;
   position: absolute;
-  bottom: 13vh;
-  left: 40vh;
+  bottom: 13.5vh;
+  left: 35vh;
   box-shadow: 0 1px 4px #100b3733, 0 3px 16px #100b371a;
+}
+
+@media screen and (max-width: 639px) {
+  body .conteudo .conteudo-intermediario .card {
+    left: 4.5vh;
+  }
+}
+
+@media screen and (max-width: 1667px) {
+  body .conteudo .conteudo-intermediario .card {
+    bottom: 10vh;
+  }
 }
 
 body .conteudo .conteudo-intermediario .card h2 {
@@ -199,10 +244,6 @@ body .conteudo .conteudo-intermediario .card p {
 }
 
 @media screen and (max-width: 639px) {
-  body .conteudo .conteudo-intermediario .card {
-    left: 4.5vh;
-  }
-
   body .conteudo .conteudo-intermediario .card h2 {
     font-size: 1.25rem;
     line-height: 1.5rem;

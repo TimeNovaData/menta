@@ -35,6 +35,14 @@ $sm: 639px
       //acima do medio
       @content
 
-  @else if $size==sm
+  @else if $size== sm
     @media screen and (max-width: $sm)
+      @content
+
+  @else if $size== max2xl
+    @media screen and (max-width: $max2xl)
+      @content
+
+  @else if $size== xl
+    @media screen and (max-width: $xl)
       @content
