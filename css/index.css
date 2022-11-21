@@ -103,7 +103,7 @@ body .conteudo .intro {
   max-width: fit-content;
   margin: 0 auto;
   background: #00ff8c;
-  margin-top: 15vh;
+  margin-top: 13vh;
   padding: 0 1.5rem;
   transform: rotate(-10deg);
 }
@@ -192,7 +192,7 @@ body .conteudo .conteudo-intermediario {
   height: 100%;
   z-index: -1;
   position: absolute;
-  top: 300px;
+  top: 267px;
   bottom: 0;
   left: 0;
 }
@@ -221,7 +221,7 @@ body .conteudo .conteudo-intermediario {
   height: 40%;
   object-fit: contain;
   position: absolute;
-  bottom: 13vh;
+  bottom: 15vh;
   right: 30vh;
 }
 
@@ -259,7 +259,7 @@ body .conteudo .conteudo-intermediario {
   border-radius: 1rem;
   padding: 2rem 1.5rem;
   position: absolute;
-  bottom: 13.5vh;
+  bottom: 17vh;
   left: 35vh;
   box-shadow: 0 1px 4px #100b3733, 0 3px 16px #100b371a;
 }
@@ -270,13 +270,13 @@ body .conteudo .conteudo-intermediario {
   }
 }
 
-@media screen and (max-width: 639px) and (max-width: 1667px) {
+@media screen and (max-width: 1667px) {
   .conteudo-intermediario .card {
     bottom: 9.5vh;
   }
 }
 
-@media screen and (max-width: 639px) and (max-width: 1667px) and (max-width: 1447px) {
+@media screen and (max-width: 1447px) {
   .conteudo-intermediario .card {
     width: 420px;
     padding: 1.5rem;
@@ -284,44 +284,44 @@ body .conteudo .conteudo-intermediario {
   }
 }
 
-@media screen and (max-width: 639px) and (max-width: 1667px) and (max-width: 1372px) {
+@media screen and (max-width: 1372px) {
   .conteudo-intermediario .card {
     bottom: 8vh;
     left: 25vh;
   }
 }
 
-@media screen and (max-width: 639px) and (max-width: 1667px) and (max-width: 1281px) {
+@media screen and (max-width: 1281px) {
   .conteudo-intermediario .card {
     bottom: 8.5vh;
     left: 25vh;
   }
 }
 
-@media screen and (max-width: 639px) and (max-width: 1667px) {
-  .conteudo-intermediario .card h2 {
-    color: #4f37ff;
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 2rem;
-  }
-
-  .conteudo-intermediario .card p {
-    width: 22rem;
-    color: #0f0f0f;
-    margin-top: 1rem;
-    font-size: .875rem;
-    font-weight: 400;
-    line-height: 1.375rem;
-  }
+.conteudo-intermediario .card h2 {
+  color: #4f37ff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2rem;
 }
 
-@media screen and (max-width: 639px) and (max-width: 1667px) and (max-width: 639px) {
+@media screen and (max-width: 639px) {
   .conteudo-intermediario .card h2 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
+}
 
+.conteudo-intermediario .card p {
+  width: 22rem;
+  color: #0f0f0f;
+  margin-top: 1rem;
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+}
+
+@media screen and (max-width: 639px) {
   .conteudo-intermediario .card p {
     width: 17.5rem;
     font-size: .75rem;
@@ -329,88 +329,84 @@ body .conteudo .conteudo-intermediario {
   }
 }
 
-@media screen and (max-width: 639px) {
-  .conteudo-intermediario .card .formulario .input-icon-left {
-    margin-top: 2rem;
-    position: relative;
-  }
-
-  .conteudo-intermediario .card .formulario .input-icon-left img {
-    left: .75rem;
-    right: initial;
-    width: 24px;
-    height: 24px;
-    margin: 0 auto;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .conteudo-intermediario .card .formulario .input-icon-left input {
-    width: 100%;
-    color: #666;
-    background: #fff;
-    border: 1px solid #c8c2ff;
-    border-radius: .75rem;
-    padding: .75rem 1rem .75rem 2.5rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5rem;
-  }
-
-  .conteudo-intermediario .card .formulario .input-icon-right {
-    width: 100%;
-    position: relative;
-  }
-
-  .conteudo-intermediario .card .formulario .input-icon-right img {
-    right: 25%;
-    left: initial;
-    width: 24px;
-    height: 24px;
-    margin: 0 auto;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
+.conteudo-intermediario .card .formulario .input-icon-left {
+  margin-top: 2rem;
+  position: relative;
 }
 
-@media screen and (max-width: 639px) and (max-width: 639px) {
+.conteudo-intermediario .card .formulario .input-icon-left img {
+  left: .75rem;
+  right: initial;
+  width: 24px;
+  height: 24px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.conteudo-intermediario .card .formulario .input-icon-left input {
+  width: 100%;
+  color: #666;
+  background: #fff;
+  border: 1px solid #c8c2ff;
+  border-radius: .75rem;
+  padding: .75rem 1rem .75rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+.conteudo-intermediario .card .formulario .input-icon-right {
+  width: 100%;
+  position: relative;
+}
+
+.conteudo-intermediario .card .formulario .input-icon-right img {
+  right: 30%;
+  left: initial;
+  width: 24px;
+  height: 24px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media screen and (max-width: 639px) {
   .conteudo-intermediario .card .formulario .input-icon-right img {
     right: 15%;
   }
 }
 
-@media screen and (max-width: 639px) {
-  .conteudo-intermediario .card .formulario .conteudo-final {
-    align-items: center;
-    gap: .5rem;
-    margin-top: 1.5rem;
-    display: flex;
-  }
+.conteudo-intermediario .card .formulario .conteudo-final {
+  align-items: center;
+  gap: .5rem;
+  margin-top: 1.5rem;
+  display: flex;
+}
 
-  .conteudo-intermediario .card .formulario .conteudo-final .icon-question {
-    border: 1px solid #4f37ff;
-    border-radius: 12px;
-    padding: .75rem;
-  }
+.conteudo-intermediario .card .formulario .conteudo-final .icon-question {
+  border: 1px solid #4f37ff;
+  border-radius: 12px;
+  padding: .75rem;
+}
 
-  .conteudo-intermediario .card .formulario .conteudo-final .icon-question img {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
+.conteudo-intermediario .card .formulario .conteudo-final .icon-question img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
 
-  .conteudo-intermediario .card .formulario .conteudo-final button {
-    width: 100%;
-    color: #fff;
-    cursor: pointer;
-    background: #857aea;
-    border-radius: .75rem;
-    padding: .75rem 1.5rem;
-    font-size: 1rem;
-    font-weight: 700;
-    line-height: 1.5rem;
-  }
+.conteudo-intermediario .card .formulario .conteudo-final button {
+  width: 100%;
+  color: #fff;
+  cursor: pointer;
+  background: #857aea;
+  border-radius: .75rem;
+  padding: .75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
 }
 
 /*# sourceMappingURL=index.css.map */
