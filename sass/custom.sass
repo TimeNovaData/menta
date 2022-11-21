@@ -1,5 +1,5 @@
 body
-  overflow: hidden
+  overflow-x: hidden
 
   header
     background: #4F37FF
@@ -10,35 +10,61 @@ body
       padding-left: 4rem
     @include d(sm)
       padding-left: 1.5rem
-  .conteudo
+  section
+    min-height: calc(100vh - 81px)
+    position: relative
+    @include d(md2)
+      height: unset
+      padding-bottom: 3rem
+    .container
+      max-width: 1400px
+      width: 100%
+      margin: 0 auto
+      padding: 0 1.5rem
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      .grid-wrapper
+        display: grid
+        grid-template-columns: 0.8fr 1fr
+        flex: 1
+        justify-self: center
+        align-items: center
+        @include d(md2)
+          grid-template-columns: 1fr
+          margin-top: -15px
+
     .intro
       background: #00FF8C
       transform: rotate(-10deg)
       max-width: fit-content
-      padding: 0 1.5rem
+      padding: .875rem
       margin: 0 auto
-      margin-top: 13vh
+      margin-top: 100px
+      margin-bottom: 4rem
+      @include d(max2xl)
+        margin-top: 66px
+        transform: rotate(-7deg)
+      @include d(xl)
+        margin-bottom: 2rem
+      @include d(md2)
+        padding: .875rem
       @include d(sm)
         margin-top: 7vh
-      @include d(max2xl)
-        margin-top: 10vh
-      @include d(md2)
-        margin-top: 8vh
       h1
         color: #4F37FF
         font-weight: 900
         font-size: 5.5rem
-        line-height: 7rem
+        line-height: 1.5
         @include d(sm)
           font-size: 3rem
           text-align: center
           line-height: 3.5rem
           width: min-content
         @include d(max2xl)
-          font-size: 4.5rem
-        @include d(xl)
           font-size: 4rem
-        @include d(md2)
+        @include d(xl)
           font-size: 3rem
 
     .conteudo-intermediario
