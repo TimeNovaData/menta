@@ -32,6 +32,8 @@ body
           width: min-content
         @include d(max2xl)
           font-size: 4.5rem
+        @include d(xl)
+          font-size: 4rem
     .img-clouds
       img
         width: 100%
@@ -56,7 +58,6 @@ body
       @include d(sm)
         img
           width: fit-content
-
       @include d(max2xl)
         img
           top: 265px
@@ -80,6 +81,8 @@ body
             right: 1vh
           @include d(max2xl)
             bottom: 10vh
+          @include d(xl)
+            right: 25vh
 
       .card
         width: 488px
@@ -94,6 +97,10 @@ body
           left: 4.5vh
         @include d(max2xl)
           bottom: 10vh
+        @include d(xl)
+          width: 420px
+          padding: 1.5rem 1.5rem
+          bottom: 7vh
         h2
           font-size: 1.5rem
           font-weight: 700

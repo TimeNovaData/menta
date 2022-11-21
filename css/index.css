@@ -136,6 +136,12 @@ body .conteudo .intro h1 {
   }
 }
 
+@media screen and (max-width: 1447px) {
+  body .conteudo .intro h1 {
+    font-size: 4rem;
+  }
+}
+
 body .conteudo .img-clouds img {
   width: 100%;
   height: 100%;
@@ -204,6 +210,12 @@ body .conteudo .conteudo-intermediario .img-airplane img {
   }
 }
 
+@media screen and (max-width: 1447px) {
+  body .conteudo .conteudo-intermediario .img-airplane img {
+    right: 25vh;
+  }
+}
+
 body .conteudo .conteudo-intermediario .card {
   width: 488px;
   background: #fff;
@@ -224,6 +236,14 @@ body .conteudo .conteudo-intermediario .card {
 @media screen and (max-width: 1667px) {
   body .conteudo .conteudo-intermediario .card {
     bottom: 10vh;
+  }
+}
+
+@media screen and (max-width: 1447px) {
+  body .conteudo .conteudo-intermediario .card {
+    width: 420px;
+    padding: 1.5rem;
+    bottom: 7vh;
   }
 }
 
