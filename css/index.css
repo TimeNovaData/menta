@@ -92,6 +92,12 @@ body header {
   }
 }
 
+@media screen and (max-width: 1447px) {
+  body header {
+    padding-left: 4rem;
+  }
+}
+
 body .conteudo .intro {
   max-width: -moz-fit-content;
   max-width: fit-content;
@@ -111,6 +117,12 @@ body .conteudo .intro {
 @media screen and (max-width: 1667px) {
   body .conteudo .intro {
     margin-top: 10vh;
+  }
+}
+
+@media screen and (max-width: 1281px) {
+  body .conteudo .intro {
+    margin-top: 8vh;
   }
 }
 
@@ -139,6 +151,12 @@ body .conteudo .intro h1 {
 @media screen and (max-width: 1447px) {
   body .conteudo .intro h1 {
     font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 1281px) {
+  body .conteudo .intro h1 {
+    font-size: 3rem;
   }
 }
 
@@ -181,6 +199,12 @@ body .conteudo .img-circle img {
   }
 }
 
+@media screen and (max-width: 1281px) {
+  body .conteudo .img-circle img {
+    top: 245px;
+  }
+}
+
 body .conteudo .conteudo-intermediario {
   gap: 4rem;
   display: flex;
@@ -216,8 +240,9 @@ body .conteudo .conteudo-intermediario .img-airplane img {
   }
 }
 
-@media screen and (max-width: 1370px) {
+@media screen and (max-width: 1372px) {
   body .conteudo .conteudo-intermediario .img-airplane img {
+    bottom: 8vh;
     right: 20vh;
   }
 }
@@ -241,7 +266,7 @@ body .conteudo .conteudo-intermediario .card {
 
 @media screen and (max-width: 1667px) {
   body .conteudo .conteudo-intermediario .card {
-    bottom: 10vh;
+    bottom: 9.5vh;
   }
 }
 
@@ -253,10 +278,17 @@ body .conteudo .conteudo-intermediario .card {
   }
 }
 
-@media screen and (max-width: 1370px) {
+@media screen and (max-width: 1372px) {
+  body .conteudo .conteudo-intermediario .card {
+    bottom: 8vh;
+    left: 25vh;
+  }
+}
+
+@media screen and (max-width: 1281px) {
   body .conteudo .conteudo-intermediario .card {
     bottom: 8.5vh;
-    left: 30vh;
+    left: 25vh;
   }
 }
 
