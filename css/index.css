@@ -77,7 +77,8 @@ input[type="submit"] {
 }
 
 body {
-  overflow: hidden;
+  background: #0ff;
+  overflow-x: hidden;
 }
 
 body header {
@@ -98,43 +99,87 @@ body header {
   }
 }
 
-body .conteudo .intro {
+body section {
+  min-height: calc(100vh - 81px);
+  position: relative;
+}
+
+@media screen and (max-width: 1200px) {
+  body section {
+    height: unset;
+    padding-bottom: 3rem;
+  }
+}
+
+body section .container {
+  max-width: 1400px;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+}
+
+body section .container .grid-wrapper {
+  flex: 1;
+  grid-template-columns: .8fr 1fr;
+  justify-self: center;
+  align-items: center;
+  display: grid;
+}
+
+@media screen and (max-width: 1200px) {
+  body section .container .grid-wrapper {
+    grid-template-columns: 1fr;
+    margin-top: -15px;
+  }
+}
+
+body section .intro {
   max-width: -moz-fit-content;
   max-width: fit-content;
-  margin: 0 auto;
   background: #00ff8c;
-  margin-top: 13vh;
-  padding: 0 1.5rem;
+  margin: 100px auto 4rem;
+  padding: .875rem;
   transform: rotate(-10deg);
 }
 
+@media screen and (max-width: 1667px) {
+  body section .intro {
+    margin-top: 66px;
+    transform: rotate(-7deg);
+  }
+}
+
+@media screen and (max-width: 1447px) {
+  body section .intro {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  body section .intro {
+    padding: .875rem;
+  }
+}
+
 @media screen and (max-width: 639px) {
-  body .conteudo .intro {
+  body section .intro {
     margin-top: 7vh;
   }
 }
 
-@media screen and (max-width: 1667px) {
-  body .conteudo .intro {
-    margin-top: 10vh;
-  }
-}
-
-@media screen and (max-width: 1281px) {
-  body .conteudo .intro {
-    margin-top: 8vh;
-  }
-}
-
-body .conteudo .intro h1 {
+body section .intro h1 {
   color: #4f37ff;
   font-size: 5.5rem;
   font-weight: 900;
-  line-height: 7rem;
+  line-height: 1.5;
 }
 
 @media screen and (max-width: 639px) {
-  body .conteudo .intro h1 {
+  body section .intro h1 {
     text-align: center;
     width: min-content;
     font-size: 3rem;
@@ -143,169 +188,119 @@ body .conteudo .intro h1 {
 }
 
 @media screen and (max-width: 1667px) {
-  body .conteudo .intro h1 {
-    font-size: 4.5rem;
-  }
-}
-
-@media screen and (max-width: 1447px) {
-  body .conteudo .intro h1 {
+  body section .intro h1 {
     font-size: 4rem;
   }
 }
 
-@media screen and (max-width: 1281px) {
-  body .conteudo .intro h1 {
+@media screen and (max-width: 1447px) {
+  body section .intro h1 {
     font-size: 3rem;
   }
 }
 
-body .conteudo .conteudo-intermediario {
+body section .conteudo-intermediario {
   gap: 4rem;
   display: flex;
 }
 
-.conteudo .img-clouds img {
-  width: 100%;
-  height: 100%;
+section .clouds {
+  max-height: 80vh;
   z-index: -1;
   position: absolute;
-  top: 125px;
   bottom: 0;
   left: 0;
 }
 
-@media screen and (max-width: 1281px) {
-  .conteudo .img-clouds img {
-    top: 95px;
+@media screen and (max-width: 1200px) {
+  section .clouds {
+    max-height: unset;
+    inset: 0;
   }
 }
 
-@media screen and (max-width: 639px) {
-  .conteudo .img-clouds img {
-    top: -10vh;
-  }
-}
-
-.conteudo .img-circle img {
+section .clouds img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+
+section .circle {
   z-index: -1;
   position: absolute;
-  top: 267px;
   bottom: 0;
-  left: 0;
 }
 
-@media screen and (max-width: 1667px) {
-  .conteudo .img-circle img {
-    top: 265px;
+section .circle img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  section .img-airplane {
+    grid-row: 1;
   }
 }
 
-@media screen and (max-width: 1372px) {
-  .conteudo .img-circle img {
-    top: 260px;
+section .img-airplane img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  section .img-airplane img {
+    max-width: 488px;
+    margin: 0 auto;
   }
 }
 
-@media screen and (max-width: 1281px) {
-  .conteudo .img-circle img {
-    top: 245px;
-  }
-}
-
-@media screen and (max-width: 639px) {
-  .conteudo .img-circle img {
-    object-fit: contain;
-  }
-}
-
-.conteudo .conteudo-intermediario .img-airplane img {
-  width: 40%;
-  height: 40%;
-  object-fit: contain;
-  position: absolute;
-  bottom: 15vh;
-  right: 30vh;
-}
-
-@media screen and (max-width: 1667px) {
-  .conteudo .conteudo-intermediario .img-airplane img {
-    bottom: 10vh;
-  }
-}
-
-@media screen and (max-width: 1447px) {
-  .conteudo .conteudo-intermediario .img-airplane img {
-    right: 25vh;
-  }
-}
-
-@media screen and (max-width: 1372px) {
-  .conteudo .conteudo-intermediario .img-airplane img {
-    bottom: 8vh;
-    right: 20vh;
-  }
-}
-
-@media screen and (max-width: 639px) {
-  .conteudo .conteudo-intermediario .img-airplane img {
-    width: 400px;
-    top: 25vh;
-    bottom: 0;
-    right: 1vh;
-  }
-}
-
-.conteudo-intermediario .card {
-  width: 488px;
+.grid-wrapper .card {
+  max-width: 488px;
+  width: 100%;
   background: #fff;
   border-radius: 1rem;
   padding: 2rem 1.5rem;
-  position: absolute;
   bottom: 17.5vh;
   left: 35vh;
   box-shadow: 0 1px 4px #100b3733, 0 3px 16px #100b371a;
 }
 
 @media screen and (max-width: 1667px) {
-  .conteudo-intermediario .card {
+  .grid-wrapper .card {
     bottom: 9.5vh;
   }
 }
 
 @media screen and (max-width: 1447px) {
-  .conteudo-intermediario .card {
-    width: 420px;
+  .grid-wrapper .card {
+    max-width: 420px;
     padding: 1.5rem;
     bottom: 6.5vh;
   }
 }
 
 @media screen and (max-width: 1372px) {
-  .conteudo-intermediario .card {
+  .grid-wrapper .card {
     bottom: 9vh;
     left: 25vh;
   }
 }
 
-@media screen and (max-width: 1281px) {
-  .conteudo-intermediario .card {
-    bottom: 8.5vh;
-    left: 25vh;
+@media screen and (max-width: 1200px) {
+  .grid-wrapper .card {
+    margin: 0 auto;
   }
 }
 
 @media screen and (max-width: 639px) {
-  .conteudo-intermediario .card {
-    width: 370px;
+  .grid-wrapper .card {
+    position: unset;
+    gap: 0;
     bottom: 10vh;
     left: 2.5vh;
   }
 }
 
-.conteudo-intermediario .card h2 {
+.grid-wrapper .card h2 {
   color: #4f37ff;
   font-size: 1.5rem;
   font-weight: 700;
@@ -313,13 +308,13 @@ body .conteudo .conteudo-intermediario {
 }
 
 @media screen and (max-width: 639px) {
-  .conteudo-intermediario .card h2 {
+  .grid-wrapper .card h2 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
-.conteudo-intermediario .card p {
+.grid-wrapper .card p {
   width: 22rem;
   color: #0f0f0f;
   margin-top: 1rem;
@@ -329,19 +324,19 @@ body .conteudo .conteudo-intermediario {
 }
 
 @media screen and (max-width: 639px) {
-  .conteudo-intermediario .card p {
+  .grid-wrapper .card p {
     width: 17.5rem;
     font-size: .75rem;
     line-height: 1.25rem;
   }
 }
 
-.conteudo-intermediario .card .formulario .input-icon-left {
+.grid-wrapper .card .formulario .input-icon-left {
   margin-top: 2rem;
   position: relative;
 }
 
-.conteudo-intermediario .card .formulario .input-icon-left img {
+.grid-wrapper .card .formulario .input-icon-left img {
   left: .75rem;
   right: initial;
   width: 24px;
@@ -352,7 +347,7 @@ body .conteudo .conteudo-intermediario {
   transform: translateY(-50%);
 }
 
-.conteudo-intermediario .card .formulario .input-icon-left input {
+.grid-wrapper .card .formulario .input-icon-left input {
   width: 100%;
   color: #666;
   background: #fff;
@@ -364,12 +359,12 @@ body .conteudo .conteudo-intermediario {
   line-height: 1.5rem;
 }
 
-.conteudo-intermediario .card .formulario .input-icon-right {
+.grid-wrapper .card .formulario .input-icon-right {
   width: 100%;
   position: relative;
 }
 
-.conteudo-intermediario .card .formulario .input-icon-right img {
+.grid-wrapper .card .formulario .input-icon-right img {
   right: 30%;
   left: initial;
   width: 24px;
@@ -380,37 +375,37 @@ body .conteudo .conteudo-intermediario {
   transform: translateY(-50%);
 }
 
-@media screen and (max-width: 639px) {
-  .conteudo-intermediario .card .formulario .input-icon-right img {
-    right: 15%;
-  }
-}
-
 @media screen and (max-width: 1447px) {
-  .conteudo-intermediario .card .formulario .input-icon-right img {
+  .grid-wrapper .card .formulario .input-icon-right img {
     right: 25%;
   }
 }
 
-.conteudo-intermediario .card .formulario .conteudo-final {
+@media screen and (max-width: 639px) {
+  .grid-wrapper .card .formulario .input-icon-right img {
+    right: 18%;
+  }
+}
+
+.grid-wrapper .card .formulario .conteudo-final {
   align-items: center;
   gap: .5rem;
   margin-top: 1.5rem;
   display: flex;
 }
 
-.conteudo-intermediario .card .formulario .conteudo-final .icon-question {
+.grid-wrapper .card .formulario .conteudo-final .icon-question {
   border: 1px solid #4f37ff;
   border-radius: 12px;
   padding: .75rem;
 }
 
-.conteudo-intermediario .card .formulario .conteudo-final .icon-question img {
+.grid-wrapper .card .formulario .conteudo-final .icon-question img {
   width: 1.5rem;
   height: 1.5rem;
 }
 
-.conteudo-intermediario .card .formulario .conteudo-final button {
+.grid-wrapper .card .formulario .conteudo-final button {
   width: 100%;
   color: #fff;
   cursor: pointer;
