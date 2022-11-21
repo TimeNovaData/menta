@@ -21,9 +21,9 @@
 
 $min2xl: 1441px
 $max2xl: 1667px
-$xl: 1367px
-$lg: 1281px
-$md2: 1180px
+$xl: 1447px
+$lg: 1372px
+$md2: 1281px
 $md: 767px
 $sm: 639px
 
@@ -35,6 +35,18 @@ $sm: 639px
       //acima do medio
       @content
 
-  @else if $size==sm
+  @else if $size== sm
     @media screen and (max-width: $sm)
+      @content
+
+  @else if $size== max2xl
+    @media screen and (max-width: $max2xl)
+      @content
+
+  @else if $size== xl
+    @media screen and (max-width: $xl)
+      @content
+
+  @else if $size== lg
+    @media screen and (max-width: $lg)
       @content

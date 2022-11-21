@@ -8,6 +8,8 @@ body
     padding-left: 5rem
     @include d(sm)
       padding-left: 1.5rem
+    @include d(xl)
+      padding-left: 4rem
   .conteudo
     .intro
       background: #00FF8C
@@ -15,151 +17,30 @@ body
       max-width: fit-content
       padding: 0 1.5rem
       margin: 0 auto
-      margin-top: 15vh
+      margin-top: 13vh
       @include d(sm)
         margin-top: 7vh
+      @include d(max2xl)
+        margin-top: 10vh
+      @include d(md2)
+        margin-top: 8vh
       h1
         color: #4F37FF
         font-weight: 900
         font-size: 5.5rem
         line-height: 7rem
         @include d(sm)
-        font-size: 3rem
-        text-align: center
-        line-height: 3.5rem
-        width: min-content
-    .img-clouds
-      img
-        width: 100%
-        height: 100%
-        position: absolute
-        top: 200px
-        bottom: 0
-        left: 0
-        z-index: -1
-        @include d(sm)
-          top: -10vh
-
-    .img-circle
-      img
-        width: 100%
-        height: 100%
-        position: absolute
-        top: 300px
-        bottom: 0
-        left: 0
-        z-index: -1
-      @include d(sm)
-        img
-          width: fit-content
+          font-size: 3rem
+          text-align: center
+          line-height: 3.5rem
+          width: min-content
+        @include d(max2xl)
+          font-size: 4.5rem
+        @include d(xl)
+          font-size: 4rem
+        @include d(md2)
+          font-size: 3rem
 
     .conteudo-intermediario
       display: flex
       gap: 4rem
-
-      .img-airplane
-        img
-          width: 647.29px
-          height: 198.76px
-          position: absolute
-          bottom: 15vh
-          right: 50vh
-          @include d(sm)
-            width: 400px
-            top: 30vh
-            bottom: 0
-            right: 1vh
-
-      .card
-        background: white
-        padding: 2rem 1.5rem
-        border-radius: 1rem
-        box-shadow: 0px 1px 4px rgba(16, 11, 55, 0.2), 0px 3px 16px rgba(16, 11, 55, 0.1)
-        position: absolute
-        bottom: 13vh
-        left: 40vh
-        h2
-          font-size: 1.5rem
-          font-weight: 700
-          color: #4F37FF
-          line-height: 2rem
-        p
-          width: 22rem
-          font-weight: 400
-          font-size: .875rem
-          line-height: 1.375rem
-          color: #0F0F0F
-          margin-top: 1rem
-        @include d(sm)
-          left: 4.5vh
-          h2
-            font-size: 1.25rem
-            line-height: 1.5rem
-          p
-            font-size: .75rem
-            line-height: 1.25rem
-            width: 17.5rem
-
-      .formulario
-        .input-icon-left
-          position: relative
-          margin-top: 2rem
-          img
-            position: absolute
-            left: .75rem
-            right: initial
-            top: 50%
-            transform: translateY(-50%)
-            margin: 0 auto
-            width: 24px
-            height: 24px
-          input
-            background: white
-            border: 1px solid #C8C2FF
-            border-radius: .75rem
-            padding: .75rem 1rem
-            width: 100%
-            padding-left: 2.5rem
-            font-weight: 400
-            font-size: 1rem
-            line-height: 1.5rem
-            color: #666666
-
-        .input-icon-right
-          position: relative
-          width: 100%
-          img
-            position: absolute
-            right: 25%
-            left: initial
-            top: 50%
-            transform: translateY(-50%)
-            margin: 0 auto
-            width: 24px
-            height: 24px
-            @include d(sm)
-              right: 15%
-
-        .conteudo-final
-          display: flex
-          align-items: center
-          margin-top: 1.5rem
-          gap: .5rem
-
-          .icon-question
-            border: 1px solid #4F37FF
-            border-radius: 12px
-            padding: .75rem
-            img
-              width: 1.5rem
-              height: 1.5rem
-          button
-            background: #857AEA
-            padding: .75rem 1.5rem
-            width: 100%
-            border-radius: .75rem
-            font-weight: 700
-            font-size: 1rem
-            line-height: 1.5rem
-            color: white
-            cursor: pointer
