@@ -216,6 +216,12 @@ body .conteudo .conteudo-intermediario .img-airplane img {
   }
 }
 
+@media screen and (max-width: 1370px) {
+  body .conteudo .conteudo-intermediario .img-airplane img {
+    right: 20vh;
+  }
+}
+
 body .conteudo .conteudo-intermediario .card {
   width: 488px;
   background: #fff;
@@ -243,7 +249,14 @@ body .conteudo .conteudo-intermediario .card {
   body .conteudo .conteudo-intermediario .card {
     width: 420px;
     padding: 1.5rem;
-    bottom: 7vh;
+    bottom: 6.5vh;
+  }
+}
+
+@media screen and (max-width: 1370px) {
+  body .conteudo .conteudo-intermediario .card {
+    bottom: 8.5vh;
+    left: 30vh;
   }
 }
 
