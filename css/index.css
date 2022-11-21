@@ -160,23 +160,34 @@ body .conteudo .intro h1 {
   }
 }
 
-body .conteudo .img-clouds img {
+body .conteudo .conteudo-intermediario {
+  gap: 4rem;
+  display: flex;
+}
+
+.conteudo .img-clouds img {
   width: 100%;
   height: 100%;
   z-index: -1;
   position: absolute;
-  top: 200px;
+  top: 145px;
   bottom: 0;
   left: 0;
 }
 
 @media screen and (max-width: 639px) {
-  body .conteudo .img-clouds img {
+  .conteudo .img-clouds img {
     top: -10vh;
   }
 }
 
-body .conteudo .img-circle img {
+@media screen and (max-width: 639px) and (max-width: 1281px) {
+  .conteudo .img-clouds img {
+    top: 95px;
+  }
+}
+
+.conteudo .img-circle img {
   width: 100%;
   height: 100%;
   z-index: -1;
@@ -187,30 +198,25 @@ body .conteudo .img-circle img {
 }
 
 @media screen and (max-width: 639px) {
-  body .conteudo .img-circle img {
+  .conteudo .img-circle img {
     width: -moz-fit-content;
     width: fit-content;
   }
 }
 
 @media screen and (max-width: 1667px) {
-  body .conteudo .img-circle img {
+  .conteudo .img-circle img {
     top: 265px;
   }
 }
 
 @media screen and (max-width: 1281px) {
-  body .conteudo .img-circle img {
+  .conteudo .img-circle img {
     top: 245px;
   }
 }
 
-body .conteudo .conteudo-intermediario {
-  gap: 4rem;
-  display: flex;
-}
-
-body .conteudo .conteudo-intermediario .img-airplane img {
+.conteudo .conteudo-intermediario .img-airplane img {
   width: 40%;
   height: 40%;
   object-fit: contain;
@@ -220,7 +226,7 @@ body .conteudo .conteudo-intermediario .img-airplane img {
 }
 
 @media screen and (max-width: 639px) {
-  body .conteudo .conteudo-intermediario .img-airplane img {
+  .conteudo .conteudo-intermediario .img-airplane img {
     width: 400px;
     top: 30vh;
     bottom: 0;
@@ -228,26 +234,26 @@ body .conteudo .conteudo-intermediario .img-airplane img {
   }
 }
 
-@media screen and (max-width: 1667px) {
-  body .conteudo .conteudo-intermediario .img-airplane img {
+@media screen and (max-width: 639px) and (max-width: 1667px) {
+  .conteudo .conteudo-intermediario .img-airplane img {
     bottom: 10vh;
   }
 }
 
-@media screen and (max-width: 1447px) {
-  body .conteudo .conteudo-intermediario .img-airplane img {
+@media screen and (max-width: 639px) and (max-width: 1447px) {
+  .conteudo .conteudo-intermediario .img-airplane img {
     right: 25vh;
   }
 }
 
-@media screen and (max-width: 1372px) {
-  body .conteudo .conteudo-intermediario .img-airplane img {
+@media screen and (max-width: 639px) and (max-width: 1372px) {
+  .conteudo .conteudo-intermediario .img-airplane img {
     bottom: 8vh;
     right: 20vh;
   }
 }
 
-body .conteudo .conteudo-intermediario .card {
+.conteudo-intermediario .card {
   width: 488px;
   background: #fff;
   border-radius: 1rem;
@@ -259,146 +265,152 @@ body .conteudo .conteudo-intermediario .card {
 }
 
 @media screen and (max-width: 639px) {
-  body .conteudo .conteudo-intermediario .card {
+  .conteudo-intermediario .card {
     left: 4.5vh;
   }
 }
 
-@media screen and (max-width: 1667px) {
-  body .conteudo .conteudo-intermediario .card {
+@media screen and (max-width: 639px) and (max-width: 1667px) {
+  .conteudo-intermediario .card {
     bottom: 9.5vh;
   }
 }
 
-@media screen and (max-width: 1447px) {
-  body .conteudo .conteudo-intermediario .card {
+@media screen and (max-width: 639px) and (max-width: 1667px) and (max-width: 1447px) {
+  .conteudo-intermediario .card {
     width: 420px;
     padding: 1.5rem;
     bottom: 6.5vh;
   }
 }
 
-@media screen and (max-width: 1372px) {
-  body .conteudo .conteudo-intermediario .card {
+@media screen and (max-width: 639px) and (max-width: 1667px) and (max-width: 1372px) {
+  .conteudo-intermediario .card {
     bottom: 8vh;
     left: 25vh;
   }
 }
 
-@media screen and (max-width: 1281px) {
-  body .conteudo .conteudo-intermediario .card {
+@media screen and (max-width: 639px) and (max-width: 1667px) and (max-width: 1281px) {
+  .conteudo-intermediario .card {
     bottom: 8.5vh;
     left: 25vh;
   }
 }
 
-body .conteudo .conteudo-intermediario .card h2 {
-  color: #4f37ff;
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 2rem;
+@media screen and (max-width: 639px) and (max-width: 1667px) {
+  .conteudo-intermediario .card h2 {
+    color: #4f37ff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2rem;
+  }
+
+  .conteudo-intermediario .card p {
+    width: 22rem;
+    color: #0f0f0f;
+    margin-top: 1rem;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.375rem;
+  }
 }
 
-body .conteudo .conteudo-intermediario .card p {
-  width: 22rem;
-  color: #0f0f0f;
-  margin-top: 1rem;
-  font-size: .875rem;
-  font-weight: 400;
-  line-height: 1.375rem;
-}
-
-@media screen and (max-width: 639px) {
-  body .conteudo .conteudo-intermediario .card h2 {
+@media screen and (max-width: 639px) and (max-width: 1667px) and (max-width: 639px) {
+  .conteudo-intermediario .card h2 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 
-  body .conteudo .conteudo-intermediario .card p {
+  .conteudo-intermediario .card p {
     width: 17.5rem;
     font-size: .75rem;
     line-height: 1.25rem;
   }
 }
 
-body .conteudo .conteudo-intermediario .formulario .input-icon-left {
-  margin-top: 2rem;
-  position: relative;
-}
-
-body .conteudo .conteudo-intermediario .formulario .input-icon-left img {
-  left: .75rem;
-  right: initial;
-  width: 24px;
-  height: 24px;
-  margin: 0 auto;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-body .conteudo .conteudo-intermediario .formulario .input-icon-left input {
-  width: 100%;
-  color: #666;
-  background: #fff;
-  border: 1px solid #c8c2ff;
-  border-radius: .75rem;
-  padding: .75rem 1rem .75rem 2.5rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5rem;
-}
-
-body .conteudo .conteudo-intermediario .formulario .input-icon-right {
-  width: 100%;
-  position: relative;
-}
-
-body .conteudo .conteudo-intermediario .formulario .input-icon-right img {
-  right: 25%;
-  left: initial;
-  width: 24px;
-  height: 24px;
-  margin: 0 auto;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 @media screen and (max-width: 639px) {
-  body .conteudo .conteudo-intermediario .formulario .input-icon-right img {
+  .conteudo-intermediario .card .formulario .input-icon-left {
+    margin-top: 2rem;
+    position: relative;
+  }
+
+  .conteudo-intermediario .card .formulario .input-icon-left img {
+    left: .75rem;
+    right: initial;
+    width: 24px;
+    height: 24px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .conteudo-intermediario .card .formulario .input-icon-left input {
+    width: 100%;
+    color: #666;
+    background: #fff;
+    border: 1px solid #c8c2ff;
+    border-radius: .75rem;
+    padding: .75rem 1rem .75rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+  }
+
+  .conteudo-intermediario .card .formulario .input-icon-right {
+    width: 100%;
+    position: relative;
+  }
+
+  .conteudo-intermediario .card .formulario .input-icon-right img {
+    right: 25%;
+    left: initial;
+    width: 24px;
+    height: 24px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@media screen and (max-width: 639px) and (max-width: 639px) {
+  .conteudo-intermediario .card .formulario .input-icon-right img {
     right: 15%;
   }
 }
 
-body .conteudo .conteudo-intermediario .formulario .conteudo-final {
-  align-items: center;
-  gap: .5rem;
-  margin-top: 1.5rem;
-  display: flex;
-}
+@media screen and (max-width: 639px) {
+  .conteudo-intermediario .card .formulario .conteudo-final {
+    align-items: center;
+    gap: .5rem;
+    margin-top: 1.5rem;
+    display: flex;
+  }
 
-body .conteudo .conteudo-intermediario .formulario .conteudo-final .icon-question {
-  border: 1px solid #4f37ff;
-  border-radius: 12px;
-  padding: .75rem;
-}
+  .conteudo-intermediario .card .formulario .conteudo-final .icon-question {
+    border: 1px solid #4f37ff;
+    border-radius: 12px;
+    padding: .75rem;
+  }
 
-body .conteudo .conteudo-intermediario .formulario .conteudo-final .icon-question img {
-  width: 1.5rem;
-  height: 1.5rem;
-}
+  .conteudo-intermediario .card .formulario .conteudo-final .icon-question img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 
-body .conteudo .conteudo-intermediario .formulario .conteudo-final button {
-  width: 100%;
-  color: #fff;
-  cursor: pointer;
-  background: #857aea;
-  border-radius: .75rem;
-  padding: .75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1.5rem;
+  .conteudo-intermediario .card .formulario .conteudo-final button {
+    width: 100%;
+    color: #fff;
+    cursor: pointer;
+    background: #857aea;
+    border-radius: .75rem;
+    padding: .75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

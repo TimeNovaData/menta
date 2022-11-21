@@ -1,0 +1,55 @@
+.conteudo
+  .img-clouds
+    img
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 145px
+      bottom: 0
+      left: 0
+      z-index: -1
+      @include d(sm)
+        top: -10vh
+        @include d(md2)
+          top: 95px
+
+  .img-circle
+    img
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 300px
+      bottom: 0
+      left: 0
+      z-index: -1
+    @include d(sm)
+      img
+        width: fit-content
+    @include d(max2xl)
+      img
+        top: 265px
+    @include d(md2)
+      img
+        top: 245px
+
+  .conteudo-intermediario
+    .img-airplane
+      img
+        width: 40%
+        height: 40%
+        position: absolute
+        bottom: 13vh
+        right: 30vh
+        object-fit: contain
+        @include d(sm)
+          width: 400px
+          top: 30vh
+          bottom: 0
+          right: 1vh
+          @include d(max2xl)
+            bottom: 10vh
+          @include d(xl)
+            right: 25vh
+          @include d(lg)
+            right: 20vh
+            bottom: 8vh
