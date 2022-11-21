@@ -170,7 +170,7 @@ body .conteudo .conteudo-intermediario {
   height: 100%;
   z-index: -1;
   position: absolute;
-  top: 145px;
+  top: 125px;
   bottom: 0;
   left: 0;
 }
@@ -200,6 +200,12 @@ body .conteudo .conteudo-intermediario {
 @media screen and (max-width: 1667px) {
   .conteudo .img-circle img {
     top: 265px;
+  }
+}
+
+@media screen and (max-width: 1372px) {
+  .conteudo .img-circle img {
+    top: 260px;
   }
 }
 
@@ -279,7 +285,7 @@ body .conteudo .conteudo-intermediario {
 
 @media screen and (max-width: 1372px) {
   .conteudo-intermediario .card {
-    bottom: 8vh;
+    bottom: 9vh;
     left: 25vh;
   }
 }
