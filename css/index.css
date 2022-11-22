@@ -258,44 +258,20 @@ section .img-airplane img {
   background: #fff;
   border-radius: 1rem;
   padding: 2rem 1.5rem;
-  bottom: 17.5vh;
-  left: 35vh;
   box-shadow: 0 1px 4px #100b3733, 0 3px 16px #100b371a;
-}
-
-@media screen and (max-width: 1667px) {
-  .grid-wrapper .card {
-    bottom: 9.5vh;
-  }
 }
 
 @media screen and (max-width: 1447px) {
   .grid-wrapper .card {
     max-width: 420px;
     padding: 1.5rem;
-    bottom: 6.5vh;
-  }
-}
-
-@media screen and (max-width: 1372px) {
-  .grid-wrapper .card {
-    bottom: 9vh;
-    left: 25vh;
   }
 }
 
 @media screen and (max-width: 1200px) {
   .grid-wrapper .card {
-    margin: 0 auto;
-  }
-}
-
-@media screen and (max-width: 639px) {
-  .grid-wrapper .card {
-    position: unset;
     gap: 0;
-    bottom: 10vh;
-    left: 2.5vh;
+    margin: 0 auto;
   }
 }
 
