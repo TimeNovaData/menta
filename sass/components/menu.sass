@@ -1,9 +1,39 @@
 header.faq-menu
   background: #4F37FF
   border-bottom: 1px solid rgba(0, 0, 0, 0.1)
-  padding: 1.25rem 0
-  padding-left: 5rem
+  padding-block: 1.25rem
+  padding-inline: 5rem
+  display: flex
+  justify-content: space-between
   @include d(xl)
     padding-left: 4rem
     @include d(sm)
       padding-left: 1.5rem
+
+  .logo
+    svg
+      width: 6.0625rem
+      height: 2rem
+
+  nav
+    display: flex
+    align-items: center
+
+  ul
+    display: flex
+    align-items: center
+    gap: 2.5rem
+
+    a
+      text-decoration: none
+      color: white
+
+  .social-media
+    display: flex
+    justify-content: space-between
+    gap: 2.1875rem
+
+    svg
+      width: 1.5rem
+      height: 1.5rem
+      color: white

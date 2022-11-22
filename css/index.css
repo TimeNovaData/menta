@@ -75,7 +75,10 @@ input[type="submit"] {
 header.faq-menu {
   background: #4f37ff;
   border-bottom: 1px solid #0000001a;
-  padding: 1.25rem 0 1.25rem 5rem;
+  justify-content: space-between;
+  padding-block: 1.25rem;
+  padding-inline: 5rem;
+  display: flex;
 }
 
 @media screen and (max-width: 1447px) {
@@ -88,6 +91,39 @@ header.faq-menu {
   header.faq-menu {
     padding-left: 1.5rem;
   }
+}
+
+header.faq-menu .logo svg {
+  width: 6.0625rem;
+  height: 2rem;
+}
+
+header.faq-menu nav {
+  align-items: center;
+  display: flex;
+}
+
+header.faq-menu ul {
+  align-items: center;
+  gap: 2.5rem;
+  display: flex;
+}
+
+header.faq-menu ul a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header.faq-menu .social-media {
+  justify-content: space-between;
+  gap: 2.1875rem;
+  display: flex;
+}
+
+header.faq-menu .social-media svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #fff;
 }
 
 footer.faq-footer {
@@ -111,15 +147,15 @@ footer.faq-footer .footer-wrapper {
     text-align: left;
     flex-direction: column;
     align-items: flex-start;
+    gap: 1.5rem;
   }
 }
 
 .about-menta {
-  max-width: 500px;
+  max-width: 400px;
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  gap: 7.75rem;
   display: flex;
 }
 
