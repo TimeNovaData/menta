@@ -1,6 +1,13 @@
-@import './reset'
-@import './responsivo'
-@import './custom'
-@import './ornamentos'
-@import './card'
-@import './faq/faq'
+@import "./utils/reset"
+@import "./utils/responsivo"
+@import "./mixins"
+
+//components
+@import "./components/menu"
+@import "./components/footer"
+
+.PageFaq
+  @import './pages/page_faq'
+
+.PageEmBreve
+  @import './pages/page_em_breve'

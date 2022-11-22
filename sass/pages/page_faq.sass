@@ -1,0 +1,35 @@
+&
+  font-family: "vinila"
+
+.section-header
+  @include section-header
+
+  h2.title-bg
+    background: #4F37FF
+    color: #00FF8C
+    clip-path: polygon(0 20%, 99% 0%, 100% 80%, 1% 100%)
+    padding: 0.4rem 2.8rem
+
+  h2.relative
+    position: relative
+    left: 26%
+    @include d(sm)
+      padding-inline: 0
+      position: static
+
+.faq-cards
+  background: #EBEAF4
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  padding-block: 6.25rem
+  gap: 1.5rem
+  padding-inline: 1.5rem
+
+  @include d(sm)
+    padding-inline: 0.5rem
+    padding-block: 3.5rem 6.25rem
+
+.faq-card
+  @include faq-card
