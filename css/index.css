@@ -78,20 +78,8 @@ header.faq-menu {
   justify-content: space-between;
   gap: 1.5rem;
   padding-block: 1.25rem;
-  padding-inline: 5rem;
+  padding-inline: 5vw;
   display: flex;
-}
-
-@media screen and (max-width: 1447px) {
-  header.faq-menu {
-    padding-left: 4rem;
-  }
-}
-
-@media screen and (max-width: 1447px) and (max-width: 639px) {
-  header.faq-menu {
-    padding-left: 1.5rem;
-  }
 }
 
 header.faq-menu .logo svg {
@@ -104,8 +92,14 @@ header.faq-menu nav {
   display: flex;
 }
 
+@media screen and (max-width: 800px) {
+  header.faq-menu nav {
+    display: none;
+  }
+}
+
 header.faq-menu ul {
-  width: 620px;
+  width: 38.75rem;
   justify-content: space-between;
   align-items: center;
   display: flex;
@@ -121,6 +115,12 @@ header.faq-menu .social-media {
   width: 100%;
   justify-content: space-between;
   display: flex;
+}
+
+@media screen and (max-width: 1024px) {
+  header.faq-menu .social-media {
+    display: none;
+  }
 }
 
 header.faq-menu .social-media svg {
@@ -145,7 +145,7 @@ footer.faq-footer .footer-wrapper {
   display: flex;
 }
 
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 600px) {
   footer.faq-footer .footer-wrapper {
     text-align: left;
     flex-direction: column;
@@ -156,14 +156,20 @@ footer.faq-footer .footer-wrapper {
 }
 
 .about-menta {
-  max-width: 400px;
+  max-width: 25rem;
   width: 100%;
   justify-content: space-between;
   align-items: center;
   display: flex;
 }
 
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 800px) {
+  .about-menta {
+    max-width: 18.75rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
   .about-menta {
     flex-direction: column;
     justify-content: center;
@@ -220,27 +226,26 @@ footer.faq-footer .all-rights-reserved {
   display: flex;
 }
 
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 600px) {
   footer.faq-footer .all-rights-reserved {
     flex-direction: column;
   }
 
   footer.faq-footer .all-rights-reserved span, footer.faq-footer .all-rights-reserved p {
     font-size: .875rem;
-  }
-
-  footer.faq-footer .all-rights-reserved p:before {
-    content: "";
+    line-height: 1.25rem;
   }
 }
 
 footer.faq-footer .all-rights-reserved p:before {
   content: "•";
+  content: "";
   padding-inline: 8px;
 }
 
 .PageFaq {
   font-family: vinila;
+  overflow-x: hidden;
 }
 
 .PageFaq .section-header {
@@ -248,23 +253,22 @@ footer.faq-footer .all-rights-reserved p:before {
   justify-content: space-between;
   gap: 4rem;
   padding-top: 2.5rem;
-  padding-left: 5rem;
+  padding-left: 5vw;
   display: flex;
   position: relative;
 }
 
-@media screen and (max-width: 1281px) {
+@media screen and (max-width: 1024px) {
   .PageFaq .section-header {
-    flex-direction: column;
-    padding-left: 3rem;
+    padding-left: 2vw;
   }
 }
 
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 800px) {
   .PageFaq .section-header {
+    flex-direction: column;
     gap: .5rem;
-    padding-inline: 0;
-    position: static;
+    padding-left: 1vw;
   }
 }
 
@@ -275,64 +279,47 @@ footer.faq-footer .all-rights-reserved p:before {
   line-height: 72px;
 }
 
-@media screen and (max-width: 639px) {
-  .PageFaq .section-header h2 {
-    margin-inline: .25rem;
-  }
-}
-
-.PageFaq .section-header h2.title-bg {
+.PageFaq .section-header .title-bg {
   color: #00ff8c;
   clip-path: polygon(0 20%, 99% 0%, 100% 80%, 1% 100%);
   text-align: center;
   background: #4f37ff;
-  padding: .4rem 2.8rem;
+  padding: .3rem 2.8rem;
+}
+
+@media screen and (max-width: 800px) {
+  .PageFaq .section-header .title-bg {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-inline: auto;
+  }
+}
+
+.PageFaq .section-header .title-bg h2 {
+  color: #00ff8c;
 }
 
 .PageFaq .section-header h2.relative {
   position: relative;
   left: 26%;
-}
-
-@media screen and (max-width: 639px) {
-  .PageFaq .section-header h2.relative {
-    text-align: center;
-    position: static;
-  }
 }
 
 .PageFaq .section-header .faq-img {
-  max-width: 50vw;
-  margin-bottom: -1rem;
+  max-width: 48vw;
   position: absolute;
-  bottom: -1.5rem;
   right: 0;
 }
 
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 1024px) {
   .PageFaq .section-header .faq-img {
-    width: 100%;
-    max-width: 100vw;
-    margin-bottom: 0;
-    position: static;
+    max-width: 42vw;
   }
 }
 
-.PageFaq .section-header h2.title-bg {
-  color: #00ff8c;
-  clip-path: polygon(0 20%, 99% 0%, 100% 80%, 1% 100%);
-  background: #4f37ff;
-  padding: .4rem 2.8rem;
-}
-
-.PageFaq .section-header h2.relative {
-  position: relative;
-  left: 26%;
-}
-
-@media screen and (max-width: 639px) {
-  .PageFaq .section-header h2.relative {
-    padding-inline: 0;
+@media screen and (max-width: 800px) {
+  .PageFaq .section-header .faq-img {
+    max-width: 100vw;
+    margin-left: auto;
     position: static;
   }
 }
@@ -348,7 +335,7 @@ footer.faq-footer .all-rights-reserved p:before {
   display: flex;
 }
 
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 600px) {
   .PageFaq .faq-cards {
     padding-block: 3.5rem 6.25rem;
     padding-inline: .5rem;
@@ -405,54 +392,11 @@ footer.faq-footer .all-rights-reserved p:before {
   box-shadow: 0 1px 4px #100b3733, 0 3px 16px #100b371a;
 }
 
-@media screen and (max-width: 1667px) {
-  .PageEmBreve .conteudo-intermediario .card {
-    bottom: 9.5vh;
-  }
-}
-
-@media screen and (max-width: 1447px) {
-  .PageEmBreve .conteudo-intermediario .card {
-    width: 420px;
-    padding: 1.5rem;
-    bottom: 6.5vh;
-  }
-}
-
-@media screen and (max-width: 1372px) {
-  .PageEmBreve .conteudo-intermediario .card {
-    bottom: 9vh;
-    left: 25vh;
-  }
-}
-
-@media screen and (max-width: 1281px) {
-  .PageEmBreve .conteudo-intermediario .card {
-    bottom: 8.5vh;
-    left: 25vh;
-  }
-}
-
-@media screen and (max-width: 639px) {
-  .PageEmBreve .conteudo-intermediario .card {
-    width: 370px;
-    bottom: 10vh;
-    left: 2.5vh;
-  }
-}
-
 .PageEmBreve .conteudo-intermediario .card h2 {
   color: #4f37ff;
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 2rem;
-}
-
-@media screen and (max-width: 639px) {
-  .PageEmBreve .conteudo-intermediario .card h2 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
 }
 
 .PageEmBreve .conteudo-intermediario .card p {
@@ -462,14 +406,6 @@ footer.faq-footer .all-rights-reserved p:before {
   font-size: .875rem;
   font-weight: 400;
   line-height: 1.375rem;
-}
-
-@media screen and (max-width: 639px) {
-  .PageEmBreve .conteudo-intermediario .card p {
-    width: 17.5rem;
-    font-size: .75rem;
-    line-height: 1.25rem;
-  }
 }
 
 .PageEmBreve .conteudo-intermediario .card .formulario .input-icon-left {
@@ -517,18 +453,6 @@ footer.faq-footer .all-rights-reserved p:before {
   transform: translateY(-50%);
 }
 
-@media screen and (max-width: 639px) {
-  .PageEmBreve .conteudo-intermediario .card .formulario .input-icon-right img {
-    right: 15%;
-  }
-}
-
-@media screen and (max-width: 1447px) {
-  .PageEmBreve .conteudo-intermediario .card .formulario .input-icon-right img {
-    right: 25%;
-  }
-}
-
 .PageEmBreve .conteudo-intermediario .card .formulario .conteudo-final {
   align-items: center;
   gap: .5rem;
@@ -569,18 +493,6 @@ footer.faq-footer .all-rights-reserved p:before {
   left: 0;
 }
 
-@media screen and (max-width: 1281px) {
-  .PageEmBreve .conteudo .img-clouds img {
-    top: 95px;
-  }
-}
-
-@media screen and (max-width: 639px) {
-  .PageEmBreve .conteudo .img-clouds img {
-    top: -10vh;
-  }
-}
-
 .PageEmBreve .conteudo .img-circle img {
   width: 100%;
   height: 100%;
@@ -589,30 +501,6 @@ footer.faq-footer .all-rights-reserved p:before {
   top: 267px;
   bottom: 0;
   left: 0;
-}
-
-@media screen and (max-width: 1667px) {
-  .PageEmBreve .conteudo .img-circle img {
-    top: 265px;
-  }
-}
-
-@media screen and (max-width: 1372px) {
-  .PageEmBreve .conteudo .img-circle img {
-    top: 260px;
-  }
-}
-
-@media screen and (max-width: 1281px) {
-  .PageEmBreve .conteudo .img-circle img {
-    top: 245px;
-  }
-}
-
-@media screen and (max-width: 639px) {
-  .PageEmBreve .conteudo .img-circle img {
-    object-fit: contain;
-  }
 }
 
 .PageEmBreve .conteudo .conteudo-intermediario .img-airplane img {
@@ -624,36 +512,9 @@ footer.faq-footer .all-rights-reserved p:before {
   right: 30vh;
 }
 
-@media screen and (max-width: 1667px) {
-  .PageEmBreve .conteudo .conteudo-intermediario .img-airplane img {
-    bottom: 10vh;
-  }
-}
-
-@media screen and (max-width: 1447px) {
-  .PageEmBreve .conteudo .conteudo-intermediario .img-airplane img {
-    right: 25vh;
-  }
-}
-
-@media screen and (max-width: 1372px) {
-  .PageEmBreve .conteudo .conteudo-intermediario .img-airplane img {
-    bottom: 8vh;
-    right: 20vh;
-  }
-}
-
-@media screen and (max-width: 639px) {
-  .PageEmBreve .conteudo .conteudo-intermediario .img-airplane img {
-    width: 400px;
-    top: 25vh;
-    bottom: 0;
-    right: 1vh;
-  }
-}
-
 .PageEmBreve body {
   font-family: vinila;
+  font-size: 1rem;
   overflow: hidden;
 }
 
@@ -661,18 +522,6 @@ footer.faq-footer .all-rights-reserved p:before {
   background: #4f37ff;
   border-bottom: 1px solid #0000001a;
   padding: 1.25rem 0 1.25rem 5rem;
-}
-
-@media screen and (max-width: 1447px) {
-  .PageEmBreve body header {
-    padding-left: 4rem;
-  }
-}
-
-@media screen and (max-width: 639px) {
-  .PageEmBreve body header {
-    padding-left: 1.5rem;
-  }
 }
 
 .PageEmBreve body .conteudo .intro {
@@ -684,56 +533,11 @@ footer.faq-footer .all-rights-reserved p:before {
   transform: rotate(-10deg);
 }
 
-@media screen and (max-width: 639px) {
-  .PageEmBreve body .conteudo .intro {
-    margin-top: 7vh;
-  }
-}
-
-@media screen and (max-width: 1667px) {
-  .PageEmBreve body .conteudo .intro {
-    margin-top: 10vh;
-  }
-}
-
-@media screen and (max-width: 1281px) {
-  .PageEmBreve body .conteudo .intro {
-    margin-top: 8vh;
-  }
-}
-
 .PageEmBreve body .conteudo .intro h1 {
   color: #4f37ff;
   font-size: 5.5rem;
   font-weight: 900;
   line-height: 7rem;
-}
-
-@media screen and (max-width: 639px) {
-  .PageEmBreve body .conteudo .intro h1 {
-    text-align: center;
-    width: min-content;
-    font-size: 3rem;
-    line-height: 3.5rem;
-  }
-}
-
-@media screen and (max-width: 1667px) {
-  .PageEmBreve body .conteudo .intro h1 {
-    font-size: 4.5rem;
-  }
-}
-
-@media screen and (max-width: 1447px) {
-  .PageEmBreve body .conteudo .intro h1 {
-    font-size: 4rem;
-  }
-}
-
-@media screen and (max-width: 1281px) {
-  .PageEmBreve body .conteudo .intro h1 {
-    font-size: 3rem;
-  }
 }
 
 .PageEmBreve body .conteudo .conteudo-intermediario {

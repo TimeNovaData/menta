@@ -2,14 +2,10 @@ header.faq-menu
   background: $blue-500
   border-bottom: 1px solid rgba(0, 0, 0, 0.1)
   padding-block: 1.25rem
-  padding-inline: 5rem
+  padding-inline: 5vw
   display: flex
   justify-content: space-between
   gap: 1.5rem
-  @include d(xl)
-    padding-left: 4rem
-    @include d(sm)
-      padding-left: 1.5rem
 
   .logo
     svg
@@ -19,12 +15,14 @@ header.faq-menu
   nav
     display: flex
     align-items: center
+    @include d(md)
+      display: none
 
   ul
     display: flex
     align-items: center
     justify-content: space-between
-    width: 620px
+    width: 38.75rem
 
     a
       text-decoration: none
@@ -35,6 +33,8 @@ header.faq-menu
     width: 100%
     display: flex
     justify-content: space-between
+    @include d(md2)
+      display: none
 
     svg
       width: 1.5rem

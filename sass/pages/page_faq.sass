@@ -1,21 +1,9 @@
 &
   font-family: "vinila"
+  overflow-x: hidden
 
 .section-header
   @include section-header
-
-  h2.title-bg
-    background: $blue-500
-    color: $green-500
-    clip-path: polygon(0 20%, 99% 0%, 100% 80%, 1% 100%)
-    padding: 0.4rem 2.8rem
-
-  h2.relative
-    position: relative
-    left: 26%
-    @include d(sm)
-      padding-inline: 0
-      position: static
 
 .faq-cards
   background: $background
@@ -26,7 +14,6 @@
   padding-block: 6.25rem
   gap: 1.5rem
   padding-inline: 1.5rem
-
   @include d(sm)
     padding-inline: 0.5rem
     padding-block: 3.5rem 6.25rem

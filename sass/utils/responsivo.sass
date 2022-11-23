@@ -1,52 +1,28 @@
-// min2xl: { min: "1441px" },
-// 			// => @media (max-width: 1535px) { ... }
+$xl: 1920px
+$lg: 1440px
+$md2: 1024px
+$md: 800px
+$sm: 600px
 
-// 			"2xl": { max: "1667px" },
-// 			// => @media (max-width: 1535px) { ... }
-
-// 			xl: { max: "1367px" },
-// 			// => @media (max-width: 1279px) { ... }
-
-// 			lg: { max: "1281px" },
-// 			// => @media (max-width: 1023px) { ... }
-
-// 			md2: { max: "1180px" },
-// 			// => @media (max-width: 767px) { ... }
-
-// 			md: { max: "767px" },
-// 			// => @media (max-width: 767px) { ... }
-
-// 			sm: { max: "639px" },
-// 			// => @media (max-width: 639px) { ... }
-
-$min2xl: 1441px
-$max2xl: 1667px
-$xl: 1447px
-$lg: 1372px
-$md2: 1281px
-$md: 767px
-$sm: 639px
-
-//mixin media querie
+// Mixin media queries
 
 @mixin d($size)
-  @if $size== md2
-    @media screen and (max-width: $md2)
-      //acima do medio
-      @content
-
-  @else if $size== sm
-    @media screen and (max-width: $sm)
-      @content
-
-  @else if $size== max2xl
-    @media screen and (max-width: $max2xl)
-      @content
-
-  @else if $size== xl
+  @if $size== xl
     @media screen and (max-width: $xl)
       @content
 
   @else if $size== lg
     @media screen and (max-width: $lg)
+      @content
+
+  @else if $size== md2
+    @media screen and (max-width: $md2)
+      @content
+
+  @else if $size== md
+    @media screen and (max-width: $md)
+      @content
+
+  @else if $size== sm
+    @media screen and (max-width: $sm)
       @content
