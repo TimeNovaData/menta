@@ -20,6 +20,6 @@ if (PageFaq) {
 }
 
 const swiper = new Swiper(".swiper", {
-  direction: "horizontal",
-  freeMode: true,
+  slidesPerView: 2,
+  spaceBetween: 30,
 });
