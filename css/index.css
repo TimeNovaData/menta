@@ -300,6 +300,8 @@ footer.faq-footer .all-rights-reserved p:before {
 }
 
 .PageFaq .section-header h2.relative {
+  width: -moz-fit-content;
+  width: fit-content;
   position: relative;
   left: 26%;
 }
