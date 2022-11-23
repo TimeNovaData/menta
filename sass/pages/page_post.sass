@@ -1,36 +1,150 @@
-.post-container
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: center
-  max-width: 85.375rem
-  margin-inline: auto
-
-  .post-wrapper
-    max-width: 49.625rem
-    display: flex
-    flex-direction: column
-    gap: 2.5rem
-
-    .main-img
-      max-width: 56.0625rem
-
-    .post-header
-      display: flex
-      flex-direction: column
-      gap: 1rem
-
 h3
   font-size: 3rem
   font-weight: 900
   color: $blue-500
   margin-block: 0
+  line-height: 3.75rem
 
 h6
   font-size: 1.25rem
   font-weight: 700
   color: $gray-900
   line-height: 1.75rem
+  margin-block: 0
 
 p
-  line-height: 1.75rem
+  line-height: 1.5rem
+
+.post-container
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  max-width: 85.375rem
+  width: 100%
+  margin-inline: auto
+  padding-inline: 1.5rem
+
+  a.back-button
+    margin-block: 2.5rem
+    padding-inline: 5vw
+    width: 100%
+    text-decoration: none
+    color: $blue-500
+    font-weight: 700
+
+    display: flex
+    align-items: center
+    gap: .75rem
+
+  svg
+    width: .625rem
+    height: 1.0625rem
+
+  .post-wrapper
+    max-width: 49.625rem
+    width: 100%
+    display: flex
+    flex-direction: column
+    gap: 2.5rem
+    @include d(md)
+      gap: 1.5rem
+
+    .main-img
+      max-width: 56.0625rem
+    img
+      border-radius: 16px 16px 0 0
+
+    .post-header
+      display: flex
+      flex-direction: column
+      gap: 1rem
+
+      .post-infos
+        color: $gray-600
+        display: flex
+        align-items: center
+        gap: 1.25rem
+        @include d(md)
+          flex-direction: column
+          align-items: flex-start
+          gap: .5rem
+
+        .post-info
+          display: flex
+          align-items: center
+          gap: .625rem
+      svg
+        color: $gray-600
+        width: 1.5rem
+        height: 1.5rem
+
+    .post-content
+      display: flex
+      flex-direction: column
+      gap: 1rem
+
+    .post-columns
+      display: flex
+      justify-content: center
+      align-items: center
+      gap: 2rem
+      @include d(md)
+        flex-direction: column
+
+  .author-container
+    display: grid
+    grid-template-columns: 56px 1fr
+    gap: 1rem
+    padding-block: 3.4375rem
+    border-block: 1px solid $gray-300
+
+    .author-info
+      display: flex
+      flex-direction: column
+      gap: .5rem
+      strong
+        font-size: 1.125rem
+      span
+        font-weight: 300
+        line-height: 1.5rem
+
+  .next-reading
+    padding-bottom: 5.25rem
+    h5
+      color: $blue-600
+      font-size: 1.5rem
+      margin-block: 1rem 2rem
+
+    h6
+      color: $blue-500
+      line-height: 1.75rem
+      text-align: center
+
+    img
+      border-radius: 8px
+
+    .next-post-cards
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      gap: 1.9688rem
+
+      .next-post-card
+        display: flex
+        flex-direction: column
+        height: 16rem
+        gap: 1rem
+
+        a
+          color: $blue-500
+          text-decoration: none
+          margin-top: auto
+          margin-left: auto
+
+          display: flex
+          align-items: center
+          gap: .5938rem
+
+          svg
+            width: .9375rem
+            height: .7813rem

@@ -364,7 +364,7 @@ footer.faq-footer .all-rights-reserved p:before {
 }
 
 .PageFaq .faq-card .faq-card-title svg {
-  width: 32px;
+  width: 2rem;
   height: 2rem;
 }
 
@@ -547,24 +547,74 @@ footer.faq-footer .all-rights-reserved p:before {
   display: flex;
 }
 
+.PagePost h3 {
+  color: #4f37ff;
+  margin-block: 0;
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 3.75rem;
+}
+
+.PagePost h6 {
+  color: #0f0f0f;
+  margin-block: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+}
+
+.PagePost p {
+  line-height: 1.5rem;
+}
+
 .PagePost .post-container {
   max-width: 85.375rem;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-inline: auto;
+  padding-inline: 1.5rem;
   display: flex;
+}
+
+.PagePost .post-container a.back-button {
+  width: 100%;
+  color: #4f37ff;
+  align-items: center;
+  gap: .75rem;
+  margin-block: 2.5rem;
+  padding-inline: 5vw;
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+}
+
+.PagePost .post-container svg {
+  width: .625rem;
+  height: 1.0625rem;
 }
 
 .PagePost .post-container .post-wrapper {
   max-width: 49.625rem;
+  width: 100%;
   flex-direction: column;
   gap: 2.5rem;
   display: flex;
 }
 
+@media screen and (max-width: 800px) {
+  .PagePost .post-container .post-wrapper {
+    gap: 1.5rem;
+  }
+}
+
 .PagePost .post-container .post-wrapper .main-img {
   max-width: 56.0625rem;
+}
+
+.PagePost .post-container .post-wrapper img {
+  border-radius: 16px 16px 0 0;
 }
 
 .PagePost .post-container .post-wrapper .post-header {
@@ -573,22 +623,121 @@ footer.faq-footer .all-rights-reserved p:before {
   display: flex;
 }
 
-.PagePost h3 {
+.PagePost .post-container .post-wrapper .post-header .post-infos {
+  color: #474747;
+  align-items: center;
+  gap: 1.25rem;
+  display: flex;
+}
+
+@media screen and (max-width: 800px) {
+  .PagePost .post-container .post-wrapper .post-header .post-infos {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .5rem;
+  }
+}
+
+.PagePost .post-container .post-wrapper .post-header .post-infos .post-info {
+  align-items: center;
+  gap: .625rem;
+  display: flex;
+}
+
+.PagePost .post-container .post-wrapper .post-header svg {
+  color: #474747;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.PagePost .post-container .post-wrapper .post-content {
+  flex-direction: column;
+  gap: 1rem;
+  display: flex;
+}
+
+.PagePost .post-container .post-wrapper .post-columns {
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  display: flex;
+}
+
+@media screen and (max-width: 800px) {
+  .PagePost .post-container .post-wrapper .post-columns {
+    flex-direction: column;
+  }
+}
+
+.PagePost .post-container .author-container {
+  border-block: 1px solid #a3a3a3;
+  grid-template-columns: 56px 1fr;
+  gap: 1rem;
+  padding-block: 3.4375rem;
+  display: grid;
+}
+
+.PagePost .post-container .author-container .author-info {
+  flex-direction: column;
+  gap: .5rem;
+  display: flex;
+}
+
+.PagePost .post-container .author-container .author-info strong {
+  font-size: 1.125rem;
+}
+
+.PagePost .post-container .author-container .author-info span {
+  font-weight: 300;
+  line-height: 1.5rem;
+}
+
+.PagePost .post-container .next-reading {
+  padding-bottom: 5.25rem;
+}
+
+.PagePost .post-container .next-reading h5 {
+  color: #1d00f5;
+  margin-block: 1rem 2rem;
+  font-size: 1.5rem;
+}
+
+.PagePost .post-container .next-reading h6 {
   color: #4f37ff;
-  margin-block: 0;
-  font-size: 3rem;
-  font-weight: 900;
-}
-
-.PagePost h6 {
-  color: #0f0f0f;
-  font-size: 1.25rem;
-  font-weight: 700;
+  text-align: center;
   line-height: 1.75rem;
 }
 
-.PagePost p {
-  line-height: 1.75rem;
+.PagePost .post-container .next-reading img {
+  border-radius: 8px;
+}
+
+.PagePost .post-container .next-reading .next-post-cards {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.9688rem;
+  display: grid;
+}
+
+.PagePost .post-container .next-reading .next-post-cards .next-post-card {
+  height: 16rem;
+  flex-direction: column;
+  gap: 1rem;
+  display: flex;
+}
+
+.PagePost .post-container .next-reading .next-post-cards .next-post-card a {
+  color: #4f37ff;
+  align-items: center;
+  gap: .5938rem;
+  margin-top: auto;
+  margin-left: auto;
+  text-decoration: none;
+  display: flex;
+}
+
+.PagePost .post-container .next-reading .next-post-cards .next-post-card a svg {
+  width: .9375rem;
+  height: .7813rem;
 }
 
 /*# sourceMappingURL=index.css.map */
