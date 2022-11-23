@@ -76,6 +76,7 @@ header.faq-menu {
   background: #4f37ff;
   border-bottom: 1px solid #0000001a;
   justify-content: space-between;
+  gap: 1.5rem;
   padding-block: 1.25rem;
   padding-inline: 5rem;
   display: flex;
@@ -104,8 +105,9 @@ header.faq-menu nav {
 }
 
 header.faq-menu ul {
+  width: 620px;
+  justify-content: space-between;
   align-items: center;
-  gap: 2.5rem;
   display: flex;
 }
 
@@ -115,8 +117,9 @@ header.faq-menu ul a {
 }
 
 header.faq-menu .social-media {
+  max-width: 200px;
+  width: 100%;
   justify-content: space-between;
-  gap: 2.1875rem;
   display: flex;
 }
 
@@ -148,6 +151,7 @@ footer.faq-footer .footer-wrapper {
     flex-direction: column;
     align-items: flex-start;
     gap: 1.5rem;
+    padding: 1.5rem 1rem;
   }
 }
 
@@ -208,11 +212,31 @@ footer.faq-footer .footer-wrapper {
 
 footer.faq-footer .all-rights-reserved {
   width: 100%;
+  text-align: center;
   border-top: 1px solid #fff;
   justify-content: center;
   align-items: center;
   padding-block: 1.6rem;
   display: flex;
+}
+
+@media screen and (max-width: 639px) {
+  footer.faq-footer .all-rights-reserved {
+    flex-direction: column;
+  }
+
+  footer.faq-footer .all-rights-reserved span, footer.faq-footer .all-rights-reserved p {
+    font-size: .875rem;
+  }
+
+  footer.faq-footer .all-rights-reserved p:before {
+    content: "";
+  }
+}
+
+footer.faq-footer .all-rights-reserved p:before {
+  content: "•";
+  padding-inline: 8px;
 }
 
 .PageFaq {
@@ -364,7 +388,7 @@ footer.faq-footer .all-rights-reserved {
   line-height: 2rem;
 }
 
-.PageFaq .faq-card .faq-card-title h5 span {
+.PageFaq .faq-card span {
   color: #0f0f0f;
   font-size: 1rem;
   line-height: 1.5rem;

@@ -1,5 +1,5 @@
 @mixin section-header()
-  background: #00FF8C
+  background: $green-500
   display: flex
   justify-content: space-between
   gap: 4rem
@@ -16,15 +16,15 @@
 
   h2
     font-size: 3.375rem //54px
-    color: #4F37FF
+    color: $blue-500
     text-transform: uppercase
     line-height: 72px
     @include d(sm)
       margin-inline: .25rem
 
   h2.title-bg
-    background: #4F37FF
-    color: #00FF8C
+    background: $blue-500
+    color: $green-500
     clip-path: polygon(0 20%, 99% 0%, 100% 80%, 1% 100%)
     padding: 0.4rem 2.8rem
     text-align: center
@@ -49,8 +49,8 @@
       margin-bottom: 0
 
 @mixin title-bg()
-  background: #4F37FF
-  color: #00FF8C
+  background: $blue-500
+  color: $green-500
   clip-path: polygon(0 20%, 99% 0%, 100% 80%, 1% 100%)
   padding: 0.4rem 2.8rem
 
@@ -58,7 +58,7 @@
   max-width: 1000px
   width: 100%
   padding: 1.5rem
-  background: #FFFFFF
+  background: $white
   box-shadow: 0px 1px 4px rgba(16, 11, 55, 0.2), 0px 3px 16px rgba(16, 11, 55, 0.1)
   border-radius: 8px
   display: flex
@@ -77,12 +77,12 @@
     h5
       font-size: 1.5rem
       font-weight: bold
-      color: #1202A4
+      color: $blue-800
       line-height: 2rem
       margin-block: 0
       padding-block: 0
 
-      span
-        font-size: 1rem
-        color: #0F0F0F
-        line-height: 1.5rem
+  span
+    font-size: 1rem
+    color: $gray-900
+    line-height: 1.5rem

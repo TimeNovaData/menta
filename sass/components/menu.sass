@@ -1,10 +1,11 @@
 header.faq-menu
-  background: #4F37FF
+  background: $blue-500
   border-bottom: 1px solid rgba(0, 0, 0, 0.1)
   padding-block: 1.25rem
   padding-inline: 5rem
   display: flex
   justify-content: space-between
+  gap: 1.5rem
   @include d(xl)
     padding-left: 4rem
     @include d(sm)
@@ -22,16 +23,18 @@ header.faq-menu
   ul
     display: flex
     align-items: center
-    gap: 2.5rem
+    justify-content: space-between
+    width: 620px
 
     a
       text-decoration: none
       color: white
 
   .social-media
+    max-width: 200px
+    width: 100%
     display: flex
     justify-content: space-between
-    gap: 2.1875rem
 
     svg
       width: 1.5rem

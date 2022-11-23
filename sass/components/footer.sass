@@ -17,6 +17,7 @@ footer.faq-footer
       align-items: flex-start
       text-align: left
       gap: 1.5rem
+      padding: 1.5rem 1rem
 
 .about-menta
   display: flex
@@ -73,3 +74,14 @@ footer.faq-footer
     display: flex
     justify-content: center
     align-items: center
+    text-align: center
+    @include d(sm)
+      flex-direction: column
+      span, p
+        font-size: .875rem
+      p::before
+        content: ''
+
+    p::before
+      content: '•'
+      padding-inline: 8px
