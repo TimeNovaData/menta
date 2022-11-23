@@ -712,20 +712,36 @@ footer.faq-footer .all-rights-reserved p:before {
   border-radius: 8px;
 }
 
-.PagePost .post-container .next-reading .next-post-cards {
+.PagePost .post-container .swiper {
+  width: 100%;
+  margin-inline: 0;
+  overflow: hidden;
+}
+
+.PagePost .post-container .swiper .swiper-wrapper {
+  overflow: visible;
+}
+
+.PagePost .post-container .swiper .swiper-wrapper .swiper-slide {
+  max-width: 15.1875rem;
+  width: 100%;
+  overflow: visible;
+}
+
+.PagePost .post-container .swiper .next-post-cards {
   grid-template-columns: repeat(3, 1fr);
   gap: 1.9688rem;
   display: grid;
 }
 
-.PagePost .post-container .next-reading .next-post-cards .next-post-card {
+.PagePost .post-container .swiper .next-post-cards .next-post-card {
   height: 16rem;
   flex-direction: column;
   gap: 1rem;
   display: flex;
 }
 
-.PagePost .post-container .next-reading .next-post-cards .next-post-card a {
+.PagePost .post-container .swiper .next-post-cards .next-post-card a {
   color: #4f37ff;
   align-items: center;
   gap: .5938rem;
@@ -735,7 +751,7 @@ footer.faq-footer .all-rights-reserved p:before {
   display: flex;
 }
 
-.PagePost .post-container .next-reading .next-post-cards .next-post-card a svg {
+.PagePost .post-container .swiper .next-post-cards .next-post-card a svg {
   width: .9375rem;
   height: .7813rem;
 }

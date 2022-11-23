@@ -9,6 +9,12 @@
 
     <!-- FONT VINILA -->
     <link rel="stylesheet" href="https://use.typekit.net/uts8dxl.css" />
+
+    <!-- SWIPER -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
   </head>
   <body class="page-post">
     <main id="PagePost">
@@ -158,7 +164,7 @@
 
           <div class="author-container">
             <div class="avatar">
-              <img src="./assets/img/post_avatar.png" alt="">
+              <img src="./assets/img/post_avatar.png" alt="" />
             </div>
 
             <div class="author-info">
@@ -172,11 +178,11 @@
             </div>
           </div>
 
-          <div class="next-reading">
+          <div class="next-reading swiper">
             <h5>O que ler em seguida:</h5>
-            <div class="next-post-cards">
-              <div class="next-post-card">
-                <img src="./assets/img/nxt_post1.png" alt="">
+            <div class="next-post-cards swiper-wrapper">
+              <div class="next-post-card swiper-slide">
+                <img src="./assets/img/nxt_post1.png" alt="" />
                 <h6>Título do post do blog com duas linhas saca?</h6>
                 <a href="#">
                   Leia mais
@@ -185,9 +191,9 @@
                   </svg>
                 </a>
               </div>
-  
-              <div class="next-post-card">
-                <img src="./assets/img/nxt_post2.png" alt="">
+
+              <div class="next-post-card swiper-slide">
+                <img src="./assets/img/nxt_post2.png" alt="" />
                 <h6>Título do post do blog</h6>
                 <a href="#">
                   Leia mais
@@ -196,9 +202,9 @@
                   </svg>
                 </a>
               </div>
-  
-              <div class="next-post-card">
-                <img src="./assets/img/nxt_post3.png" alt="">
+
+              <div class="next-post-card swiper-slide">
+                <img src="./assets/img/nxt_post3.png" alt="" />
                 <h6>Título do post do blog bem grande com ma...</h6>
                 <a href="#">
                   Leia mais
@@ -207,7 +213,6 @@
                   </svg>
                 </a>
               </div>
-
             </div>
           </div>
         </div>
@@ -217,6 +222,7 @@
         <!-- AJAX -->
       </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/index.js" type="module"></script>
   </body>
 </html>

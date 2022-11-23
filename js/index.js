@@ -18,3 +18,8 @@ if (PageFaq) {
   getElementAndappend(".menu-container", "../../templates/parts/menu.html");
   getElementAndappend(".footer-container", "../../templates/parts/footer.html");
 }
+
+const swiper = new Swiper(".swiper", {
+  direction: "horizontal",
+  freeMode: true,
+});
