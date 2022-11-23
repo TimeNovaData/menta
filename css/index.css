@@ -741,4 +741,48 @@ footer.faq-footer .all-rights-reserved p:before {
   display: flex;
 }
 
+.PagePost .post-container {
+  max-width: 85.375rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+  display: flex;
+}
+
+.PagePost .post-container .post-wrapper {
+  max-width: 49.625rem;
+  flex-direction: column;
+  gap: 2.5rem;
+  display: flex;
+}
+
+.PagePost .post-container .post-wrapper .main-img {
+  max-width: 56.0625rem;
+}
+
+.PagePost .post-container .post-wrapper .post-header {
+  flex-direction: column;
+  gap: 1rem;
+  display: flex;
+}
+
+.PagePost h3 {
+  color: #4f37ff;
+  margin-block: 0;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.PagePost h6 {
+  color: #0f0f0f;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+}
+
+.PagePost p {
+  line-height: 1.75rem;
+}
+
 /*# sourceMappingURL=index.css.map */
