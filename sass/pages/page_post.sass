@@ -123,40 +123,24 @@ p
 
     img
       border-radius: 8px
+      width: 100%
 
-  .swiper
-    margin-inline: 0
-    overflow: hidden
-    width: 100%
+    .next-post-card
+      display: flex
+      flex-direction: column
+      min-height: 16rem
+      gap: 1rem
 
-    .swiper-wrapper
-      overflow: visible
+      a
+        color: $blue-500
+        text-decoration: none
+        margin-top: auto
+        margin-left: auto
 
-      .swiper-slide
-        overflow: visible
-        max-width: 15.1875rem
-        width: 100%
-
-    .next-post-cards
-      display: grid
-      grid-template-columns: repeat(3, 1fr)
-
-      .next-post-card
         display: flex
-        flex-direction: column
-        height: 16rem
-        gap: 1rem
+        align-items: center
+        gap: .5938rem
 
-        a
-          color: $blue-500
-          text-decoration: none
-          margin-top: auto
-          margin-left: auto
-
-          display: flex
-          align-items: center
-          gap: .5938rem
-
-          svg
-            width: .9375rem
-            height: .7813rem
+        svg
+          width: .9375rem
+          height: .7813rem

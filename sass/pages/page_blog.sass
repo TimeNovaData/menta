@@ -1,0 +1,148 @@
+&
+  background: $background
+
+.section-header
+  @include section-header
+  align-items: center
+  padding-top: 0
+  @include d(md)
+    padding-top: 1.6rem
+  .title-bg
+    align-self: center
+  .blog-img
+    max-width: 28.3125rem
+    padding-top: 1rem
+    margin-bottom: -1.5rem
+    img
+      width: 100%
+    @include d(md)
+      margin-left: auto
+      padding-top: 0
+
+.blog-wrapper
+  max-width: 1206px
+  margin-block: 6.25rem
+  display: flex
+  flex-direction: column
+  margin-inline: auto
+  padding-inline: 1.5rem
+  gap: 2rem
+
+  .main-card
+    width: 100%
+    display: grid
+    grid-template-columns: 1fr 1fr
+    align-items: center
+    background: $white
+    box-shadow: 0px 1px 4px rgba(16, 11, 55, 0.2), 0px 3px 16px rgba(16, 11, 55, 0.1)
+    border-radius: 16px
+    @include d(md)
+      grid-template-columns: 1fr
+
+    .main-card-img
+      height: 100%
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: bottom
+      border-radius: 16px 0 0 16px
+      @include d(md)
+        border-radius: 16px 16px 0 0
+
+    .main-card-info
+      padding: 1.8rem
+      display: flex
+      flex-direction: column
+      gap: 1.5rem
+
+    h5
+      font-size: 1.5rem
+      color: $blue-500
+      line-height: 32px
+      margin-block: 0
+
+    p
+      line-height: 1.5rem
+      color: $gray-900
+
+    a
+      color: $blue-500
+      text-decoration: none
+      margin-top: 2.5rem
+      margin-left: auto
+
+      display: flex
+      align-items: center
+      gap: .5938rem
+
+      svg
+        width: .9375rem
+        height: .7813rem
+
+  .swiper
+    margin-inline: 0
+
+    .swiper-slide
+      box-shadow: 0px 1px 4px rgba(16, 11, 55, 0.2), 0px 3px 16px rgba(16, 11, 55, 0.1)
+      border-radius: 8px
+
+  .blog-card
+    @include blog-card
+
+  .menta-way
+    width: 100%
+    border-radius: 8px
+    margin-block: 2.25rem
+    padding: 4.5rem 1.5rem
+    background: url('../assets/img/blog_img2.png') no-repeat
+    background-size: cover
+    color: $white
+    text-align: center
+
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    gap: .5rem
+
+    a
+      margin-top: 2rem
+      background: $blue-500
+      color: $white
+      text-decoration: none
+      font-weight: 700
+      padding-block: .75rem
+
+      display: flex
+      justify-content: center
+      max-width: 23.75rem
+      width: 100%
+      border-radius: 8px
+
+  h3
+    font-size: 3rem
+    font-weight: 900
+    margin-block: 0
+    line-height: 3.75rem
+
+.see-more
+  display: flex
+  justify-content: center
+
+  a
+    color: $blue-500
+    text-decoration: none
+    font-weight: 700
+    border: 1px solid $blue-500
+    margin-top: 32px
+    max-width: 36.8125rem
+    width: 100%
+    padding: 1.125rem
+    text-align: center
+    border-radius: 12px
+    transition: all 0.2s
+  a:hover
+    background: $blue-500
+    color: $white
