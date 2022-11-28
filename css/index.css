@@ -1109,7 +1109,7 @@ main {
 }
 
 .PageBlog .modal .card-form .form-columns {
-  gap: 2vw;
+  gap: 1.8vw;
   display: flex;
 }
 
@@ -1127,7 +1127,8 @@ main {
   background-clip: padding-box;
   border: 0;
   outline: 0;
-  padding: .375rem .75rem;
+  padding-block: .375rem;
+  padding-inline: .625rem 0;
   font-size: 1rem;
   display: block;
 }
@@ -1188,7 +1189,7 @@ main {
   border: 1px solid #c8c2ff;
   border-radius: .75rem;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 0 1rem 1rem;
   display: flex;
 }
 
