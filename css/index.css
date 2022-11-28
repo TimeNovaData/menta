@@ -1054,6 +1054,7 @@ main {
   width: 100vw;
   height: 100vh;
   background: #00000059;
+  display: none;
   position: fixed;
   top: 0;
   left: 0;

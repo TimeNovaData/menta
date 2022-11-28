@@ -48,26 +48,24 @@ if (PageFaq) {
 
 }
 
-// ==== MODAL ====
+const switchModal = () => {
+  const modal = document.querySelector(".modal");
+  let actualStyle = modal.style.display;
+  if (actualStyle == "block") {
+    modal.style.display = "none";
+  } else {
+    modal.style.display = "block";
+  }
+};
 
-// const switchModal = () => {
-//   const modal = document.querySelector(".modal");
-//   let actualStyle = modal.style.display;
-//   if (actualStyle == "block") {
-//     modal.style.display = "none";
-//   } else {
-//     modal.style.display = "block";
-//   }
-// };
+const btn = document.querySelector(".modal-btn");
+btn.addEventListener("click", switchModal);
 
-// const btn = document.querySelector(".modal-btn");
-// btn.addEventListener("click", switchModal);
+window.onclick = function (event) {
+  event.preventDefault();
 
-// window.onclick = function (event) {
-//   event.preventDefault();
-
-//   const modal = document.querySelector(".modal");
-//   if (event.target == modal) {
-//     switchModal();
-//   }
-// };
+  const modal = document.querySelector(".modal");
+  if (event.target == modal) {
+    switchModal();
+  }
+};
