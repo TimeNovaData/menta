@@ -1094,6 +1094,20 @@ main {
   box-shadow: 0 1px 4px #100b3733, 0 3px 16px #100b371a;
 }
 
+.PageBlog .modal .card-form .input-validation-field {
+  flex-direction: column;
+  gap: .25rem;
+  display: flex;
+  position: relative;
+}
+
+.PageBlog .modal .card-form .input-validation-field p {
+  color: #c82400;
+  font-size: .75rem;
+  position: absolute;
+  top: 4.25rem;
+}
+
 .PageBlog .modal .card-form .form-columns {
   gap: 2vw;
   display: flex;
@@ -1184,7 +1198,7 @@ main {
   background-repeat: no-repeat;
   background-size: 1.5rem;
   padding-right: 1.125rem;
-  border: 2px solid green !important;
+  border: 1px solid #1cc800 !important;
 }
 
 .PageBlog .input-field.valido input {
@@ -1196,8 +1210,8 @@ main {
   background-position: right 1.125rem center;
   background-repeat: no-repeat;
   background-size: 1.5rem;
-  padding-right: 1.125rem;
-  border: 2px solid #dc3545 !important;
+  padding-right: 1rem;
+  border: 2px solid #c82400 !important;
 }
 
 .PageBlog .input-field.invalido input {

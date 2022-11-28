@@ -187,58 +187,69 @@
           </span>
         </header>
         <form id="form">
-          <label class="input-field">
-            <svg>
-              <use xlink:href="#icon-user-solid"></use>
-            </svg>
-            <input
-              type="text"
-              placeholder="Nome completo*"
-              name="name"
-              id="name"
-              autofocus
-              data-tipo="name"
-            />
-          </label>
-          <div class="form-columns">
+          <div class="input-validation-field">
             <label class="input-field">
               <svg>
-                <use xlink:href="#icon-calendar-day-solid"></use>
+                <use xlink:href="#icon-user-solid"></use>
               </svg>
               <input
                 type="text"
-                placeholder="Data de nascimento"
-                id="date"
-                name="date"
-                class="form__input form-control"
-                data-tipo="date"
+                placeholder="Nome completo*"
+                name="name"
+                id="name"
+                autofocus
+                data-tipo="name"
               />
             </label>
-            <label class="input-field">
-              <svg>
-                <use xlink:href="#icon-phone-solid"></use>
-              </svg>
-              <input
-                type="text"
-                placeholder="Telefone de contato"
-                name="tel"
-                id="tel"
-                data-tipo="tel"
-              />
-            </label>
+            <p class="name-msg"></p>
           </div>
-          <label class="input-field">
-            <svg>
-              <use xlink:href="#icon-email"></use>
-            </svg>
-            <input
-              type="text"
-              placeholder="E-mail*"
-              name="email"
-              id="email"
-              data-tipo="email"
-            />
-          </label>
+          <div class="form-columns">
+            <div class="input-validation-field">
+              <label class="input-field">
+                <svg>
+                  <use xlink:href="#icon-calendar-day-solid"></use>
+                </svg>
+                <input
+                  type="text"
+                  placeholder="Data de nascimento"
+                  id="date"
+                  name="date"
+                  data-tipo="date"
+                />
+              </label>
+              <p class="date-msg"></p>
+            </div>
+            <div class="input-validation-field">
+              <label class="input-field">
+                <svg>
+                  <use xlink:href="#icon-phone-solid"></use>
+                </svg>
+                <input
+                  type="text"
+                  placeholder="Telefone de contato"
+                  name="tel"
+                  id="tel"
+                  data-tipo="tel"
+                />
+              </label>
+              <p class="tel-msg"></p>
+            </div>
+          </div>
+          <div class="input-validation-field">
+            <label class="input-field">
+              <svg>
+                <use xlink:href="#icon-email"></use>
+              </svg>
+              <input
+                type="text"
+                placeholder="E-mail*"
+                name="email"
+                id="email"
+                data-tipo="email"
+              />
+            </label>
+            <p class="email-msg"></p>
+          </div>
           <footer>
             <a href="/" class="icon-question">
               <svg>

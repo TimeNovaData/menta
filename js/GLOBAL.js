@@ -16,17 +16,37 @@ const GLOBAL = {
     const valido = GLOBAL.testPattern[tipo](value);
     const wrapper = currentTarget.closest(".input-field");
 
+    const nameMessage = document.querySelector('.name-msg')
+    const dateMessage = document.querySelector('.date-msg')
+    const telMessage = document.querySelector('.tel-msg')
+    const emailMessage = document.querySelector('.email-msg')
+
     if (!wrapper) return;
 
     if (valido) {
       wrapper.classList.add("valido");
       wrapper.classList.remove("invalido");
+      nameMessage.innerHTML = ''
+      dateMessage.innerHTML = ''
+      telMessage.innerHTML = ''
+      emailMessage.innerHTML = ''
+
     } else {
       wrapper.classList.remove("valido");
       wrapper.classList.add("invalido");
 
       currentTarget.addEventListener("keyup", GLOBAL.validaAi);
       currentTarget.removeEventListener("change", GLOBAL.validaAi);
+
+      if (tipo === 'name') {
+        nameMessage.innerHTML = 'Insira um nome válido'
+      } else if (tipo === 'date') {
+        dateMessage.innerHTML = 'Insira uma data válida'
+      } else if (tipo === 'tel') {
+        telMessage.innerHTML = 'Insira um telefone válido'
+      } else {
+        emailMessage.innerHTML = 'Insira um e-mail válido'
+      }
     }
   },
 };
