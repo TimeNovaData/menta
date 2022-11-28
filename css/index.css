@@ -321,7 +321,7 @@ main {
 @media screen and (max-width: 600px) {
   .PageFaq .section-header .title-bg {
     width: 95%;
-    padding-inline: .25rem;
+    padding-inline: 1.5rem;
   }
 }
 
@@ -356,6 +356,12 @@ main {
     max-width: 100vw;
     margin-left: auto;
     position: static;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .PageFaq .section-header .title-bg {
+    padding-inline: .25rem;
   }
 }
 
@@ -833,7 +839,7 @@ main {
 @media screen and (max-width: 600px) {
   .PageBlog .section-header .title-bg {
     width: 95%;
-    padding-inline: .25rem;
+    padding-inline: 1.5rem;
   }
 }
 
