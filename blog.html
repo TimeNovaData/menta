@@ -15,8 +15,9 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
+    <script src="./js/GLOBAL.js"></script>
   </head>
-  <body class="page-blog">
+  <body>
     <div class="svg-container">
       <!-- AJAX -->
     </div>
@@ -79,7 +80,6 @@
                 </a>
               </div>
             </div>
-            <!--FIM DO SWIPER SLIDE -->
 
             <div class="swiper-slide">
               <div class="blog-card">
@@ -93,7 +93,6 @@
                 </a>
               </div>
             </div>
-            <!--FIM DO SWIPER SLIDE -->
 
             <div class="swiper-slide">
               <div class="blog-card">
@@ -107,11 +106,8 @@
                 </a>
               </div>
             </div>
-            <!--FIM DO SWIPER SLIDE -->
           </div>
-          <!--FIM DO SWIPER WRAPPER -->
         </div>
-        <!--FIM DO SWIPER -->
 
         <div class="menta-way">
           <h3>A Menta vai mudar o jeito de viajar!</h3>
@@ -119,7 +115,9 @@
             >Com passagens ultra acessíveis para todos e para todo o
             Brasil!</span
           >
-          <a href="#">Fique por dentro e descubra como!</a>
+          <button type="button" class="modal-btn">
+            Fique por dentro e descubra como!
+          </button>
         </div>
 
         <div class="swiper swiper-cards">
@@ -168,7 +166,6 @@
           </div>
           <!--FIM DO SWIPER WRAPPER -->
         </div>
-        <!--FIM DO SWIPER -->
 
         <div class="see-more">
           <a href="#">Ver mais</a>
@@ -179,6 +176,88 @@
         <!-- AJAX -->
       </div>
     </main>
+
+    <div id="dv-modal" class="modal">
+      <div class="card-form">
+        <header>
+          <h4>Voar nunca foi tão barato!</h4>
+          <span>
+            Cadastre-se e seja o primeiro a saber todo o passo a passo da Menta
+            e receber as primeiras oferdas de lançamento
+          </span>
+        </header>
+        <form id="form">
+          <label class="input-field">
+            <svg>
+              <use xlink:href="#icon-user-solid"></use>
+            </svg>
+            <input
+              type="text"
+              placeholder="Nome completo*"
+              name="name"
+              id="name"
+              autofocus
+              data-tipo="name"
+            />
+          </label>
+          <div class="form-columns">
+            <label class="input-field">
+              <svg>
+                <use xlink:href="#icon-calendar-day-solid"></use>
+              </svg>
+              <input
+                type="text"
+                placeholder="Data de nascimento"
+                id="date"
+                name="date"
+                class="form__input form-control"
+                data-tipo="date"
+              />
+            </label>
+            <label class="input-field">
+              <svg>
+                <use xlink:href="#icon-phone-solid"></use>
+              </svg>
+              <input
+                type="text"
+                placeholder="Telefone de contato"
+                name="tel"
+                id="tel"
+                data-tipo="tel"
+              />
+            </label>
+          </div>
+          <label class="input-field">
+            <svg>
+              <use xlink:href="#icon-email"></use>
+            </svg>
+            <input
+              type="text"
+              placeholder="E-mail*"
+              name="email"
+              id="email"
+              data-tipo="email"
+            />
+          </label>
+          <footer>
+            <a href="/" class="icon-question">
+              <svg>
+                <use xlink:href="#icon-circle-question"></use>
+              </svg>
+            </a>
+            <button type="submit" class="modal-btn submit-btn">
+              Inscrever-se
+              <svg>
+                <use xlink:href="#icon-airplane"></use>
+              </svg>
+            </button>
+          </footer>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/imask"></script>
+    <script src="https://unpkg.com/just-validate-plugin-date@1.2.0/dist/just-validate-plugin-date.production.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/index.js" type="module"></script>
   </body>

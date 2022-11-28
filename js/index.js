@@ -1,4 +1,5 @@
 import getElementAndappend from "./modules/getElementAndappend.js";
+import swiperProps from "./modules/swiperProps.js";
 
 const PageEmBreve = document.querySelector("#PageEmBreve");
 const PageFaq = document.querySelector("#PageFaq");
@@ -14,28 +15,59 @@ if (PageFaq) {
 } else if (PageEmBreve) {
   document.body.classList.add("PageEmBreve");
   getElementAndappend(".menu-container", "../../templates/parts/menu.html");
+  //
 } else if (PagePost) {
   document.body.classList.add("PagePost");
   getElementAndappend(".menu-container", "../../templates/parts/menu.html");
   getElementAndappend(".footer-container", "../../templates/parts/footer.html");
+  const swiper = new Swiper(".swiper-cards", swiperProps.default);
+  //
+
 } else if (PageBlog) {
   document.body.classList.add("PageBlog");
   getElementAndappend(".menu-container", "../../templates/parts/menu.html");
   getElementAndappend(".footer-container", "../../templates/parts/footer.html");
+  const swiper = new Swiper(".swiper-cards", swiperProps.default);
+
+  const formFields = {
+    nameInput: document.querySelector("#name"),
+    dateInput: document.querySelector("#date"),
+    telInput: document.querySelector("#tel"),
+    emailInput: document.querySelector("#email"),
+    //
+  };
+
+  IMask(formFields.dateInput, { mask: "00/00/0000" });
+  IMask(formFields.telInput, { mask: "(00) 00000-0000" });
+
+  Object
+    .entries(formFields)
+    .map(([_, field]) => {
+      field.addEventListener("change", GLOBAL.validaAi);
+    });
+
 }
 
-const swiper = new Swiper(".swiper-cards", {
-  slidesPerView: 1.2,
-  spaceBetween: 32,
-  breakpoints: {
-    640: {
-      slidesPerView: 2,
-    },
-    768: {
-      slidesPerView: 2.5,
-    },
-    1024: {
-      slidesPerView: 3,
-    },
-  },
-});
+// ==== MODAL ====
+
+// const switchModal = () => {
+//   const modal = document.querySelector(".modal");
+//   let actualStyle = modal.style.display;
+//   if (actualStyle == "block") {
+//     modal.style.display = "none";
+//   } else {
+//     modal.style.display = "block";
+//   }
+// };
+
+// const btn = document.querySelector(".modal-btn");
+// btn.addEventListener("click", switchModal);
+
+// window.onclick = function (event) {
+//   event.preventDefault();
+
+//   const modal = document.querySelector(".modal");
+//   if (event.target == modal) {
+//     switchModal();
+//   }
+// };
