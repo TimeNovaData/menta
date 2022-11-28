@@ -18,6 +18,8 @@
     color: $blue-500
     text-transform: uppercase
     line-height: 72px
+  @include d(sm)
+    text-align: center
 
   .title-bg
     background: $blue-500
@@ -30,11 +32,18 @@
       margin-inline: auto
     h2
       color: $green-500
+    @include d(sm)
+      width: 95%
+      padding-inline: .25rem
 
   h2.relative
     position: relative
     left: 26%
     width: fit-content
+
+    @include d(sm)
+      position: static
+      margin-inline: auto
 
   .faq-img
     max-width: 48vw

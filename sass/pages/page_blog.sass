@@ -186,13 +186,16 @@
     box-shadow: 0px 1px 4px rgba(16, 11, 55, 0.2), 0px 3px 16px rgba(16, 11, 55, 0.1)
     border-radius: 1rem
     max-width: 587px
-    width: 100%
+    width: 96%
     padding-block: 2rem
     padding-inline: 3vw
 
     display: flex
     flex-direction: column
     gap: 2.5rem
+    @include d(sm)
+      width: 90%
+      padding-inline: 1rem
 
     .input-validation-field
       display: flex
@@ -207,13 +210,19 @@
         top: 4.25rem
 
     .form-columns
-      display: flex
+      display: grid
+      grid-template-columns: 1fr 1fr
       gap: 1.8vw
+      @include d(sm)
+        grid-template-columns: 1fr
+        gap: 2rem
 
     form
       display: flex
       flex-direction: column
       gap: 2.5rem
+      @include d(sm)
+        gap: 2rem
 
     input
       border: 0

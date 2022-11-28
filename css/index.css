@@ -292,6 +292,12 @@ main {
   line-height: 72px;
 }
 
+@media screen and (max-width: 600px) {
+  .PageFaq .section-header {
+    text-align: center;
+  }
+}
+
 .PageFaq .section-header .title-bg {
   color: #00ff8c;
   clip-path: polygon(0 20%, 99% 0%, 100% 80%, 1% 100%);
@@ -312,11 +318,25 @@ main {
   color: #00ff8c;
 }
 
+@media screen and (max-width: 600px) {
+  .PageFaq .section-header .title-bg {
+    width: 95%;
+    padding-inline: .25rem;
+  }
+}
+
 .PageFaq .section-header h2.relative {
   width: -moz-fit-content;
   width: fit-content;
   position: relative;
   left: 26%;
+}
+
+@media screen and (max-width: 600px) {
+  .PageFaq .section-header h2.relative {
+    margin-inline: auto;
+    position: static;
+  }
 }
 
 .PageFaq .section-header .faq-img {
@@ -784,6 +804,12 @@ main {
   line-height: 72px;
 }
 
+@media screen and (max-width: 600px) {
+  .PageBlog .section-header {
+    text-align: center;
+  }
+}
+
 .PageBlog .section-header .title-bg {
   color: #00ff8c;
   clip-path: polygon(0 20%, 99% 0%, 100% 80%, 1% 100%);
@@ -804,11 +830,25 @@ main {
   color: #00ff8c;
 }
 
+@media screen and (max-width: 600px) {
+  .PageBlog .section-header .title-bg {
+    width: 95%;
+    padding-inline: .25rem;
+  }
+}
+
 .PageBlog .section-header h2.relative {
   width: -moz-fit-content;
   width: fit-content;
   position: relative;
   left: 26%;
+}
+
+@media screen and (max-width: 600px) {
+  .PageBlog .section-header h2.relative {
+    margin-inline: auto;
+    position: static;
+  }
 }
 
 .PageBlog .section-header .faq-img {
@@ -1079,7 +1119,7 @@ main {
 
 .PageBlog .modal .card-form {
   max-width: 587px;
-  width: 100%;
+  width: 96%;
   background: #fff;
   border-radius: 1rem;
   flex-direction: column;
@@ -1092,6 +1132,13 @@ main {
   left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: 0 1px 4px #100b3733, 0 3px 16px #100b371a;
+}
+
+@media screen and (max-width: 600px) {
+  .PageBlog .modal .card-form {
+    width: 90%;
+    padding-inline: 1rem;
+  }
 }
 
 .PageBlog .modal .card-form .input-validation-field {
@@ -1109,14 +1156,28 @@ main {
 }
 
 .PageBlog .modal .card-form .form-columns {
+  grid-template-columns: 1fr 1fr;
   gap: 1.8vw;
-  display: flex;
+  display: grid;
+}
+
+@media screen and (max-width: 600px) {
+  .PageBlog .modal .card-form .form-columns {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }
 
 .PageBlog .modal .card-form form {
   flex-direction: column;
   gap: 2.5rem;
   display: flex;
+}
+
+@media screen and (max-width: 600px) {
+  .PageBlog .modal .card-form form {
+    gap: 2rem;
+  }
 }
 
 .PageBlog .modal .card-form input {
