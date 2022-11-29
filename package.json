@@ -7,9 +7,17 @@
   "author": "natalia",
   "license": "MIT",
   "scripts": {
-    "sass": "parcel watch sass/index.sass --dist-dir css --no-cache -p 2367"
+    "sass": "parcel watch sass/index.sass --dist-dir css --no-cache -p 2367",
+    "js":   "parcel watch js/index.js --dist-dir dist --no-cache -p 2368",
+    
+    "build-sass": "parcel build sass/index.sass --dist-dir css --no-cache ",
+    "build-js":   "parcel build js/index.js --dist-dir dist --no-cache ",
+
+    "build":  "concurrently  \"yarn run build-sass\" \"yarn run build-js\"",
+    "dev":  "concurrently --kill-others \"yarn run sass\" \"yarn run js\""
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "2.8.0"
+    "@parcel/transformer-sass": "2.8.0",
+    "concurrently": "^7.6.0"
   }
 }
