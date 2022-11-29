@@ -12,10 +12,13 @@
   </head>
 
   <body>
+    <div class="svg-container">
+      <!-- AJAX -->
+    </div>
     <main id="PageEmBreve">
       <div class="menu-container">
         <!-- AJAX -->
-       </div>
+      </div>
 
       <div class="conteudo">
         <div class="intro">
@@ -28,9 +31,6 @@
           <img src="./assets/img/cicle.svg" alt="" />
         </div>
         <div class="conteudo-intermediario">
-          <div class="img-airplane">
-            <img src="./assets/img/airplane.png" alt="" />
-          </div>
           <div class="card-form">
             <header>
               <h2>Voar nunca foi tão barato!</h2>
@@ -40,22 +40,32 @@
               </p>
             </header>
             <form class="formulario">
-              <div class="input-icon-left">
-                <img src="./assets/img/email.svg" alt="" />
+              <div class="input-field">
+                <svg>
+                  <use xlink:href="#icon-email"></use>
+                </svg>
                 <input type="email" placeholder="E-mail*" />
               </div>
               <div class="conteudo-final">
                 <a href="/" class="icon-question">
-                  <img src="./assets/img/circle-question.svg" alt="" />
+                  <svg>
+                    <use xlink:href="#icon-circle-question"></use>
+                  </svg>
                 </a>
                 <div class="input-icon-right">
                   <button type="submit">
                     Inscrever-se
-                    <img src="./assets/img/airplane.svg" alt="" />
+                    <svg>
+                      <use xlink:href="#icon-airplane"></use>
+                    </svg>
                   </button>
                 </div>
               </div>
             </form>
+          </div>
+
+          <div class="img-airplane">
+            <img src="./assets/img/airplane.png" alt="" />
           </div>
         </div>
       </div>

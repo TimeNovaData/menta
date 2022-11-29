@@ -24,6 +24,8 @@ if (PageFaq) {
   //
 
 } else if (PageBlog) {
+  window.scrollTo({ top: 0 });
+
   document.body.classList.add("PageBlog");
   getElementAndappend(".menu-container", "../../templates/parts/menu.html");
   getElementAndappend(".footer-container", "../../templates/parts/footer.html");
@@ -50,6 +52,7 @@ if (PageFaq) {
 
 const switchModal = () => {
   const modal = document.querySelector(".modal");
+
   let actualStyle = modal.style.display;
   if (actualStyle == "block") {
     modal.style.display = "none";
@@ -62,7 +65,8 @@ const btn = document.querySelector(".modal-btn");
 btn.addEventListener("click", switchModal);
 
 window.onclick = function (event) {
-  event.preventDefault();
+  event.preventDefault()
+  console.log('Trocou modal!')
 
   const modal = document.querySelector(".modal");
   if (event.target == modal) {

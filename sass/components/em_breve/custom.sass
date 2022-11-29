@@ -1,47 +1,25 @@
-body
+&
   overflow: hidden
-  font-family: "vinila"
-  font-size: 1rem
-  header
-    background: #4F37FF
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1)
-    padding: 1.25rem 0
-    padding-left: 5rem
-    // @include d(xl)
-    //   padding-left: 4rem
-    // @include d(sm)
-    //   padding-left: 1.5rem
-  .conteudo
-    .intro
-      background: #00FF8C
-      transform: rotate(-10deg)
-      max-width: fit-content
-      padding: 0 1.5rem
-      margin: 0 auto
-      margin-top: 13vh
-      // @include d(sm)
-      //   margin-top: 7vh
-      // @include d(max2xl)
-      //   margin-top: 10vh
-      // @include d(md2)
-      //   margin-top: 8vh
-      h1
-        color: #4F37FF
-        font-weight: 900
-        font-size: 5.5rem
-        line-height: 7rem
-        // @include d(sm)
-        //   font-size: 3rem
-        //   text-align: center
-        //   line-height: 3.5rem
-        //   width: min-content
-        // @include d(max2xl)
-        //   font-size: 4.5rem
-        // @include d(xl)
-        //   font-size: 4rem
-        // @include d(md2)
-        //   font-size: 3rem
 
-    .conteudo-intermediario
-      display: flex
-      gap: 4rem
+.conteudo
+  .intro
+    background: $green-500
+    transform: rotate(-10deg)
+    max-width: fit-content
+    padding-inline: 1.5rem
+    margin-inline: auto
+
+h1
+  color: $blue-500
+  font-weight: 900
+  font-size: 5.5rem
+  line-height: 7rem
+  margin-block: 6rem
+
+  .conteudo-intermediario
+    display: flex
+    gap: 4rem
+
+svg
+  width: 1.5rem
+  height: 1.5rem

@@ -422,14 +422,16 @@ main {
   line-height: 1.5rem;
 }
 
+.PageEmBreve .conteudo-intermediario {
+  justify-content: center;
+  display: flex;
+}
+
 .PageEmBreve .conteudo-intermediario .card-form {
   width: 488px;
   background: #fff;
   border-radius: 1rem;
   padding: 2rem 1.5rem;
-  position: absolute;
-  bottom: 17.5vh;
-  left: 35vh;
   box-shadow: 0 1px 4px #100b3733, 0 3px 16px #100b371a;
 }
 
@@ -449,12 +451,12 @@ main {
   line-height: 1.375rem;
 }
 
-.PageEmBreve .conteudo-intermediario .card-form .formulario .input-icon-left {
+.PageEmBreve .conteudo-intermediario .card-form .formulario .input-field {
   margin-top: 2rem;
   position: relative;
 }
 
-.PageEmBreve .conteudo-intermediario .card-form .formulario .input-icon-left img {
+.PageEmBreve .conteudo-intermediario .card-form .formulario .input-field img {
   left: .75rem;
   right: initial;
   width: 24px;
@@ -465,7 +467,7 @@ main {
   transform: translateY(-50%);
 }
 
-.PageEmBreve .conteudo-intermediario .card-form .formulario .input-icon-left input {
+.PageEmBreve .conteudo-intermediario .card-form .formulario .input-field input {
   width: 100%;
   padding: .75rem 1rem;
   color: #666;
@@ -545,45 +547,40 @@ main {
 }
 
 .PageEmBreve .conteudo .conteudo-intermediario .img-airplane img {
-  width: 40%;
-  height: 40%;
+  max-width: 647px;
+  width: 100%;
   object-fit: contain;
-  position: absolute;
-  bottom: 15vh;
-  right: 30vh;
 }
 
-.PageEmBreve body {
-  font-family: vinila;
-  font-size: 1rem;
+.PageEmBreve {
   overflow: hidden;
 }
 
-.PageEmBreve body header {
-  background: #4f37ff;
-  border-bottom: 1px solid #0000001a;
-  padding: 1.25rem 0 1.25rem 5rem;
-}
-
-.PageEmBreve body .conteudo .intro {
+.PageEmBreve .conteudo .intro {
   max-width: -moz-fit-content;
   max-width: fit-content;
   background: #00ff8c;
-  margin: 13vh auto 0;
-  padding: 0 1.5rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
   transform: rotate(-10deg);
 }
 
-.PageEmBreve body .conteudo .intro h1 {
+.PageEmBreve h1 {
   color: #4f37ff;
+  margin-block: 6rem;
   font-size: 5.5rem;
   font-weight: 900;
   line-height: 7rem;
 }
 
-.PageEmBreve body .conteudo .conteudo-intermediario {
+.PageEmBreve h1 .conteudo-intermediario {
   gap: 4rem;
   display: flex;
+}
+
+.PageEmBreve svg {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .PagePost h3 {
