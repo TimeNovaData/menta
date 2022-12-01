@@ -549,7 +549,7 @@ async function init() {
         document.body.classList.add("PageFaq");
         (0, _getElementAndappendJsDefault.default)(".footer-container", "../../templates/parts/footer.html");
         (0, _getElementAndappendJsDefault.default)(".menu-container", "../../templates/parts/menu.html");
-    } else if (PageEmBreve) {
+    /*  */ } else if (PageEmBreve) {
         document.body.classList.add("PageEmBreve");
         document.querySelectorAll(".faq-menu > nav, .faq-menu .social-media").forEach((i)=>i.remove());
         (0, _animationJsDefault.default)().emBreve();
@@ -685,8 +685,8 @@ function animation() {
         const $ = {
             form: document.querySelector(".card-form"),
             aviao: document.querySelector(".img-airplane"),
-            boxH1: document.querySelector(".intro"),
-            h1: document.querySelector(".intro h1")
+            boxH1: document.querySelector(".conteudo .intro"),
+            h1: document.querySelector(".conteudo .intro h1")
         };
         gsap.set($.form, {
             opacity: 0,
@@ -696,10 +696,11 @@ function animation() {
             x: "-100vw"
         });
         gsap.set($.boxH1, {
-            scaleY: "0"
+            clipPath: "inset(0 100% 0 0)"
         });
         gsap.set($.h1, {
-            y: "100px"
+            x: "-100px",
+            opacity: 0
         });
         gsap.timeline({
             defaults: {
@@ -708,15 +709,15 @@ function animation() {
             }
         }).to($.aviao, {
             x: 0,
-            duration: 1.3
+            duration: 1.9
         }, "tag").to($.boxH1, {
-            scaleY: "1",
-            transformOrigin: "bottom top",
-            duration: 0.3,
-            ease: "sine"
-        }, "tag").to($.h1, {
-            y: 0
-        }, "tag+=0.3").to($.form, {
+            clipPath: "inset(0px 0.1% 0px 0px)",
+            duration: 0.8,
+            ease: "power3"
+        }, "tag+=0.3").to($.h1, {
+            x: 0,
+            opacity: 1
+        }, "tag+=0.5").to($.form, {
             opacity: 1,
             x: 0
         }, "-=0.8");

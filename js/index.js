@@ -18,11 +18,12 @@ async function init() {
     document.body.classList.add("PageFaq");
     getElementAndappend(".footer-container", "../../templates/parts/footer.html");
     getElementAndappend(".menu-container", "../../templates/parts/menu.html");
+    /*  */
   } else if (PageEmBreve) {
     document.body.classList.add("PageEmBreve");
     document.querySelectorAll(".faq-menu > nav, .faq-menu .social-media")
       .forEach(i => i.remove())
-    animation().emBreve()
+      animation().emBreve()
 
   } else if (PagePost) {
     document.body.classList.add("PagePost");
