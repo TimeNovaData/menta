@@ -5,7 +5,7 @@ html {
 
 @media (max-width: 1446px) {
   html {
-    font-size: calc(var(--font-base)  - 7.25%);
+    font-size: calc(var(--font-base)  - 10.25%);
   }
 }
 
@@ -677,7 +677,7 @@ main {
 @media (min-width: 1111px) {
   .PageEmBreve.PageEmBreve .conteudo {
     height: calc(100vh - 5rem);
-    margin-top: clamp(1.875rem, 11vw, 30rem) !important;
+    margin-top: clamp(1.875rem, 21vh, 30rem) !important;
   }
 
   .PageEmBreve.PageEmBreve h1 {
@@ -703,7 +703,7 @@ main {
 
   .PageEmBreve.PageEmBreve h1 {
     line-height: 150%;
-    font-size: clamp(1.875rem, 4vw, 5.5rem) !important;
+    font-size: clamp(1.875rem, 3.8vw, 5.5rem) !important;
   }
 
   .PageEmBreve.PageEmBreve .formulario .input-field {
