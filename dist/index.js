@@ -551,8 +551,6 @@ async function init() {
         (0, _getElementAndappendJsDefault.default)(".menu-container", "../../templates/parts/menu.html");
     } else if (PageEmBreve) {
         document.body.classList.add("PageEmBreve");
-        await (0, _getElementAndappendJsDefault.default)(".menu-container", "../../templates/parts/menu.html");
-        //
         document.querySelectorAll(".faq-menu > nav, .faq-menu .social-media").forEach((i)=>i.remove());
         (0, _animationJsDefault.default)().emBreve();
     } else if (PagePost) {

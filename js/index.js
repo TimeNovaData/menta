@@ -20,8 +20,6 @@ async function init() {
     getElementAndappend(".menu-container", "../../templates/parts/menu.html");
   } else if (PageEmBreve) {
     document.body.classList.add("PageEmBreve");
-    await getElementAndappend(".menu-container", "../../templates/parts/menu.html");
-    //
     document.querySelectorAll(".faq-menu > nav, .faq-menu .social-media")
       .forEach(i => i.remove())
     animation().emBreve()
