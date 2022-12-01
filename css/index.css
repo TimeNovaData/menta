@@ -698,7 +698,7 @@ main {
     width: max-content;
     margin-bottom: 2.5rem;
     overflow: hidden;
-    transform: rotate(-9deg);
+    transform: rotate(-9deg) !important;
   }
 
   .PageEmBreve.PageEmBreve h1 {
