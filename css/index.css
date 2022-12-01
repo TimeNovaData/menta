@@ -674,6 +674,28 @@ main {
   display: none;
 }
 
+.PageEmBreve .cloud-1 {
+  width: calc(100vw + 400px);
+  height: auto;
+  z-index: -2;
+  margin: 0 auto;
+  position: fixed;
+  top: 200px;
+  left: -200px;
+  right: -200px;
+}
+
+.PageEmBreve .cloud-2 {
+  width: calc(100vw + 400px);
+  height: auto;
+  z-index: -1;
+  margin: 0 auto;
+  position: fixed;
+  top: 250px;
+  left: -200px;
+  right: -200px;
+}
+
 @media (min-width: 1111px) {
   .PageEmBreve.PageEmBreve .conteudo {
     height: calc(100vh - 5rem);
@@ -807,21 +829,6 @@ main {
     position: absolute;
     top: .75rem;
     left: 1rem;
-  }
-
-  .PageEmBreve.PageEmBreve .img-clouds img {
-    --width: clamp(400px, 100vw, 1100px);
-    top: 285px;
-    bottom: initial;
-    width: var(--width);
-    height: auto;
-    max-width: var(--width);
-    min-width: var(--width);
-    object-fit: contain;
-    margin: 0 auto;
-    position: fixed;
-    left: 0;
-    right: 0;
   }
 }
 
