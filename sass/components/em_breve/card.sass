@@ -3,18 +3,18 @@
   justify-content: center
 
   .card-form
-    width: 488px
+    width: 30.5rem
     background: white
     padding: 2rem 1.5rem
     border-radius: 1rem
-    box-shadow: 0px 1px 4px rgba(16, 11, 55, 0.2), 0px 3px 16px rgba(16, 11, 55, 0.1)
+    box-shadow: 0rem .0625rem .25rem rgba(16, 11, 55, 0.2), 0rem .1875rem 1rem rgba(16, 11, 55, 0.1)
     // position: absolute
     // bottom: 17.5vh
     // left: 35vh
     // @include d(max2xl)
     //   bottom: 9.5vh
     // @include d(xl)
-    //   width: 420px
+    //   width: 26.25rem
     //   padding: 1.5rem 1.5rem
     //   bottom: 6.5vh
     // @include d(lg)
@@ -25,7 +25,7 @@
     //   left: 25vh
     // @include d(sm)
     //   left: 2.5vh
-    //   width: 370px
+    //   width: 23.125rem
     //   bottom: 10vh
     h2
       font-size: 1.5rem
@@ -57,11 +57,11 @@
           top: 50%
           transform: translateY(-50%)
           margin: 0 auto
-          width: 24px
-          height: 24px
+          width: 1.5rem
+          height: 1.5rem
         input
           background: white
-          border: 1px solid #C8C2FF
+          border: .0625rem solid #C8C2FF
           border-radius: .75rem
           padding: .75rem 1rem
           width: 100%
@@ -81,8 +81,8 @@
           top: 50%
           transform: translateY(-50%)
           margin: 0 auto
-          width: 24px
-          height: 24px
+          width: 1.5rem
+          height: 1.5rem
           // @include d(sm)
           //   right: 15%
           // @include d(xl)
@@ -94,12 +94,50 @@
         gap: .5rem
 
         .icon-question
-          border: 1px solid #4F37FF
-          border-radius: 12px
-          padding: .75rem
+          border: .0625rem solid #4F37FF
+          border-radius: .75rem
+          padding: 0
+          min-width: 3rem
+          height: 3rem
+          width: 3rem
+          display: grid
+          place-items: center
+          transition: .3s ease
+          position: relative
+          cursor: pointer
+          .tooltip
+            border: .0625rem solid $blue-500
+            position: absolute
+            bottom: calc(100% + .3125rem)
+            right: 0
+            left: 0
+            margin: 0 auto
+            width: 25rem
+            height: 8.125rem
+            background: white
+            color: $blue-400
+            z-index: 100
+            padding: .5rem
+            border-radius: .375rem
+            transition: .3s ease
+            opacity: 0
+            pointer-events: none
+            display: grid
+            place-items: center
+            font-size: 1rem
+            line-height: 150%
+            box-shadow: rgba(99, 99, 99, 0.2) 0rem .125rem .5rem 0rem
+
+          &:hover
+            background-color: $blue-50
+            .tooltip
+              opacity: 1
+
           img
             width: 1.5rem
             height: 1.5rem
+            position: relative
+            z-index: 2
         button
           background: #857AEA
           padding: .75rem 1.5rem
@@ -107,6 +145,16 @@
           border-radius: .75rem
           font-weight: 700
           font-size: 1rem
-          line-height: 1.5rem
+          // line-height: 1.5rem
           color: white
           cursor: pointer
+          transition: background .3s ease
+          svg
+            transition: transform .3s ease
+          &:hover
+            background: $blue-400
+            svg
+              transform: translateX(6.875rem)
+              @include d(md2)
+                transform: translateX(50px)
+

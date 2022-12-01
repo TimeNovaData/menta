@@ -1,55 +1,71 @@
 import getElementAndappend from "./modules/getElementAndappend.js";
 import swiperProps from "./modules/swiperProps.js";
+import animation from "./modules/animation.js"
+
 
 const PageEmBreve = document.querySelector("#PageEmBreve");
 const PageFaq = document.querySelector("#PageFaq");
 const PagePost = document.querySelector("#PagePost");
 const PageBlog = document.querySelector("#PageBlog");
 
-getElementAndappend(".svg-container", "../../templates/parts/svg.html");
 
-if (PageFaq) {
-  document.body.classList.add("PageFaq");
-  getElementAndappend(".footer-container", "../../templates/parts/footer.html");
-  getElementAndappend(".menu-container", "../../templates/parts/menu.html");
-} else if (PageEmBreve) {
-  document.body.classList.add("PageEmBreve");
-  getElementAndappend(".menu-container", "../../templates/parts/menu.html");
-  //
-} else if (PagePost) {
-  document.body.classList.add("PagePost");
-  getElementAndappend(".menu-container", "../../templates/parts/menu.html");
-  getElementAndappend(".footer-container", "../../templates/parts/footer.html");
-  const swiper = new Swiper(".swiper-cards", swiperProps.default);
-  //
 
-} else if (PageBlog) {
-  window.scrollTo({ top: 0 });
+async function init() {
 
-  document.body.classList.add("PageBlog");
-  getElementAndappend(".menu-container", "../../templates/parts/menu.html");
-  getElementAndappend(".footer-container", "../../templates/parts/footer.html");
-  const swiper = new Swiper(".swiper-cards", swiperProps.default);
+  getElementAndappend(".svg-container", "../../templates/parts/svg.html");
 
-  const formFields = {
-    nameInput: document.querySelector("#name"),
-    dateInput: document.querySelector("#date"),
-    telInput: document.querySelector("#tel"),
-    emailInput: document.querySelector("#email"),
+  if (PageFaq) {
+    document.body.classList.add("PageFaq");
+    getElementAndappend(".footer-container", "../../templates/parts/footer.html");
+    getElementAndappend(".menu-container", "../../templates/parts/menu.html");
+  } else if (PageEmBreve) {
+    document.body.classList.add("PageEmBreve");
+    await getElementAndappend(".menu-container", "../../templates/parts/menu.html");
     //
-  };
+    document.querySelectorAll(".faq-menu > nav, .faq-menu .social-media")
+      .forEach(i => i.remove())
+    animation().emBreve()
 
-  IMask(formFields.dateInput, { mask: "00/00/0000" });
-  IMask(formFields.telInput, { mask: "(00) 00000-0000" });
+  } else if (PagePost) {
+    document.body.classList.add("PagePost");
+    getElementAndappend(".menu-container", "../../templates/parts/menu.html");
+    getElementAndappend(".footer-container", "../../templates/parts/footer.html");
+    const swiper = new Swiper(".swiper-cards", swiperProps.default);
+    //
 
-  Object
-    .entries(formFields)
-    .map(([_, field]) => {
-      field.addEventListener("change", GLOBAL.validaAi);
-    });
+  } else if (PageBlog) {
+    window.scrollTo({ top: 0 });
+
+    document.body.classList.add("PageBlog");
+    getElementAndappend(".menu-container", "../../templates/parts/menu.html");
+    getElementAndappend(".footer-container", "../../templates/parts/footer.html");
+    const swiper = new Swiper(".swiper-cards", swiperProps.default);
+
+    const formFields = {
+      nameInput: document.querySelector("#name"),
+      dateInput: document.querySelector("#date"),
+      telInput: document.querySelector("#tel"),
+      emailInput: document.querySelector("#email"),
+      //
+    };
+
+    IMask(formFields.dateInput, { mask: "00/00/0000" });
+    IMask(formFields.telInput, { mask: "(00) 00000-0000" });
+
+    Object
+      .entries(formFields)
+      .map(([_, field]) => {
+        field.addEventListener("change", GLOBAL.validaAi);
+      });
+
+  }
+
+  document.body.style.opacity = 1
+
+
 
 }
-
+init()
 // const switchModal = () => {
 //   const modal = document.querySelector(".modal");
 

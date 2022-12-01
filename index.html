@@ -9,6 +9,12 @@
 
     <!-- FONT VINILA -->
     <link rel="stylesheet" href="https://use.typekit.net/uts8dxl.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+      integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </head>
 
   <body>
@@ -22,7 +28,7 @@
 
       <div class="conteudo">
         <div class="intro">
-          <h1>Estamos chegando!</h1>
+          <h1>Estamos <br class="quebra" />chegando!</h1>
         </div>
         <div class="img-clouds">
           <img src="./assets/img/clouds.svg" alt="" />
@@ -47,13 +53,19 @@
                 <input type="email" placeholder="E-mail*" />
               </div>
               <div class="conteudo-final">
-                <a href="/" class="icon-question">
+                <div class="icon-question">
                   <svg>
                     <use xlink:href="#icon-circle-question"></use>
                   </svg>
-                </a>
+                  <div class="tooltip">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Quisquam obcaecati sit fugit reprehenderit dicta vitae,
+                    natus repudiandae et, eum enim earum quas rerum temporibus
+                    quam asperiores non quasi nesciunt ipsam?
+                  </div>
+                </div>
                 <div class="input-icon-right">
-                  <button type="submit">
+                  <button type="button">
                     Inscrever-se
                     <svg>
                       <use xlink:href="#icon-airplane"></use>
@@ -72,5 +84,6 @@
     </main>
 
     <script src="./dist/index.js" type="module"></script>
+    <script></script>
   </body>
 </html>

@@ -1,3 +1,122 @@
 @import "../components/em_breve/card"
 @import "../components/em_breve/ornamentos"
 @import "../components/em_breve/custom"
+.quebra
+  display: none
+
+@media (min-width: 1111px)
+  &.PageEmBreve
+    .conteudo
+      height: calc(100vh - 5rem)
+      margin-top: clamp(1.875rem, 11vw, 30rem) !important
+
+    h1
+      margin: 0
+      padding-top: 5px
+
+    header.faq-menu
+      position: fixed
+      width: 100%
+      top: 0
+      left: 0
+      height: 5rem
+
+    .intro
+      height: max-content
+      width: max-content
+      margin-bottom: 2.5rem
+      transform: rotate(-9deg)
+      overflow: hidden
+
+    h1
+      line-height: 150%
+      font-size: clamp(1.875rem,4vw,5.5rem) !important
+
+    .formulario .input-field
+      position: relative
+      input
+        padding-left: 3rem !important
+      svg
+        position: absolute
+        top: .75rem
+        left: 1rem
+        color: #666666
+
+    .conteudo-intermediario
+      margin-top: 11vh
+
+    .conteudo-intermediario .card-form .formulario .conteudo-final button
+      display: flex
+      align-items: center
+      padding: 0 1.5rem !important
+      height: 3rem
+      justify-content: center
+      gap: .5rem
+
+    header.faq-menu .logo svg
+      width: 7.25rem
+      height: 2.5rem
+
+    .conteudo .conteudo-intermediario .img-airplane img
+      margin-left: 2rem
+
+@media (max-width:1100px)
+  &.PageEmBreve
+    overflow-y: auto
+    .img-circle
+      display: none !important
+    .intro
+      width: max-content
+      max-width: auto
+
+    h1
+      max-width: auto
+      line-height: 117%
+      text-align: center
+      font-size: 48px !important
+      margin-bottom: 1rem !important
+
+    .conteudo-intermediario .card-form .formulario .conteudo-final button
+      display: flex
+      align-items: center
+      padding: 0 1.5rem !important
+      height: 3rem
+      justify-content: center
+      gap: .5rem
+
+    .quebra
+      display: block
+
+    .conteudo-intermediario
+      flex-direction: column-reverse !important
+      align-items: center
+      .card-form
+        width: 100%
+        margin-bottom: 42px
+        max-width: clamp(300px,calc(100vw - 2rem), 400px)
+
+    .img-airplane
+      max-width: 90vw
+    .formulario .input-field
+      position: relative
+      input
+        padding-left: 3rem !important
+      svg
+        position: absolute
+        top: .75rem
+        left: 1rem
+        color: #666666
+    .img-clouds
+      img
+        --width: clamp(400px, 100vw, 1100px)
+        position: fixed
+        top: 285px
+        bottom: initial
+        left: 0
+        right: 0
+        width: var(--width)
+        height: auto
+        max-width: var(--width)
+        min-width: var(--width)
+        object-fit: contain
+        margin: 0 auto
