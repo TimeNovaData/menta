@@ -3,6 +3,12 @@ html {
   font-size: var(--font-base);
 }
 
+.container {
+  max-width: 1206px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
 @media (max-width: 1446px) {
   html {
     font-size: calc(var(--font-base)  - 10.25%);
@@ -1538,6 +1544,135 @@ main {
 
 .PageBlog .input-field:focus-within svg {
   color: #0f0f0f;
+}
+
+.PageHome #banner-hero {
+  height: calc(100vh - 69px);
+  position: relative;
+  overflow: hidden;
+}
+
+.PageHome #banner-hero .container {
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-end;
+  display: flex;
+  position: relative;
+}
+
+.PageHome #banner-hero .content-wrapper {
+  padding-bottom: 3rem;
+  position: absolute;
+  inset: 0;
+}
+
+.PageHome #banner-hero .intro {
+  max-width: max-content;
+  background-color: #00ff8c;
+  transform: rotate(-10deg);
+}
+
+.PageHome #banner-hero .intro .title {
+  color: #5037ff;
+  padding: 0 1rem;
+  font-size: clamp(1.875rem, 3.8vw, 5.5rem);
+  font-weight: 900;
+  line-height: 150%;
+}
+
+.PageHome #banner-hero .plane-wrapper {
+  margin-bottom: 48px;
+}
+
+.PageHome #banner-hero .plane-wrapper img {
+  margin: 0 auto;
+}
+
+.PageHome #banner-hero .cta-banner-wrapper {
+  max-width: 992px;
+  width: 100%;
+  background: #fff;
+  border-radius: 32px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  display: flex;
+  box-shadow: 0 1px 4px #100b3733, 0 3px 16px #100b371a;
+}
+
+.PageHome #banner-hero .cta-banner-wrapper p {
+  color: #0f0f0f;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.PageHome #banner-hero .cta-banner-wrapper .btn-primary {
+  color: #fff;
+  cursor: pointer;
+  background: #4f37ff;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 2rem;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all .2s;
+  display: flex;
+  box-shadow: 0 1px 4px #100b371a, 0 1px 2px #100b374d;
+}
+
+.PageHome #banner-hero .cta-banner-wrapper .btn-primary svg {
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+}
+
+.PageHome #banner-hero .cta-banner-wrapper .btn-primary:hover {
+  background: #1d00f5;
+}
+
+.PageHome #banner-hero .parallax-group-images {
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-end;
+  display: flex;
+}
+
+.PageHome #banner-hero .parallax-group-images img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.PageHome #banner-hero .parallax-group-images .ceu-banner {
+  height: 100%;
+  margin-bottom: -150px;
+}
+
+.PageHome #banner-hero .parallax-group-images .ceu-banner img {
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.PageHome #banner-hero .parallax-group-images .segundo-plano {
+  margin-bottom: -87px;
+  position: relative;
+}
+
+.PageHome #banner-hero .parallax-group-images .segundo-plano img {
+  height: 417px;
+  object-position: 0;
+}
+
+.PageHome #banner-hero .parallax-group-images .pista {
+  position: relative;
+}
+
+.PageHome #banner-hero .parallax-group-images .pista img {
+  height: 263px;
+  object-position: top left;
 }
 
 /*# sourceMappingURL=index.css.map */

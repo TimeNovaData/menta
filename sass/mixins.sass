@@ -128,3 +128,27 @@
     svg
       width: .9375rem
       height: .7813rem
+
+
+@mixin Botao()
+  background: $blue-500
+  color: $white
+  text-decoration: none
+  font-weight: 700
+  font-size: 16px
+  padding-block: .75rem
+  cursor: pointer
+  transition: all 0.2s
+
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 12px 2rem
+  border-radius: 12px
+
+  svg
+    width: 24px
+    height: 24px
+    margin-left: 8px
+  &:hover
+    background: $blue-600

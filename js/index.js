@@ -7,6 +7,7 @@ const PageEmBreve = document.querySelector("#PageEmBreve");
 const PageFaq = document.querySelector("#PageFaq");
 const PagePost = document.querySelector("#PagePost");
 const PageBlog = document.querySelector("#PageBlog");
+const PageHome = document.querySelector("#PageHome");
 
 
 
@@ -57,6 +58,10 @@ async function init() {
         field.addEventListener("change", GLOBAL.validaAi);
       });
 
+  }else if (PageHome){
+    document.body.classList.add("PageHome");
+    getElementAndappend(".menu-container", "../../templates/parts/menu.html");
+    getElementAndappend(".footer-container", "../../templates/parts/footer.html");
   }
 
   document.body.style.opacity = 1

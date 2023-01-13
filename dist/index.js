@@ -543,6 +543,7 @@ const PageEmBreve = document.querySelector("#PageEmBreve");
 const PageFaq = document.querySelector("#PageFaq");
 const PagePost = document.querySelector("#PagePost");
 const PageBlog = document.querySelector("#PageBlog");
+const PageHome = document.querySelector("#PageHome");
 async function init() {
     (0, _getElementAndappendJsDefault.default)(".svg-container", "../../templates/parts/svg.html");
     if (PageFaq) {
@@ -582,6 +583,10 @@ async function init() {
         Object.entries(formFields).map(([_, field])=>{
             field.addEventListener("change", GLOBAL.validaAi);
         });
+    } else if (PageHome) {
+        document.body.classList.add("PageHome");
+        (0, _getElementAndappendJsDefault.default)(".menu-container", "../../templates/parts/menu.html");
+        (0, _getElementAndappendJsDefault.default)(".footer-container", "../../templates/parts/footer.html");
     }
     document.body.style.opacity = 1;
 }
