@@ -1,6 +1,8 @@
 import getElementAndappend from "./modules/getElementAndappend.js";
 import swiperProps from "./modules/swiperProps.js";
 import animation from "./modules/animation.js"
+import homeScripts from "./modules/scriptsPaginas/home.js";
+
 
 
 const PageEmBreve = document.querySelector("#PageEmBreve");
@@ -15,6 +17,7 @@ async function init() {
 
   getElementAndappend(".svg-container", "../../templates/parts/svg.html");
 
+ 
   if (PageFaq) {
     document.body.classList.add("PageFaq");
     getElementAndappend(".footer-container", "../../templates/parts/footer.html");
@@ -62,6 +65,7 @@ async function init() {
     document.body.classList.add("PageHome");
     getElementAndappend(".menu-container", "../../templates/parts/menu.html");
     getElementAndappend(".footer-container", "../../templates/parts/footer.html");
+    homeScripts();
   }
 
   document.body.style.opacity = 1

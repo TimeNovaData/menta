@@ -539,6 +539,8 @@ var _swiperPropsJs = require("./modules/swiperProps.js");
 var _swiperPropsJsDefault = parcelHelpers.interopDefault(_swiperPropsJs);
 var _animationJs = require("./modules/animation.js");
 var _animationJsDefault = parcelHelpers.interopDefault(_animationJs);
+var _homeJs = require("./modules/scriptsPaginas/home.js");
+var _homeJsDefault = parcelHelpers.interopDefault(_homeJs);
 const PageEmBreve = document.querySelector("#PageEmBreve");
 const PageFaq = document.querySelector("#PageFaq");
 const PagePost = document.querySelector("#PagePost");
@@ -587,6 +589,7 @@ async function init() {
         document.body.classList.add("PageHome");
         (0, _getElementAndappendJsDefault.default)(".menu-container", "../../templates/parts/menu.html");
         (0, _getElementAndappendJsDefault.default)(".footer-container", "../../templates/parts/footer.html");
+        (0, _homeJsDefault.default)();
     }
     document.body.style.opacity = 1;
 }
@@ -611,7 +614,7 @@ init() // const switchModal = () => {
  // };
 ;
 
-},{"./modules/getElementAndappend.js":"kgt1M","./modules/swiperProps.js":"csy8f","./modules/animation.js":"8x8Rt","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kgt1M":[function(require,module,exports) {
+},{"./modules/getElementAndappend.js":"kgt1M","./modules/swiperProps.js":"csy8f","./modules/animation.js":"8x8Rt","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./modules/scriptsPaginas/home.js":"2gwvx"}],"kgt1M":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 async function getElemetAndAppend(cont, arquivo, isHead) {
@@ -762,6 +765,29 @@ function animation() {
     };
 }
 exports.default = animation;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2gwvx":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function homeScripts() {
+    const swiperFaq = new Swiper(".swiper-faq", {
+        slidesPerView: 1.4,
+        spaceBetween: 16,
+        breakpoints: {
+            540: {
+                slidesPerView: 2.2
+            },
+            700: {
+                slidesPerView: 3.2
+            },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 32
+            }
+        }
+    });
+}
+exports.default = homeScripts;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["jfkrW","1Z4Rq"], "1Z4Rq", "parcelRequirec1d0")
 

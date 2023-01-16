@@ -4,7 +4,7 @@ html {
 }
 
 .container {
-  max-width: 1206px;
+  max-width: calc(1206px + 3rem);
   margin: 0 auto;
   padding: 0 1.5rem;
 }
@@ -279,6 +279,80 @@ footer.faq-footer .all-rights-reserved p:before {
   content: "•";
   content: "";
   padding-inline: 8px;
+}
+
+.cta-banner-wrapper {
+  max-width: 992px;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #a3a3a3;
+  border-radius: 32px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  display: flex;
+  box-shadow: 0 1px 4px #100b3733, 0 3px 16px #100b371a;
+}
+
+@media screen and (max-width: 1024px) {
+  .cta-banner-wrapper {
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+  }
+}
+
+.cta-banner-wrapper p {
+  color: #0f0f0f;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.cta-banner-wrapper .btn-primary {
+  color: #fff;
+  cursor: pointer;
+  color: #5037ff;
+  background: #fff;
+  border: 1px solid #5037ff;
+  border-radius: 12px;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 2rem;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all .2s;
+  display: flex;
+  box-shadow: 0 1px 4px #100b371a, 0 1px 2px #100b374d;
+}
+
+.cta-banner-wrapper .btn-primary svg {
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+}
+
+.cta-banner-wrapper .btn-primary:hover {
+  background: #1d00f5;
+}
+
+.cta-banner-wrapper .btn-primary svg {
+  width: 24px;
+  height: 24px;
+}
+
+.cta-banner-wrapper .btn-primary:hover {
+  color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  .cta-banner-wrapper .btn-primary {
+    width: 100%;
+  }
 }
 
 body {
@@ -1575,7 +1649,7 @@ main {
 .PageHome #banner-hero .intro .title {
   color: #5037ff;
   padding: 0 1rem;
-  font-size: clamp(1.875rem, 3.8vw, 5.5rem);
+  font-size: clamp(1.875rem, 4.4vw, 5.5rem);
   font-weight: 900;
   line-height: 150%;
 }
@@ -1595,16 +1669,32 @@ main {
   border-radius: 32px;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
   margin: 0 auto;
   padding: 1.5rem 2rem;
   display: flex;
   box-shadow: 0 1px 4px #100b3733, 0 3px 16px #100b371a;
 }
 
+@media screen and (max-width: 1024px) {
+  .PageHome #banner-hero .cta-banner-wrapper {
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+  }
+}
+
 .PageHome #banner-hero .cta-banner-wrapper p {
   color: #0f0f0f;
   font-size: 1.5rem;
   font-weight: 700;
+  line-height: 1.3;
+}
+
+@media screen and (max-width: 800px) {
+  .PageHome #banner-hero .cta-banner-wrapper p {
+    text-align: center;
+    font-size: 1.3rem;
+  }
 }
 
 .PageHome #banner-hero .cta-banner-wrapper .btn-primary {
@@ -1612,6 +1702,7 @@ main {
   cursor: pointer;
   background: #4f37ff;
   border-radius: 12px;
+  flex-shrink: 0;
   justify-content: center;
   align-items: center;
   padding: 12px 2rem;
@@ -1631,6 +1722,12 @@ main {
 
 .PageHome #banner-hero .cta-banner-wrapper .btn-primary:hover {
   background: #1d00f5;
+}
+
+@media screen and (max-width: 600px) {
+  .PageHome #banner-hero .cta-banner-wrapper .btn-primary {
+    width: 100%;
+  }
 }
 
 .PageHome #banner-hero .parallax-group-images {
@@ -1673,6 +1770,235 @@ main {
 .PageHome #banner-hero .parallax-group-images .pista img {
   height: 263px;
   object-position: top left;
+}
+
+.PageHome #sobre {
+  margin-top: 7.5rem;
+  margin-bottom: 7.5rem;
+}
+
+.PageHome #sobre .intro {
+  max-width: max-content;
+  margin-bottom: 3rem;
+  transform: rotate(-10deg);
+}
+
+.PageHome #sobre .intro .title {
+  color: #4f37ff;
+  font-size: clamp(3rem, 4.4vw, 3rem);
+  font-weight: 900;
+}
+
+.PageHome #sobre .intro .title span {
+  background-color: #00ff8c;
+  padding: 1rem;
+}
+
+.PageHome #sobre .intro .title .to-break {
+  margin-left: -16px;
+}
+
+@media screen and (max-width: 800px) {
+  .PageHome #sobre .intro .title .to-break {
+    margin-left: 0;
+    display: block;
+    position: relative;
+    left: 50%;
+  }
+}
+
+.PageHome #sobre .sobre-grid {
+  grid-template-columns: 1fr 1fr;
+  gap: 6.25rem;
+  margin-bottom: 5rem;
+  display: grid;
+}
+
+@media screen and (max-width: 800px) {
+  .PageHome #sobre .sobre-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.PageHome #sobre .sobre-grid .col-2 .title {
+  color: #4f37ff;
+  margin-bottom: 8px;
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+.PageHome #sobre .sobre-grid .col-2 .sobre-wrapper .sub-title {
+  color: #0f0f0f;
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.PageHome #sobre .sobre-grid .col-2 .sobre-wrapper p {
+  color: #0f0f0f;
+  margin-bottom: 1rem;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.PageHome #sobre .sobre-grid .col-2 .sobre-cards {
+  margin-top: 1.5rem;
+}
+
+.PageHome #sobre .sobre-grid .col-2 .sobre-cards .card-item {
+  max-width: 250px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #00ff8c;
+  border-radius: 16px;
+  margin-bottom: 1rem;
+  padding: 8px 24px 8px 40px;
+  position: relative;
+  box-shadow: 0 1px 4px #100b3733, 0 3px 8px #100b371a;
+}
+
+@media screen and (max-width: 800px) {
+  .PageHome #sobre .sobre-grid .col-2 .sobre-cards .card-item {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.PageHome #sobre .sobre-grid .col-2 .sobre-cards .card-item svg {
+  width: 3.5rem;
+  height: 3.5rem;
+  position: absolute;
+  top: 50%;
+  left: -1.75rem;
+  transform: translateY(-50%);
+}
+
+.PageHome #sobre .sobre-grid .col-2 .sobre-cards .card-item p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.PageHome #sobre .sobre-grid .col-2 .sobre-cards .card-item span {
+  font-weight: 700;
+}
+
+.PageHome #sobre .sobre-grid .col-2 .sobre-cards .card-item:nth-child(2) {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.PageHome #sobre .sobre-grid .col-2 .sobre-cards .card-item:nth-child(3) {
+  margin-left: auto;
+}
+
+.PageHome #sobre .sobre-grid .col-2 .text-experimenta {
+  color: #4f37ff;
+  margin-top: 1.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.PageHome #faq {
+  background-color: #4f37ff;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.PageHome #faq .intro {
+  max-width: max-content;
+  margin-bottom: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  right: 106px;
+  transform: rotate(-10deg);
+}
+
+@media screen and (max-width: 800px) {
+  .PageHome #faq .intro {
+    right: 0;
+  }
+}
+
+.PageHome #faq .intro .title {
+  color: #4f37ff;
+  font-size: clamp(3rem, 4.4vw, 3rem);
+  font-weight: 900;
+}
+
+.PageHome #faq .intro .title span {
+  background-color: #00ff8c;
+  padding: 1rem;
+}
+
+.PageHome #faq .intro .title .to-break {
+  width: max-content;
+  margin-left: 0;
+  display: block;
+  position: relative;
+  left: 70%;
+}
+
+@media screen and (max-width: 800px) {
+  .PageHome #faq .intro .title .to-break {
+    left: 1rem;
+  }
+}
+
+.PageHome #faq .swiper-faq {
+  margin-bottom: 6rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .PageHome #faq .swiper-faq {
+    overflow: visible;
+  }
+}
+
+.PageHome #faq .swiper-faq .swiper-slide {
+  height: auto;
+}
+
+.PageHome #faq .faq-cards .faq-card {
+  height: 100%;
+  background-color: #fff;
+  border-bottom: 5px solid #00ff8c;
+  border-radius: 8px;
+  flex-direction: column;
+  padding: 24px;
+  display: flex;
+  box-shadow: 0 1px 4px #100b3733, 0 3px 16px #100b371a;
+}
+
+.PageHome #faq .faq-cards .faq-card svg {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.PageHome #faq .faq-cards .faq-card .pergunta-title {
+  color: #0f0f0f;
+  margin-bottom: 1rem;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.PageHome #faq .faq-cards .faq-card .resposta {
+  color: #0f0f0f;
+  margin-bottom: 1.4rem;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.PageHome #faq .faq-cards .faq-card .saber-mais {
+  margin-top: auto;
+}
+
+.PageHome #faq .cta-banner-wrapper {
+  max-width: 910px;
 }
 
 /*# sourceMappingURL=index.css.map */
