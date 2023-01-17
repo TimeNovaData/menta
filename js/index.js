@@ -52,14 +52,18 @@ async function init() {
       //
     };
 
-    IMask(formFields.dateInput, { mask: "00/00/0000" });
-    IMask(formFields.telInput, { mask: "(00) 00000-0000" });
+    // IMask(formFields.dateInput, { mask: "00/00/0000" });
+    // IMask(formFields.telInput, { mask: "(00) 00000-0000" });
 
-    Object
-      .entries(formFields)
-      .map(([_, field]) => {
-        field.addEventListener("change", GLOBAL.validaAi);
-      });
+    if(formFields){
+
+
+      Object
+        .entries(formFields)
+        .map(([_, field]) => {
+          field?.addEventListener("change", GLOBAL.validaAi);
+        });
+    }
 
   }else if (PageHome){
     document.body.classList.add("PageHome");
@@ -70,6 +74,26 @@ async function init() {
 
   document.body.style.opacity = 1
 
+
+  const btnOpen = document.querySelectorAll('.open-modal')
+  const closeBtn = document.querySelector('.modal .close-modal')
+  const modalWrapper = document.querySelector('.modal')
+  closeBtn.addEventListener('click', ()=> {
+    modalWrapper.classList.remove('modal-active')
+  })
+
+  modalWrapper.addEventListener('click', (e) => {
+    console.log(e.target.classList)
+    if(!e.target.classList.contains('modal-active')) return
+    modalWrapper.classList.remove('modal-active')
+  })
+  btnOpen.forEach(link => {
+    link.addEventListener('click', () => {
+    
+     
+      modalWrapper.classList.add('modal-active')
+    })
+  })
 
 
 }

@@ -576,14 +576,10 @@ async function init() {
             telInput: document.querySelector("#tel"),
             emailInput: document.querySelector("#email")
         };
-        IMask(formFields.dateInput, {
-            mask: "00/00/0000"
-        });
-        IMask(formFields.telInput, {
-            mask: "(00) 00000-0000"
-        });
-        Object.entries(formFields).map(([_, field])=>{
-            field.addEventListener("change", GLOBAL.validaAi);
+        // IMask(formFields.dateInput, { mask: "00/00/0000" });
+        // IMask(formFields.telInput, { mask: "(00) 00000-0000" });
+        if (formFields) Object.entries(formFields).map(([_, field])=>{
+            field?.addEventListener("change", GLOBAL.validaAi);
         });
     } else if (PageHome) {
         document.body.classList.add("PageHome");
@@ -592,6 +588,22 @@ async function init() {
         (0, _homeJsDefault.default)();
     }
     document.body.style.opacity = 1;
+    const btnOpen = document.querySelectorAll(".open-modal");
+    const closeBtn = document.querySelector(".modal .close-modal");
+    const modalWrapper = document.querySelector(".modal");
+    closeBtn.addEventListener("click", ()=>{
+        modalWrapper.classList.remove("modal-active");
+    });
+    modalWrapper.addEventListener("click", (e)=>{
+        console.log(e.target.classList);
+        if (!e.target.classList.contains("modal-active")) return;
+        modalWrapper.classList.remove("modal-active");
+    });
+    btnOpen.forEach((link)=>{
+        link.addEventListener("click", ()=>{
+            modalWrapper.classList.add("modal-active");
+        });
+    });
 }
 init() // const switchModal = () => {
  //   const modal = document.querySelector(".modal");
@@ -614,7 +626,7 @@ init() // const switchModal = () => {
  // };
 ;
 
-},{"./modules/getElementAndappend.js":"kgt1M","./modules/swiperProps.js":"csy8f","./modules/animation.js":"8x8Rt","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./modules/scriptsPaginas/home.js":"2gwvx"}],"kgt1M":[function(require,module,exports) {
+},{"./modules/getElementAndappend.js":"kgt1M","./modules/swiperProps.js":"csy8f","./modules/animation.js":"8x8Rt","./modules/scriptsPaginas/home.js":"2gwvx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kgt1M":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 async function getElemetAndAppend(cont, arquivo, isHead) {

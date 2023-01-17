@@ -355,6 +355,222 @@ footer.faq-footer .all-rights-reserved p:before {
   }
 }
 
+.modal {
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background: #00000059;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.modal.modal-active {
+  display: block;
+}
+
+.modal .card-form svg.close-modal {
+  color: #0f0f0f;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 1.9rem;
+  right: 2rem;
+}
+
+.modal .card-form svg.close-modal:hover {
+  color: #c82400;
+}
+
+.modal header {
+  flex-direction: column;
+  gap: 1rem;
+  display: flex;
+}
+
+.modal h4 {
+  color: #4f37ff;
+  margin-block: 0;
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+}
+
+.modal span {
+  line-height: 1.5rem;
+}
+
+.modal .card-form {
+  max-width: 587px;
+  width: 96%;
+  background: #fff;
+  border-radius: 1rem;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 2.5rem 2rem;
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 1px 4px #100b3733, 0 3px 16px #100b371a;
+}
+
+@media screen and (max-width: 600px) {
+  .modal .card-form {
+    width: 90%;
+    padding-inline: 1rem;
+  }
+}
+
+.modal .card-form .input-validation-field {
+  flex-direction: column;
+  gap: .25rem;
+  display: flex;
+  position: relative;
+}
+
+.modal .card-form .input-validation-field p {
+  color: #c82400;
+  font-size: .75rem;
+  position: absolute;
+  top: 4.25rem;
+}
+
+.modal .card-form .form-columns {
+  grid-template-columns: 1fr 1fr;
+  gap: 1.8vw;
+  display: grid;
+}
+
+@media screen and (max-width: 600px) {
+  .modal .card-form .form-columns {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.modal .card-form form {
+  flex-direction: column;
+  gap: 2.5rem;
+  display: flex;
+}
+
+@media screen and (max-width: 600px) {
+  .modal .card-form form {
+    gap: 2rem;
+  }
+}
+
+.modal .card-form input {
+  width: 100%;
+  color: #0f0f0f;
+  color: #212529;
+  appearance: none;
+  background-clip: padding-box;
+  border: 0;
+  outline: 0;
+  padding-block: .375rem;
+  padding-inline: .625rem 0;
+  font-size: 1rem;
+  display: block;
+}
+
+.modal .card-form footer {
+  align-items: center;
+  gap: .5rem;
+  display: flex;
+}
+
+.modal .card-form footer button {
+  color: #fff;
+  background: #857aea;
+  border-radius: .75rem;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: .75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  transition: all .2s;
+  display: flex;
+}
+
+.modal .card-form footer button svg {
+  color: #fff;
+}
+
+.modal .card-form footer button:hover {
+  background: #6f5cff;
+}
+
+.modal .card-form a.icon-question {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 1px solid #4f37ff;
+  border-radius: .75rem;
+  align-items: center;
+  padding: .75rem;
+  transition: all .2s;
+  display: flex;
+}
+
+.modal .card-form a.icon-question:hover {
+  background: #edebff;
+}
+
+.modal .card-form svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #666;
+}
+
+.modal .input-field {
+  width: 100%;
+  border: 1px solid #c8c2ff;
+  border-radius: .75rem;
+  align-items: center;
+  padding: 1rem 0 1rem 1rem;
+  display: flex;
+}
+
+.modal .input-field.valido {
+  background-image: url("valid.6c6e3d86.svg");
+  background-position: right 1.125rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+  padding-right: 1.125rem;
+  border: 1px solid #1cc800 !important;
+}
+
+.modal .input-field.valido input {
+  width: calc(100% - 48px);
+}
+
+.modal .input-field.invalido {
+  background-image: url("invalid.8b4e9b97.svg");
+  background-position: right 1.125rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+  padding-right: 1rem;
+  border: 2px solid #c82400 !important;
+}
+
+.modal .input-field.invalido input {
+  width: calc(100% - 48px);
+}
+
+.modal .input-field:focus-within {
+  border: 2px solid #2648be;
+}
+
+.modal .input-field:focus-within svg {
+  color: #0f0f0f;
+}
+
 body {
   opacity: 0;
 }
@@ -1419,205 +1635,6 @@ main {
 .PageBlog .see-more a:hover {
   color: #fff;
   background: #4f37ff;
-}
-
-.PageBlog .modal {
-  z-index: 100;
-  width: 100vw;
-  height: 100vh;
-  background: #00000059;
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-.PageBlog .modal header {
-  flex-direction: column;
-  gap: 1rem;
-  display: flex;
-}
-
-.PageBlog .modal h4 {
-  color: #4f37ff;
-  margin-block: 0;
-  font-size: 2.25rem;
-  line-height: 2.75rem;
-}
-
-.PageBlog .modal span {
-  line-height: 1.5rem;
-}
-
-.PageBlog .modal .card-form {
-  max-width: 587px;
-  width: 96%;
-  background: #fff;
-  border-radius: 1rem;
-  flex-direction: column;
-  gap: 2.5rem;
-  padding-block: 2rem;
-  padding-inline: 3vw;
-  display: flex;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 1px 4px #100b3733, 0 3px 16px #100b371a;
-}
-
-@media screen and (max-width: 600px) {
-  .PageBlog .modal .card-form {
-    width: 90%;
-    padding-inline: 1rem;
-  }
-}
-
-.PageBlog .modal .card-form .input-validation-field {
-  flex-direction: column;
-  gap: .25rem;
-  display: flex;
-  position: relative;
-}
-
-.PageBlog .modal .card-form .input-validation-field p {
-  color: #c82400;
-  font-size: .75rem;
-  position: absolute;
-  top: 4.25rem;
-}
-
-.PageBlog .modal .card-form .form-columns {
-  grid-template-columns: 1fr 1fr;
-  gap: 1.8vw;
-  display: grid;
-}
-
-@media screen and (max-width: 600px) {
-  .PageBlog .modal .card-form .form-columns {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-}
-
-.PageBlog .modal .card-form form {
-  flex-direction: column;
-  gap: 2.5rem;
-  display: flex;
-}
-
-@media screen and (max-width: 600px) {
-  .PageBlog .modal .card-form form {
-    gap: 2rem;
-  }
-}
-
-.PageBlog .modal .card-form input {
-  width: 100%;
-  color: #0f0f0f;
-  color: #212529;
-  appearance: none;
-  background-clip: padding-box;
-  border: 0;
-  outline: 0;
-  padding-block: .375rem;
-  padding-inline: .625rem 0;
-  font-size: 1rem;
-  display: block;
-}
-
-.PageBlog .modal .card-form footer {
-  align-items: center;
-  gap: .5rem;
-  display: flex;
-}
-
-.PageBlog .modal .card-form footer button {
-  color: #fff;
-  background: #857aea;
-  border-radius: .75rem;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  padding: .75rem;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1.5rem;
-  transition: all .2s;
-  display: flex;
-}
-
-.PageBlog .modal .card-form footer button svg {
-  color: #fff;
-}
-
-.PageBlog .modal .card-form footer button:hover {
-  background: #6f5cff;
-}
-
-.PageBlog .modal .card-form a.icon-question {
-  width: -moz-fit-content;
-  width: fit-content;
-  border: 1px solid #4f37ff;
-  border-radius: .75rem;
-  align-items: center;
-  padding: .75rem;
-  transition: all .2s;
-  display: flex;
-}
-
-.PageBlog .modal .card-form a.icon-question:hover {
-  background: #edebff;
-}
-
-.PageBlog .modal .card-form svg {
-  width: 1.5rem;
-  height: 1.5rem;
-  color: #666;
-}
-
-.PageBlog .input-field {
-  width: 100%;
-  border: 1px solid #c8c2ff;
-  border-radius: .75rem;
-  align-items: center;
-  padding: 1rem 0 1rem 1rem;
-  display: flex;
-}
-
-.PageBlog .input-field.valido {
-  background-image: url("valid.6c6e3d86.svg");
-  background-position: right 1.125rem center;
-  background-repeat: no-repeat;
-  background-size: 1.5rem;
-  padding-right: 1.125rem;
-  border: 1px solid #1cc800 !important;
-}
-
-.PageBlog .input-field.valido input {
-  width: calc(100% - 48px);
-}
-
-.PageBlog .input-field.invalido {
-  background-image: url("invalid.8b4e9b97.svg");
-  background-position: right 1.125rem center;
-  background-repeat: no-repeat;
-  background-size: 1.5rem;
-  padding-right: 1rem;
-  border: 2px solid #c82400 !important;
-}
-
-.PageBlog .input-field.invalido input {
-  width: calc(100% - 48px);
-}
-
-.PageBlog .input-field:focus-within {
-  border: 2px solid #2648be;
-}
-
-.PageBlog .input-field:focus-within svg {
-  color: #0f0f0f;
 }
 
 .PageHome #banner-hero {
