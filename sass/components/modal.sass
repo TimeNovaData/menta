@@ -1,5 +1,7 @@
 .modal
-  display: none
+  opacity: 0
+
+  pointer-events: none
   background: rgba(0, 0, 0, 0.35)
   position: fixed
   z-index: 100
@@ -7,11 +9,17 @@
   left: 0
   width: 100vw
   height: 100vh
-
-
+  transition: 0.2s ease
 
   &.modal-active
-    display: block
+    opacity: 1
+   
+
+    .card-form
+      transform: translate(-50%, -50%) scale(1)
+      pointer-events: all
+
+ 
 
   .card-form svg.close-modal
     position: absolute
@@ -43,7 +51,7 @@
     position: fixed
     left: 50%
     top: 50%
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%) scale(0)
     background: $white
     box-shadow: 0px 1px 4px rgba(16, 11, 55, 0.2), 0px 3px 16px rgba(16, 11, 55, 0.1)
     border-radius: 1rem
@@ -56,6 +64,8 @@
     display: flex
     flex-direction: column
     gap: 2.5rem
+    transition: 0.2s ease
+    
     @include d(sm)
       width: 90%
       padding-inline: 1rem

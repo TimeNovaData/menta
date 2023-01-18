@@ -1,3 +1,5 @@
+&
+  background: $background
 #banner-hero
   
   overflow: hidden
@@ -84,9 +86,6 @@
     img
       width: 100%
       object-fit: cover
-      
-      
-
     .ceu-banner
       height: 100%
       
@@ -129,7 +128,7 @@
 
       span
         background-color: $green-500
-        padding: 1rem
+        padding: 10px
       .to-break
         margin-left: -16px
       @include d(md)
@@ -234,9 +233,11 @@
 
       span
         background-color: $green-500
-        padding: 1rem
+        padding: 10px
+        display: block
       .to-break
         margin-left: 0
+        margin-top: -1px
         display: block
         width: max-content
         margin-left: 0
@@ -283,3 +284,521 @@
         margin-top: auto
   .cta-banner-wrapper
     max-width: 910px
+
+
+#contato
+  padding: 8rem 0
+  .intro
+
+    max-width: max-content
+    transform: rotate(-10deg)
+    margin-bottom: 3rem
+
+    @include d(sm)
+      margin-left: auto
+      margin-right: auto
+
+    .title
+      color: $blue-500
+      
+      font-size: 5.5rem
+      font-weight: 900
+      font-size: clamp(3rem, 4.4vw, 3rem)
+
+      .hide-mobile
+        display: none
+        @media (min-width: 768px)
+          display: inline-block
+          padding: 0
+        
+      .hide-desktop
+        display: none
+        @media (max-width: 768px)
+          display: inline-block
+          padding: 0
+      span
+        background-color: $green-500
+        padding: 10px
+        width: max-content
+        display: block
+        @media (max-width: 768px)
+          margin: 0 auto
+      .to-break
+        margin-left: auto
+        display: block
+        position: relative
+        left: 5rem
+        @media (max-width: 768px)
+          left: unset
+          
+      
+      
+      
+
+  .grid-wrapper
+    display: grid
+    grid-template-columns: 1fr 1fr
+    align-items: flex-end
+    gap: 1rem
+    @include d(md2)
+      grid-template-columns: 1fr 
+
+    .col-1
+      padding-bottom: 2rem
+      @include  d(md)
+        padding-top: 5rem
+    .images-group
+      margin-top: 2rem
+      @include d(md2)
+        grid-row: 1
+      .step
+        position: relative
+      .step:nth-child(2) img
+        margin: 0 auto
+        margin-top: -44px       
+        right: 10px
+        filter: grayscale(1)
+        @include d(md)
+         margin-top: -30px
+      .step:nth-child(3) img
+        margin-left: auto
+        margin-top: -120px
+        margin-right: 10px
+        filter: grayscale(1)
+        @include d(md)
+          margin-top: -80px
+
+
+  .card-form
+  
+    background: $white
+    box-shadow: 0px 1px 4px rgba(16, 11, 55, 0.2), 0px 3px 16px rgba(16, 11, 55, 0.1)
+    border-radius: 1rem
+    max-width: 587px  
+    padding: 2.5rem 2rem
+    display: flex
+    flex-direction: column
+    gap: 2.5rem
+    transition: 0.2s ease
+  
+    @include d(sm)
+      // width: 90%
+      padding-inline: 1rem
+    header
+      display: flex
+      flex-direction: column
+      gap: 1rem
+
+    h4
+      font-size: 2.25rem
+      color: $blue-500
+      line-height: 2.75rem
+      margin-block: 0
+
+    span
+      line-height: 1.5rem
+
+  .input-validation-field
+    display: flex
+    flex-direction: column
+    gap: .25rem
+    position: relative
+
+    p
+      font-size: .75rem
+      color: $invalid
+      position: absolute
+      top: 4.25rem
+
+  .form-columns
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 1.8vw
+    @include d(sm)
+      grid-template-columns: 1fr
+      gap: 2rem
+
+  form
+    display: flex
+    flex-direction: column
+    gap: 2.5rem
+    @include d(sm)
+      gap: 2rem
+
+  input
+    border: 0
+    width: 100%
+    outline: 0
+    color: $gray-900
+    font-size: 1rem
+
+    display: block
+    padding-block: 0.375rem
+    padding-inline: .625rem 0
+    color: #212529
+    background-clip: padding-box
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+
+  footer
+    // margin-top: 16px
+    display: flex
+    align-items: center
+    gap: .5rem
+
+    button
+      background: $blue-300
+      border-radius: .75rem
+      padding: .75rem
+      color: $white
+      font-size: 1rem
+      font-weight: 700
+      line-height: 1.5rem
+      flex: 1
+      transition: all 0.2s
+
+      display: flex
+      justify-content: center
+      align-items: center
+      gap: 10px
+
+      svg
+        color: $white
+
+    button:hover
+      background: $blue-400
+
+  a.icon-question
+    border: 1px solid $blue-500
+    border-radius: .75rem
+    padding: .75rem
+    display: flex
+    align-items: center
+    width: fit-content
+    transition: all 0.2s
+
+    &:hover
+      background: $blue-50
+
+  svg
+    width: 1.5rem
+    height: 1.5rem
+    color: $gray-500
+
+  .input-field
+    width: 100%
+    display: flex
+    align-items: center
+    padding: 1rem 0 1rem 1rem
+    border: 1px solid $blue-100
+    border-radius: .75rem
+
+    &.valido
+      border: 1px solid $success !important
+      padding-right: 1.125rem
+      background-image: url("../assets/img/valid.svg")
+      background-repeat: no-repeat
+      background-position: right calc(.5625rem + .5625rem) center
+      background-size: 1.5rem
+      input
+        width: calc(100% - 48px)
+
+    &.invalido
+      border: 2px solid $invalid !important
+      padding-right: 1rem
+      background-image: url("../assets/img/invalid.svg")
+      background-repeat: no-repeat
+      background-position: right 1.125rem center
+      background-size: 1.5rem
+      input
+        width: calc(100% - 48px)
+
+    &:focus-within
+      border: 2px solid $active
+      svg
+        color: $gray-900
+
+
+#blog
+  background-color: $blue-500
+  padding: 10rem 0
+
+  .intro
+    max-width: max-content
+    transform: rotate(-10deg)
+    margin-bottom: 3rem
+    margin-left: auto
+    margin-right: auto
+    position: relative
+    right: 0
+    margin-bottom: 7rem
+   
+      
+
+    .title
+      color: $blue-500
+      font-size: 5.5rem
+      font-weight: 900
+      font-size: clamp(3rem, 4.4vw, 3rem)
+      span
+        background-color: $green-500
+        padding: 10px
+        margin-left: -15px
+        @include d(sm)
+          display: block
+          margin: 0 auto
+          width: max-content
+      .to-break
+        @include d(sm)
+         display: block
+         margin-top: -2px
+        
+
+  .blog-wrapper 
+    display: flex
+    flex-direction: column
+    gap: 2rem
+
+  .main-card
+    width: 100%
+    display: grid
+    grid-template-columns: 1fr 1fr
+    align-items: center
+    background: $white
+    box-shadow: 0px 1px 4px rgba(16, 11, 55, 0.2), 0px 3px 16px rgba(16, 11, 55, 0.1)
+    border-radius: 16px
+    @include d(md)
+      grid-template-columns: 1fr
+
+    .main-card-img
+      height: 100%
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: bottom
+      border-radius: 16px 0 0 16px
+      @include d(md)
+        border-radius: 16px 16px 0 0
+
+    .main-card-info
+
+      display: flex
+      flex-direction: column
+      gap: 1.5rem
+      padding: 2rem
+      @include d(md2)
+        padding: 1.5rem 1rem 
+
+    h5
+      font-size: 1.5rem
+      color: $blue-500
+      line-height: 1.3
+      margin-block: 0
+
+    p
+      line-height: 1.5rem
+      color: $gray-900
+
+    a
+      color: $blue-500
+      text-decoration: none
+      margin-top: 2.5rem
+      margin-left: auto
+
+      display: flex
+      align-items: center
+      gap: .5938rem
+
+      svg
+        width: .9375rem
+        height: .7813rem
+
+  .swiper
+    margin-inline: 0
+
+    .swiper-slide
+      box-shadow: 0px 1px 4px rgba(16, 11, 55, 0.2), 0px 3px 16px rgba(16, 11, 55, 0.1)
+      border-radius: 8px
+
+  .blog-card
+    @include blog-card
+
+    h6
+      font-size: 1.5rem
+
+  .menta-way
+    width: 100%
+    border-radius: 8px
+    margin-block: 2.25rem
+    padding: 4.5rem 1.5rem
+    background: url('../assets/img/blog_img2.png') no-repeat
+    background-size: cover
+    color: $white
+    text-align: center
+
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    gap: .5rem
+
+    button
+      margin-top: 2rem
+      background: $blue-500
+      color: $white
+      text-decoration: none
+      font-weight: 700
+      font-size: 1rem
+      padding-block: .75rem
+      cursor: pointer
+      transition: all 0.2s
+
+      display: flex
+      justify-content: center
+      max-width: 23.75rem
+      width: 100%
+      border-radius: 8px
+
+    button:hover
+      background: $blue-600
+
+  h3
+    font-size: 3rem
+    font-weight: 900
+    margin-block: 0
+    line-height: 3.75rem
+
+  .see-more
+    display: flex
+    justify-content: center
+
+    a
+      color: $blue-500
+      text-decoration: none
+      font-weight: 700
+      border: 1px solid $blue-500
+      margin-top: 32px
+      max-width: 36.8125rem
+      width: 100%
+      padding: 1.125rem
+      text-align: center
+      border-radius: 12px
+      transition: all 0.2s
+    a:hover
+      background: $blue-500
+      color: $white
+
+
+#trabalhe-conosco
+  padding: 10rem 0
+  .intro
+    max-width: max-content
+    transform: rotate(-10deg)
+    margin-bottom: 7rem
+    margin-left: auto
+    margin-right: auto
+    position: relative
+    right:0
+
+    @include d(md2)
+     max-width: 320px
+     padding: 0 1.5rem
+     margin-bottom: 3rem
+
+
+    .title
+      color: $blue-500
+      font-size: 5.5rem
+      font-weight: 900
+      font-size: clamp(3rem, 4.4vw, 3rem)
+      line-height: 1
+      span
+        background-color: $green-500
+        padding: 10px
+        margin-left: -15px
+        @include d(md2)
+          text-transform: capitalize
+       
+      .to-break
+        // margin-left: 0
+        // margin-top: -1px
+        // display: block
+        // width: max-content
+        // margin-left: 0
+        // position: relative
+        // left: 70%
+        @include d(md2)
+          display: block
+          width: max-content
+          // left: 1rem
+      .to-break:nth-child(2)
+        margin: 0 auto
+      .to-break:nth-child(3)
+        margin-left: auto
+  
+
+  .swiper-trabalhe
+    @media (max-width: 1024px)
+      overflow: visible
+  .card-trabalho
+    background-color: #fff
+    border-radius: 16px
+    overflow: hidden
+    border: 1px solid #fff
+
+    .img-wrapper
+      img 
+        width: 100%
+    
+    svg
+      width: 18px
+      height: 18px
+    .content
+      padding: 16px 16px 19px
+      .title
+        color: $gray-900
+        font-size: 14px 
+        font-weight: 700
+        line-height: 1.3
+        margin-bottom: 8px
+      .info-vaga
+        color: $gray-500
+        font-size: 14px
+        margin-bottom: 18px
+    .ver-mais
+      color: $blue-500 
+      font-weight: 700
+      display: flex 
+      align-items: center
+      justify-content: center
+      letter-spacing: 0.0015em
+      text-decoration:  none
+
+      svg
+        margin-left: 8px
+
+  .wrapper-info
+    max-width: 586px
+    margin: 0 auto
+    text-align: center
+    margin-top:  2rem
+    .ver-mais
+      color: $blue-500 
+      font-weight: 700
+      display: flex 
+      align-items: center
+      justify-content: center
+      letter-spacing: 0.0015em
+      text-decoration:  none
+      margin-top: 1.5rem
+
+      svg
+        margin-left: 8px
+        width: 18px
+        height: 18px
+
+
+

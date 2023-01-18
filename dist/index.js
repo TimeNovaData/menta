@@ -541,6 +541,8 @@ var _animationJs = require("./modules/animation.js");
 var _animationJsDefault = parcelHelpers.interopDefault(_animationJs);
 var _homeJs = require("./modules/scriptsPaginas/home.js");
 var _homeJsDefault = parcelHelpers.interopDefault(_homeJs);
+var _modalJs = require("./modules/modal.js");
+var _modalJsDefault = parcelHelpers.interopDefault(_modalJs);
 const PageEmBreve = document.querySelector("#PageEmBreve");
 const PageFaq = document.querySelector("#PageFaq");
 const PagePost = document.querySelector("#PagePost");
@@ -548,6 +550,7 @@ const PageBlog = document.querySelector("#PageBlog");
 const PageHome = document.querySelector("#PageHome");
 async function init() {
     (0, _getElementAndappendJsDefault.default)(".svg-container", "../../templates/parts/svg.html");
+    (0, _modalJsDefault.default)();
     if (PageFaq) {
         document.body.classList.add("PageFaq");
         (0, _getElementAndappendJsDefault.default)(".footer-container", "../../templates/parts/footer.html");
@@ -586,24 +589,20 @@ async function init() {
         (0, _getElementAndappendJsDefault.default)(".menu-container", "../../templates/parts/menu.html");
         (0, _getElementAndappendJsDefault.default)(".footer-container", "../../templates/parts/footer.html");
         (0, _homeJsDefault.default)();
+        const swiper2 = new Swiper(".swiper-cards", (0, _swiperPropsJsDefault.default).default);
+        const formFields1 = {
+            nameInput: document.querySelector("#name"),
+            dateInput: document.querySelector("#date"),
+            telInput: document.querySelector("#tel"),
+            emailInput: document.querySelector("#email")
+        };
+        // IMask(formFields.dateInput, { mask: "00/00/0000" });
+        // IMask(formFields.telInput, { mask: "(00) 00000-0000" });
+        if (formFields1) Object.entries(formFields1).map(([_, field])=>{
+            field?.addEventListener("change", GLOBAL.validaAi);
+        });
     }
     document.body.style.opacity = 1;
-    const btnOpen = document.querySelectorAll(".open-modal");
-    const closeBtn = document.querySelector(".modal .close-modal");
-    const modalWrapper = document.querySelector(".modal");
-    closeBtn.addEventListener("click", ()=>{
-        modalWrapper.classList.remove("modal-active");
-    });
-    modalWrapper.addEventListener("click", (e)=>{
-        console.log(e.target.classList);
-        if (!e.target.classList.contains("modal-active")) return;
-        modalWrapper.classList.remove("modal-active");
-    });
-    btnOpen.forEach((link)=>{
-        link.addEventListener("click", ()=>{
-            modalWrapper.classList.add("modal-active");
-        });
-    });
 }
 init() // const switchModal = () => {
  //   const modal = document.querySelector(".modal");
@@ -626,7 +625,7 @@ init() // const switchModal = () => {
  // };
 ;
 
-},{"./modules/getElementAndappend.js":"kgt1M","./modules/swiperProps.js":"csy8f","./modules/animation.js":"8x8Rt","./modules/scriptsPaginas/home.js":"2gwvx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kgt1M":[function(require,module,exports) {
+},{"./modules/getElementAndappend.js":"kgt1M","./modules/swiperProps.js":"csy8f","./modules/animation.js":"8x8Rt","./modules/scriptsPaginas/home.js":"2gwvx","./modules/modal.js":"lfRJE","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kgt1M":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 async function getElemetAndAppend(cont, arquivo, isHead) {
@@ -798,8 +797,49 @@ function homeScripts() {
             }
         }
     });
+    const swiperTrabalhe = new Swiper(".swiper-trabalhe", {
+        slidesPerView: 1.2,
+        spaceBetween: 16,
+        breakpoints: {
+            540: {
+                slidesPerView: 2.2,
+                spaceBetween: 16
+            },
+            768: {
+                slidesPerView: 3.2,
+                spaceBetween: 16
+            },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 32
+            }
+        }
+    });
 }
 exports.default = homeScripts;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lfRJE":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function modal() {
+    const btnOpen = document.querySelectorAll(".open-modal");
+    const closeBtn = document.querySelector(".modal .close-modal");
+    const modalWrapper = document.querySelector(".modal");
+    closeBtn?.addEventListener("click", ()=>{
+        modalWrapper.classList.remove("modal-active");
+    });
+    modalWrapper?.addEventListener("click", (e)=>{
+        console.log(e.target.classList);
+        if (!e.target.classList.contains("modal-active")) return;
+        modalWrapper.classList.remove("modal-active");
+    });
+    btnOpen?.forEach((link)=>{
+        link.addEventListener("click", ()=>{
+            modalWrapper.classList.add("modal-active");
+        });
+    });
+}
+exports.default = modal;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["jfkrW","1Z4Rq"], "1Z4Rq", "parcelRequirec1d0")
 

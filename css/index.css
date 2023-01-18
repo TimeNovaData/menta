@@ -107,7 +107,7 @@ input[type="submit"] {
 }
 
 header.faq-menu {
-  background: #4f37ff;
+  background: #5037ff;
   border-bottom: 1px solid #0000001a;
   justify-content: space-between;
   gap: 1.5rem;
@@ -356,18 +356,25 @@ footer.faq-footer .all-rights-reserved p:before {
 }
 
 .modal {
+  opacity: 0;
+  pointer-events: none;
   z-index: 100;
   width: 100vw;
   height: 100vh;
   background: #00000059;
-  display: none;
+  transition: all .2s;
   position: fixed;
   top: 0;
   left: 0;
 }
 
 .modal.modal-active {
-  display: block;
+  opacity: 1;
+}
+
+.modal.modal-active .card-form {
+  pointer-events: all;
+  transform: translate(-50%, -50%)scale(1);
 }
 
 .modal .card-form svg.close-modal {
@@ -391,7 +398,7 @@ footer.faq-footer .all-rights-reserved p:before {
 }
 
 .modal h4 {
-  color: #4f37ff;
+  color: #5037ff;
   margin-block: 0;
   font-size: 2.25rem;
   line-height: 2.75rem;
@@ -409,11 +416,12 @@ footer.faq-footer .all-rights-reserved p:before {
   flex-direction: column;
   gap: 2.5rem;
   padding: 2.5rem 2rem;
+  transition: all .2s;
   display: flex;
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%)scale(0);
   box-shadow: 0 1px 4px #100b3733, 0 3px 16px #100b371a;
 }
 
@@ -510,7 +518,7 @@ footer.faq-footer .all-rights-reserved p:before {
 .modal .card-form a.icon-question {
   width: -moz-fit-content;
   width: fit-content;
-  border: 1px solid #4f37ff;
+  border: 1px solid #5037ff;
   border-radius: .75rem;
   align-items: center;
   padding: .75rem;
@@ -609,7 +617,7 @@ main {
 }
 
 .PageFaq .section-header h2 {
-  color: #4f37ff;
+  color: #5037ff;
   text-transform: uppercase;
   font-size: 3.375rem;
   line-height: 72px;
@@ -625,7 +633,7 @@ main {
   color: #00ff8c;
   clip-path: polygon(0 20%, 99% 0%, 100% 80%, 1% 100%);
   text-align: center;
-  background: #4f37ff;
+  background: #5037ff;
   padding: .3rem 2.8rem;
 }
 
@@ -848,7 +856,7 @@ main {
   opacity: 0;
   pointer-events: none;
   background: #fff;
-  border: .0625rem solid #4f37ff;
+  border: .0625rem solid #5037ff;
   border-radius: .375rem;
   place-items: center;
   margin: 0 auto;
@@ -949,7 +957,7 @@ main {
 }
 
 .PageEmBreve h1 {
-  color: #4f37ff;
+  color: #5037ff;
   margin-block: 6rem;
   font-size: 5.5rem;
   font-weight: 900;
@@ -1129,7 +1137,7 @@ main {
 }
 
 .PagePost h3 {
-  color: #4f37ff;
+  color: #5037ff;
   margin-block: 0;
   font-size: 3rem;
   font-weight: 900;
@@ -1161,7 +1169,7 @@ main {
 
 .PagePost .post-container a.back-button {
   width: 100%;
-  color: #4f37ff;
+  color: #5037ff;
   align-items: center;
   gap: .75rem;
   margin-block: 2.5rem;
@@ -1284,7 +1292,7 @@ main {
 }
 
 .PagePost .post-container .next-reading h6 {
-  color: #4f37ff;
+  color: #5037ff;
   text-align: center;
   line-height: 1.75rem;
 }
@@ -1302,7 +1310,7 @@ main {
 }
 
 .PagePost .post-container .next-reading .next-post-card a {
-  color: #4f37ff;
+  color: #5037ff;
   align-items: center;
   gap: .5938rem;
   margin-top: auto;
@@ -1346,7 +1354,7 @@ main {
 }
 
 .PageBlog .section-header h2 {
-  color: #4f37ff;
+  color: #5037ff;
   text-transform: uppercase;
   font-size: 3.375rem;
   line-height: 72px;
@@ -1362,7 +1370,7 @@ main {
   color: #00ff8c;
   clip-path: polygon(0 20%, 99% 0%, 100% 80%, 1% 100%);
   text-align: center;
-  background: #4f37ff;
+  background: #5037ff;
   padding: .3rem 2.8rem;
 }
 
@@ -1496,7 +1504,7 @@ main {
 }
 
 .PageBlog .blog-wrapper .main-card h5 {
-  color: #4f37ff;
+  color: #5037ff;
   margin-block: 0;
   font-size: 1.5rem;
   line-height: 32px;
@@ -1508,7 +1516,7 @@ main {
 }
 
 .PageBlog .blog-wrapper .main-card a {
-  color: #4f37ff;
+  color: #5037ff;
   align-items: center;
   gap: .5938rem;
   margin-top: 2.5rem;
@@ -1546,7 +1554,7 @@ main {
 }
 
 .PageBlog .blog-wrapper .blog-card h6 {
-  color: #4f37ff;
+  color: #5037ff;
   margin-block: 0;
   padding: 1.5rem 1.5rem 0;
   font-size: 24px;
@@ -1554,7 +1562,7 @@ main {
 }
 
 .PageBlog .blog-wrapper .blog-card a {
-  color: #4f37ff;
+  color: #5037ff;
   width: -moz-fit-content;
   width: fit-content;
   align-items: center;
@@ -1590,7 +1598,7 @@ main {
   cursor: pointer;
   max-width: 23.75rem;
   width: 100%;
-  background: #4f37ff;
+  background: #5037ff;
   border-radius: 8px;
   justify-content: center;
   margin-top: 2rem;
@@ -1619,11 +1627,11 @@ main {
 }
 
 .PageBlog .see-more a {
-  color: #4f37ff;
+  color: #5037ff;
   max-width: 36.8125rem;
   width: 100%;
   text-align: center;
-  border: 1px solid #4f37ff;
+  border: 1px solid #5037ff;
   border-radius: 12px;
   margin-top: 32px;
   padding: 1.125rem;
@@ -1634,7 +1642,11 @@ main {
 
 .PageBlog .see-more a:hover {
   color: #fff;
-  background: #4f37ff;
+  background: #5037ff;
+}
+
+.PageHome {
+  background: #ebeaf4;
 }
 
 .PageHome #banner-hero {
@@ -1717,7 +1729,7 @@ main {
 .PageHome #banner-hero .cta-banner-wrapper .btn-primary {
   color: #fff;
   cursor: pointer;
-  background: #4f37ff;
+  background: #5037ff;
   border-radius: 12px;
   flex-shrink: 0;
   justify-content: center;
@@ -1801,14 +1813,14 @@ main {
 }
 
 .PageHome #sobre .intro .title {
-  color: #4f37ff;
+  color: #5037ff;
   font-size: clamp(3rem, 4.4vw, 3rem);
   font-weight: 900;
 }
 
 .PageHome #sobre .intro .title span {
   background-color: #00ff8c;
-  padding: 1rem;
+  padding: 10px;
 }
 
 .PageHome #sobre .intro .title .to-break {
@@ -1839,7 +1851,7 @@ main {
 }
 
 .PageHome #sobre .sobre-grid .col-2 .title {
-  color: #4f37ff;
+  color: #5037ff;
   margin-bottom: 8px;
   font-size: 2.25rem;
   font-weight: 700;
@@ -1910,7 +1922,7 @@ main {
 }
 
 .PageHome #sobre .sobre-grid .col-2 .text-experimenta {
-  color: #4f37ff;
+  color: #5037ff;
   margin-top: 1.5rem;
   font-size: 1.125rem;
   font-weight: 700;
@@ -1918,7 +1930,7 @@ main {
 }
 
 .PageHome #faq {
-  background-color: #4f37ff;
+  background-color: #5037ff;
   padding-top: 10rem;
   padding-bottom: 10rem;
 }
@@ -1940,18 +1952,20 @@ main {
 }
 
 .PageHome #faq .intro .title {
-  color: #4f37ff;
+  color: #5037ff;
   font-size: clamp(3rem, 4.4vw, 3rem);
   font-weight: 900;
 }
 
 .PageHome #faq .intro .title span {
   background-color: #00ff8c;
-  padding: 1rem;
+  padding: 10px;
+  display: block;
 }
 
 .PageHome #faq .intro .title .to-break {
   width: max-content;
+  margin-top: -1px;
   margin-left: 0;
   display: block;
   position: relative;
@@ -2016,6 +2030,691 @@ main {
 
 .PageHome #faq .cta-banner-wrapper {
   max-width: 910px;
+}
+
+.PageHome #contato {
+  padding: 8rem 0;
+}
+
+.PageHome #contato .intro {
+  max-width: max-content;
+  margin-bottom: 3rem;
+  transform: rotate(-10deg);
+}
+
+@media screen and (max-width: 600px) {
+  .PageHome #contato .intro {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.PageHome #contato .intro .title {
+  color: #5037ff;
+  font-size: clamp(3rem, 4.4vw, 3rem);
+  font-weight: 900;
+}
+
+.PageHome #contato .intro .title .hide-mobile {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .PageHome #contato .intro .title .hide-mobile {
+    padding: 0;
+    display: inline-block;
+  }
+}
+
+.PageHome #contato .intro .title .hide-desktop {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .PageHome #contato .intro .title .hide-desktop {
+    padding: 0;
+    display: inline-block;
+  }
+}
+
+.PageHome #contato .intro .title span {
+  width: max-content;
+  background-color: #00ff8c;
+  padding: 10px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .PageHome #contato .intro .title span {
+    margin: 0 auto;
+  }
+}
+
+.PageHome #contato .intro .title .to-break {
+  margin-left: auto;
+  display: block;
+  position: relative;
+  left: 5rem;
+}
+
+@media (max-width: 768px) {
+  .PageHome #contato .intro .title .to-break {
+    left: unset;
+  }
+}
+
+.PageHome #contato .grid-wrapper {
+  grid-template-columns: 1fr 1fr;
+  align-items: flex-end;
+  gap: 1rem;
+  display: grid;
+}
+
+@media screen and (max-width: 1024px) {
+  .PageHome #contato .grid-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+.PageHome #contato .grid-wrapper .col-1 {
+  padding-bottom: 2rem;
+}
+
+@media screen and (max-width: 800px) {
+  .PageHome #contato .grid-wrapper .col-1 {
+    padding-top: 5rem;
+  }
+}
+
+.PageHome #contato .grid-wrapper .images-group {
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .PageHome #contato .grid-wrapper .images-group {
+    grid-row: 1;
+  }
+}
+
+.PageHome #contato .grid-wrapper .images-group .step {
+  position: relative;
+}
+
+.PageHome #contato .grid-wrapper .images-group .step:nth-child(2) img {
+  filter: grayscale();
+  margin: -44px auto 0;
+  right: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .PageHome #contato .grid-wrapper .images-group .step:nth-child(2) img {
+    margin-top: -30px;
+  }
+}
+
+.PageHome #contato .grid-wrapper .images-group .step:nth-child(3) img {
+  filter: grayscale();
+  margin-top: -120px;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .PageHome #contato .grid-wrapper .images-group .step:nth-child(3) img {
+    margin-top: -80px;
+  }
+}
+
+.PageHome #contato .card-form {
+  max-width: 587px;
+  background: #fff;
+  border-radius: 1rem;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 2.5rem 2rem;
+  transition: all .2s;
+  display: flex;
+  box-shadow: 0 1px 4px #100b3733, 0 3px 16px #100b371a;
+}
+
+@media screen and (max-width: 600px) {
+  .PageHome #contato .card-form {
+    padding-inline: 1rem;
+  }
+}
+
+.PageHome #contato .card-form header {
+  flex-direction: column;
+  gap: 1rem;
+  display: flex;
+}
+
+.PageHome #contato .card-form h4 {
+  color: #5037ff;
+  margin-block: 0;
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+}
+
+.PageHome #contato .card-form span {
+  line-height: 1.5rem;
+}
+
+.PageHome #contato .input-validation-field {
+  flex-direction: column;
+  gap: .25rem;
+  display: flex;
+  position: relative;
+}
+
+.PageHome #contato .input-validation-field p {
+  color: #c82400;
+  font-size: .75rem;
+  position: absolute;
+  top: 4.25rem;
+}
+
+.PageHome #contato .form-columns {
+  grid-template-columns: 1fr 1fr;
+  gap: 1.8vw;
+  display: grid;
+}
+
+@media screen and (max-width: 600px) {
+  .PageHome #contato .form-columns {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.PageHome #contato form {
+  flex-direction: column;
+  gap: 2.5rem;
+  display: flex;
+}
+
+@media screen and (max-width: 600px) {
+  .PageHome #contato form {
+    gap: 2rem;
+  }
+}
+
+.PageHome #contato input {
+  width: 100%;
+  color: #0f0f0f;
+  color: #212529;
+  appearance: none;
+  background-clip: padding-box;
+  border: 0;
+  outline: 0;
+  padding-block: .375rem;
+  padding-inline: .625rem 0;
+  font-size: 1rem;
+  display: block;
+}
+
+.PageHome #contato footer {
+  align-items: center;
+  gap: .5rem;
+  display: flex;
+}
+
+.PageHome #contato footer button {
+  color: #fff;
+  background: #857aea;
+  border-radius: .75rem;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: .75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  transition: all .2s;
+  display: flex;
+}
+
+.PageHome #contato footer button svg {
+  color: #fff;
+}
+
+.PageHome #contato footer button:hover {
+  background: #6f5cff;
+}
+
+.PageHome #contato a.icon-question {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 1px solid #5037ff;
+  border-radius: .75rem;
+  align-items: center;
+  padding: .75rem;
+  transition: all .2s;
+  display: flex;
+}
+
+.PageHome #contato a.icon-question:hover {
+  background: #edebff;
+}
+
+.PageHome #contato svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #666;
+}
+
+.PageHome #contato .input-field {
+  width: 100%;
+  border: 1px solid #c8c2ff;
+  border-radius: .75rem;
+  align-items: center;
+  padding: 1rem 0 1rem 1rem;
+  display: flex;
+}
+
+.PageHome #contato .input-field.valido {
+  background-image: url("valid.6c6e3d86.svg");
+  background-position: right 1.125rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+  padding-right: 1.125rem;
+  border: 1px solid #1cc800 !important;
+}
+
+.PageHome #contato .input-field.valido input {
+  width: calc(100% - 48px);
+}
+
+.PageHome #contato .input-field.invalido {
+  background-image: url("invalid.8b4e9b97.svg");
+  background-position: right 1.125rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+  padding-right: 1rem;
+  border: 2px solid #c82400 !important;
+}
+
+.PageHome #contato .input-field.invalido input {
+  width: calc(100% - 48px);
+}
+
+.PageHome #contato .input-field:focus-within {
+  border: 2px solid #2648be;
+}
+
+.PageHome #contato .input-field:focus-within svg {
+  color: #0f0f0f;
+}
+
+.PageHome #blog {
+  background-color: #5037ff;
+  padding: 10rem 0;
+}
+
+.PageHome #blog .intro {
+  max-width: max-content;
+  margin-bottom: 7rem;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  right: 0;
+  transform: rotate(-10deg);
+}
+
+.PageHome #blog .intro .title {
+  color: #5037ff;
+  font-size: clamp(3rem, 4.4vw, 3rem);
+  font-weight: 900;
+}
+
+.PageHome #blog .intro .title span {
+  background-color: #00ff8c;
+  margin-left: -15px;
+  padding: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .PageHome #blog .intro .title span {
+    width: max-content;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .PageHome #blog .intro .title .to-break {
+    margin-top: -2px;
+    display: block;
+  }
+}
+
+.PageHome #blog .blog-wrapper {
+  flex-direction: column;
+  gap: 2rem;
+  display: flex;
+}
+
+.PageHome #blog .main-card {
+  width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  display: grid;
+  box-shadow: 0 1px 4px #100b3733, 0 3px 16px #100b371a;
+}
+
+@media screen and (max-width: 800px) {
+  .PageHome #blog .main-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+.PageHome #blog .main-card .main-card-img {
+  height: 100%;
+}
+
+.PageHome #blog .main-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+  border-radius: 16px 0 0 16px;
+}
+
+@media screen and (max-width: 800px) {
+  .PageHome #blog .main-card img {
+    border-radius: 16px 16px 0 0;
+  }
+}
+
+.PageHome #blog .main-card .main-card-info {
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  display: flex;
+}
+
+@media screen and (max-width: 1024px) {
+  .PageHome #blog .main-card .main-card-info {
+    padding: 1.5rem 1rem;
+  }
+}
+
+.PageHome #blog .main-card h5 {
+  color: #5037ff;
+  margin-block: 0;
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+.PageHome #blog .main-card p {
+  color: #0f0f0f;
+  line-height: 1.5rem;
+}
+
+.PageHome #blog .main-card a {
+  color: #5037ff;
+  align-items: center;
+  gap: .5938rem;
+  margin-top: 2.5rem;
+  margin-left: auto;
+  text-decoration: none;
+  display: flex;
+}
+
+.PageHome #blog .main-card a svg {
+  width: .9375rem;
+  height: .7813rem;
+}
+
+.PageHome #blog .swiper {
+  margin-inline: 0;
+}
+
+.PageHome #blog .swiper .swiper-slide {
+  border-radius: 8px;
+  box-shadow: 0 1px 4px #100b3733, 0 3px 16px #100b371a;
+}
+
+.PageHome #blog .blog-card {
+  min-height: 23rem;
+  background: #fff;
+  border-radius: 8px;
+  flex-direction: column;
+  display: flex;
+}
+
+.PageHome #blog .blog-card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.PageHome #blog .blog-card h6 {
+  color: #5037ff;
+  margin-block: 0;
+  padding: 1.5rem 1.5rem 0;
+  font-size: 24px;
+  line-height: 2rem;
+}
+
+.PageHome #blog .blog-card a {
+  color: #5037ff;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
+  gap: .5938rem;
+  margin: auto 1.5rem 1.5rem auto;
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+}
+
+.PageHome #blog .blog-card a svg {
+  width: .9375rem;
+  height: .7813rem;
+}
+
+.PageHome #blog .blog-card h6 {
+  font-size: 1.5rem;
+}
+
+.PageHome #blog .menta-way {
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  background: url("blog_img2.ecdaf8df.png") 0 0 / cover no-repeat;
+  border-radius: 8px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  margin-block: 2.25rem;
+  padding: 4.5rem 1.5rem;
+  display: flex;
+}
+
+.PageHome #blog .menta-way button {
+  color: #fff;
+  cursor: pointer;
+  max-width: 23.75rem;
+  width: 100%;
+  background: #5037ff;
+  border-radius: 8px;
+  justify-content: center;
+  margin-top: 2rem;
+  padding-block: .75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all .2s;
+  display: flex;
+}
+
+.PageHome #blog .menta-way button:hover {
+  background: #1d00f5;
+}
+
+.PageHome #blog h3 {
+  margin-block: 0;
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 3.75rem;
+}
+
+.PageHome #blog .see-more {
+  justify-content: center;
+  display: flex;
+}
+
+.PageHome #blog .see-more a {
+  color: #5037ff;
+  max-width: 36.8125rem;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #5037ff;
+  border-radius: 12px;
+  margin-top: 32px;
+  padding: 1.125rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all .2s;
+}
+
+.PageHome #blog .see-more a:hover {
+  color: #fff;
+  background: #5037ff;
+}
+
+.PageHome #trabalhe-conosco {
+  padding: 10rem 0;
+}
+
+.PageHome #trabalhe-conosco .intro {
+  max-width: max-content;
+  margin-bottom: 7rem;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  right: 0;
+  transform: rotate(-10deg);
+}
+
+@media screen and (max-width: 1024px) {
+  .PageHome #trabalhe-conosco .intro {
+    max-width: 320px;
+    margin-bottom: 3rem;
+    padding: 0 1.5rem;
+  }
+}
+
+.PageHome #trabalhe-conosco .intro .title {
+  color: #5037ff;
+  font-size: clamp(3rem, 4.4vw, 3rem);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.PageHome #trabalhe-conosco .intro .title span {
+  background-color: #00ff8c;
+  margin-left: -15px;
+  padding: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+  .PageHome #trabalhe-conosco .intro .title span {
+    text-transform: capitalize;
+  }
+
+  .PageHome #trabalhe-conosco .intro .title .to-break {
+    width: max-content;
+    display: block;
+  }
+}
+
+.PageHome #trabalhe-conosco .intro .title .to-break:nth-child(2) {
+  margin: 0 auto;
+}
+
+.PageHome #trabalhe-conosco .intro .title .to-break:nth-child(3) {
+  margin-left: auto;
+}
+
+@media (max-width: 1024px) {
+  .PageHome #trabalhe-conosco .swiper-trabalhe {
+    overflow: visible;
+  }
+}
+
+.PageHome #trabalhe-conosco .card-trabalho {
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.PageHome #trabalhe-conosco .card-trabalho .img-wrapper img {
+  width: 100%;
+}
+
+.PageHome #trabalhe-conosco .card-trabalho svg {
+  width: 18px;
+  height: 18px;
+}
+
+.PageHome #trabalhe-conosco .card-trabalho .content {
+  padding: 16px 16px 19px;
+}
+
+.PageHome #trabalhe-conosco .card-trabalho .content .title {
+  color: #0f0f0f;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.PageHome #trabalhe-conosco .card-trabalho .content .info-vaga {
+  color: #666;
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+.PageHome #trabalhe-conosco .card-trabalho .ver-mais {
+  color: #5037ff;
+  letter-spacing: .0015em;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+}
+
+.PageHome #trabalhe-conosco .card-trabalho .ver-mais svg {
+  margin-left: 8px;
+}
+
+.PageHome #trabalhe-conosco .wrapper-info {
+  max-width: 586px;
+  text-align: center;
+  margin: 2rem auto 0;
+}
+
+.PageHome #trabalhe-conosco .wrapper-info .ver-mais {
+  color: #5037ff;
+  letter-spacing: .0015em;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+}
+
+.PageHome #trabalhe-conosco .wrapper-info .ver-mais svg {
+  width: 18px;
+  height: 18px;
+  margin-left: 8px;
 }
 
 /*# sourceMappingURL=index.css.map */

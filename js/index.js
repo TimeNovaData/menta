@@ -2,6 +2,7 @@ import getElementAndappend from "./modules/getElementAndappend.js";
 import swiperProps from "./modules/swiperProps.js";
 import animation from "./modules/animation.js"
 import homeScripts from "./modules/scriptsPaginas/home.js";
+import modal from "./modules/modal.js";
 
 
 
@@ -16,7 +17,7 @@ const PageHome = document.querySelector("#PageHome");
 async function init() {
 
   getElementAndappend(".svg-container", "../../templates/parts/svg.html");
-
+  modal()
  
   if (PageFaq) {
     document.body.classList.add("PageFaq");
@@ -70,30 +71,34 @@ async function init() {
     getElementAndappend(".menu-container", "../../templates/parts/menu.html");
     getElementAndappend(".footer-container", "../../templates/parts/footer.html");
     homeScripts();
+    const swiper = new Swiper(".swiper-cards", swiperProps.default);
+
+    const formFields = {
+      nameInput: document.querySelector("#name"),
+      dateInput: document.querySelector("#date"),
+      telInput: document.querySelector("#tel"),
+      emailInput: document.querySelector("#email"),
+      //
+    };
+
+    // IMask(formFields.dateInput, { mask: "00/00/0000" });
+    // IMask(formFields.telInput, { mask: "(00) 00000-0000" });
+
+    if(formFields){
+
+
+      Object
+        .entries(formFields)
+        .map(([_, field]) => {
+          field?.addEventListener("change", GLOBAL.validaAi);
+        });
+    }
   }
 
   document.body.style.opacity = 1
 
 
-  const btnOpen = document.querySelectorAll('.open-modal')
-  const closeBtn = document.querySelector('.modal .close-modal')
-  const modalWrapper = document.querySelector('.modal')
-  closeBtn.addEventListener('click', ()=> {
-    modalWrapper.classList.remove('modal-active')
-  })
-
-  modalWrapper.addEventListener('click', (e) => {
-    console.log(e.target.classList)
-    if(!e.target.classList.contains('modal-active')) return
-    modalWrapper.classList.remove('modal-active')
-  })
-  btnOpen.forEach(link => {
-    link.addEventListener('click', () => {
-    
-     
-      modalWrapper.classList.add('modal-active')
-    })
-  })
+  
 
 
 }
