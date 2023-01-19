@@ -3,7 +3,7 @@ import swiperProps from "./modules/swiperProps.js";
 import animation from "./modules/animation.js"
 import homeScripts from "./modules/scriptsPaginas/home.js";
 import modal from "./modules/modal.js";
-
+import AnimationHome from "./modules/animation/animationHome.js";
 
 
 const PageEmBreve = document.querySelector("#PageEmBreve");
@@ -93,6 +93,10 @@ async function init() {
           field?.addEventListener("change", GLOBAL.validaAi);
         });
     }
+
+    
+    AnimationHome().colorImagesPin()
+    AnimationHome().bannerParallax()
   }
 
   document.body.style.opacity = 1

@@ -4,7 +4,8 @@
   
   overflow: hidden
   position: relative 
-  height: calc(100vh - 69px)
+  // height: calc(100vh - 69px)
+  height: 100vh
     
     
   .container
@@ -88,7 +89,9 @@
       object-fit: cover
     .ceu-banner
       height: 100%
-      
+      // position: fixed
+      // width: 100%
+      // inset: 0
       margin-bottom: -150px
      
       img
@@ -344,29 +347,40 @@
       grid-template-columns: 1fr 
 
     .col-1
-      padding-bottom: 2rem
+      // padding-bottom: 2rem 
       @include  d(md)
-        padding-top: 5rem
+        // padding-top: 5rem
     .images-group
-      margin-top: 2rem
+      transform: translateY(120px)
+      @media (max-width: 1024px)
+        transform: translateY(0)
+      // margin-top: 2rem
       @include d(md2)
         grid-row: 1
       .step
         position: relative
-      .step:nth-child(2) img
-        margin: 0 auto
-        margin-top: -44px       
-        right: 10px
-        filter: grayscale(1)
+      .step:nth-child(2)
+        transform: translateY(-44px)  
         @include d(md)
-         margin-top: -30px
-      .step:nth-child(3) img
-        margin-left: auto
-        margin-top: -120px
-        margin-right: 10px
-        filter: grayscale(1)
+          transform: translateY(-30px)   
+        img
+          margin: 0 auto
+          // padding-top: -44px       
+          right: 10px
+          filter: grayscale(1)
+          
+            // margin-top: -30px
+      .step:nth-child(3)
+        transform: translateY(-120px)
+        transform: translateY(-80px)   
         @include d(md)
-          margin-top: -80px
+        img
+          margin-left: auto
+          // margin-top: -120px
+          margin-right: 10px
+          filter: grayscale(1)
+          @include d(md)
+            // margin-top: -80px
 
 
   .card-form

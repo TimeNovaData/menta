@@ -1,0 +1,95 @@
+body,
+p,
+input,
+h1,
+h2,
+ul,
+li {
+  margin: 0px;
+  padding: 0px;
+  font-family: "vinila";
+}
+
+li {
+  list-style: none;
+}
+
+ol {
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+  font-family: "vinila";
+}
+
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  background: initial;
+  border: initial;
+  -webkit-appearance: none;
+}
+button:active {
+  border-style: initial;
+}
+button:focus {
+  outline: initial;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+fieldset {
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  min-inline-size: -webkit-min-content;
+  min-inline-size: -moz-min-content;
+  min-inline-size: min-content;
+  border-width: 2px;
+  border-style: none;
+  border-color: transparent;
+  -o-border-image: initial;
+     border-image: initial;
+}
+
+figure {
+  display: block;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  -webkit-margin-start: 0;
+          margin-inline-start: 0;
+  -webkit-margin-end: 0;
+          margin-inline-end: 0;
+}
+
+input[type=submit] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+:focus {
+  outline: 0px transparent !important;
+}
+
+input[type=submit] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}/*# sourceMappingURL=reset.css.map */
