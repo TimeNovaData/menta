@@ -550,6 +550,8 @@ const PageFaq = document.querySelector("#PageFaq");
 const PagePost = document.querySelector("#PagePost");
 const PageBlog = document.querySelector("#PageBlog");
 const PageHome = document.querySelector("#PageHome");
+const PageTrabalhe = document.querySelector("#PageTrabalhe");
+const SingleTrabalhe = document.querySelector("#SingleTrabalhe");
 async function init() {
     (0, _getElementAndappendJsDefault.default)(".svg-container", "../../templates/parts/svg.html");
     (0, _modalJsDefault.default)();
@@ -605,6 +607,14 @@ async function init() {
         });
         (0, _animationHomeJsDefault.default)().colorImagesPin();
         (0, _animationHomeJsDefault.default)().bannerParallax();
+    } else if (PageTrabalhe) {
+        document.body.classList.add("PageTrabalhe");
+        (0, _getElementAndappendJsDefault.default)(".menu-container", "../../templates/parts/menu.html");
+        (0, _getElementAndappendJsDefault.default)(".footer-container", "../../templates/parts/footer.html");
+    } else if (SingleTrabalhe) {
+        document.body.classList.add("SingleTrabalhe");
+        (0, _getElementAndappendJsDefault.default)(".menu-container", "../../templates/parts/menu.html");
+        (0, _getElementAndappendJsDefault.default)(".footer-container", "../../templates/parts/footer.html");
     }
     document.body.style.opacity = 1;
 }

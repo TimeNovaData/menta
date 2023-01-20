@@ -1,0 +1,86 @@
+&
+  background: $background
+
+
+#content
+  padding-top: 5rem
+  position: relative
+  margin-bottom: 4rem
+  @include  d(md)
+   padding-top: 2rem
+
+  &::after
+    content: ''
+    display: block
+    background-color: $green-500
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    width: 100%
+    height: 249px
+    z-index: -1
+  .go-back
+    color: $blue-500
+    text-decoration: none
+    font-weight: 700
+    font-size: 14px
+    margin-bottom: 2rem
+    display: inline-block
+  .container
+    max-width: calc( 796px + 2rem)
+  
+  .card-content
+    box-shadow: 0px 1px 4px rgba(16, 11, 55, 0.2), 0px 3px 16px rgba(16, 11, 55, 0.1)
+    background: #fff
+    border-radius: 16px
+    
+  .header
+    padding: 4rem 3rem 2rem
+    border-bottom: 1px solid #E0E0E0
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    @include d(md) 
+     padding: 16px
+     display: grid
+     justify-content: unset 
+     gap: 1.5rem
+  .infos
+    .title
+      color: $gray-900
+      font-size: 2.25rem
+      font-weight: 700
+      margin-bottom: 1rem
+      line-height: 1.4
+      @include d(md)
+       font-size: 1.5rem
+       margin-bottom: 8px
+    .info-flex
+      display: flex
+      align-items: center
+      gap: 5px
+      color: $gray-500
+  .btn-primary 
+    @include Botao()
+    padding: 8px 1.5rem
+    svg
+      color: #fff
+  .content
+    padding: 2rem 3rem 4rem
+    color: $gray-500
+    line-height: 1.4
+    @include d(md)
+     padding: 16px
+    li
+      list-style: disc
+      margin-left: 16px
+      margin-bottom: 8px
+    .responsabilidades
+      margin-bottom: 2rem
+    .title-content
+      color: $gray-900
+      font-size: 1.125rem
+      font-weight: 700
+      margin-bottom: 1rem
+

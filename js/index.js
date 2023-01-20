@@ -11,6 +11,8 @@ const PageFaq = document.querySelector("#PageFaq");
 const PagePost = document.querySelector("#PagePost");
 const PageBlog = document.querySelector("#PageBlog");
 const PageHome = document.querySelector("#PageHome");
+const PageTrabalhe = document.querySelector("#PageTrabalhe");
+const SingleTrabalhe = document.querySelector("#SingleTrabalhe");
 
 
 
@@ -93,10 +95,19 @@ async function init() {
           field?.addEventListener("change", GLOBAL.validaAi);
         });
     }
-
+ 
     
     AnimationHome().colorImagesPin()
     AnimationHome().bannerParallax()
+  }else if(PageTrabalhe){
+    document.body.classList.add("PageTrabalhe");
+    getElementAndappend(".menu-container", "../../templates/parts/menu.html");
+    getElementAndappend(".footer-container", "../../templates/parts/footer.html");
+  }
+  else if(SingleTrabalhe){
+    document.body.classList.add("SingleTrabalhe"); 
+    getElementAndappend(".menu-container", "../../templates/parts/menu.html");
+    getElementAndappend(".footer-container", "../../templates/parts/footer.html");
   }
 
   document.body.style.opacity = 1

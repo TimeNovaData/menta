@@ -3,51 +3,73 @@
   display: flex
   justify-content: space-between
   gap: 4rem
-  padding-left: 5vw
+  // padding-left: 5vw
   padding-top: 2.5rem
   position: relative
   @include d(md2)
-    padding-left: 2vw
+    // padding-left: 2vw
   @include d(md)
     flex-direction: column
-    padding-left: 1vw
+    // padding-left: 1vw
     gap: .5rem
+  @include d(md)
+    padding: 3rem 0
 
+  .section-content
+    position: relative
+    top:28px
+    width: max-content
+    @include d(sm)
+     top: unset
   h2
     font-size: 3.375rem //54px
     color: $blue-500
     text-transform: uppercase
-    line-height: 72px
-  @include d(sm)
-    text-align: center
+    line-height: 1
+    font-weight: 900
+    @include d(sm)
+     text-align: center
 
   .title-bg
     background: $blue-500
-    color: $green-500
-    clip-path: polygon(0 20%, 99% 0%, 100% 80%, 1% 100%)
-    padding: 0.3rem 2.8rem
+    width: max-content
+    // color: $green-500
+    // clip-path: polygon(0 20%, 99% 0%, 100% 80%, 1% 100%)
+    transform: rotate(-4deg)
+    padding: 0.5rem 2.8rem 0.1rem
     text-align: center
+    margin-bottom: 16px
     @include d(md)
-      width: fit-content
-      margin-inline: auto
+      // width: fit-content
+      // margin-inline: auto
     h2
-      color: $green-500
+      color: #FFFFFF
+      line-height: 1
+      
     @include d(sm)
-      width: 95%
-      padding-inline: 1.5rem
+      // width: 95%
+      // padding-inline: 1.5rem
 
   h2.relative
     position: relative
-    left: 26%
-    width: fit-content
+    margin-left: auto
+    width: max-content
+    left: 3rem
+    @include d(sm)
+      left: unset
+      text-align: center
+      margin-right: auto
+    // left: 26%
+    // width: fit-content
 
     @include d(sm)
-      position: static
-      margin-inline: auto
+      // position: static
+      // margin-inline: auto
 
   .faq-img
     max-width: 48vw
     position: absolute
+    bottom: -20px
     right: 0
     @include d(md2)
       max-width: 42vw
