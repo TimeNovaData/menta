@@ -6,6 +6,7 @@ export default function AnimationHome(){
     // gsap.set('#banner-hero', {
     //   y:'-150vh'
     // })
+    return
     let tl2 = gsap.timeline({ 
       scrollTrigger:{
        trigger: "#banner-hero",
@@ -58,38 +59,7 @@ export default function AnimationHome(){
 
 
 
-  function makeItGray (progress, direction, isActive){
-    let tlp = 100 - (progress*100 ) 
-  
-  
-  
-        
-    if(isActive && direction === 1 && keepGoing){
-
-    
-      if(progress > 0.2){
-        gsap.from('.step-2 img', {
-        'filter': `grayscale(${tlp - 0.2 }%)`,
-      
-        })
-      }
-      if(progress > 0.4){
-        gsap.from('.step-3 img', {
-          'filter': `grayscale(${tlp - 0.4 }%)`,
-          duration: 0.1
-        })
-      }
-
-      
-      if(progress > 0.99){
-        keepGoing = false
-        tl.scrollTrigger.kill(true);
-      }
-
-    
-    }
-
-  }
+ 
 
 
 
@@ -145,7 +115,7 @@ export default function AnimationHome(){
 
   })
 
-  ScrollTrigger.matchMedia({	
+ const scrollT = ScrollTrigger.matchMedia({	
 
     "(min-width: 1024px)": function() {
 
@@ -192,6 +162,39 @@ export default function AnimationHome(){
 
   })
 
+
+  function makeItGray (progress, direction, isActive){
+    let tlp = 100 - (progress*100 ) 
+  
+  
+  
+        
+    if(isActive && direction === 1 && keepGoing){
+
+    
+      if(progress > 0.2){
+        gsap.from('.step-2 img', {
+        'filter': `grayscale(${tlp - 0.2 }%)`,
+      
+        })
+      }
+      if(progress > 0.4){
+        gsap.from('.step-3 img', {
+          'filter': `grayscale(${tlp - 0.4 }%)`,
+          duration: 0.1
+        })
+      }
+
+      
+      if(progress > 0.99){
+        keepGoing = false
+        scrollT.kill(true);
+      }
+
+    
+    }
+
+  }
 
 
    

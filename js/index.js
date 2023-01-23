@@ -13,6 +13,7 @@ const PageBlog = document.querySelector("#PageBlog");
 const PageHome = document.querySelector("#PageHome");
 const PageTrabalhe = document.querySelector("#PageTrabalhe");
 const SingleTrabalhe = document.querySelector("#SingleTrabalhe");
+const PageContato = document.querySelector("#PageContato");
 
 
 
@@ -109,6 +110,14 @@ async function init() {
     getElementAndappend(".menu-container", "../../templates/parts/menu.html");
     getElementAndappend(".footer-container", "../../templates/parts/footer.html");
   }
+  else if(PageContato){
+    document.body.classList.add("PageContato"); 
+    getElementAndappend(".menu-container", "../../templates/parts/menu.html");
+    getElementAndappend(".footer-container", "../../templates/parts/footer.html");
+  }
+
+
+  
 
   document.body.style.opacity = 1
 
