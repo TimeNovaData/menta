@@ -110,10 +110,12 @@ input[type="submit"] {
 header.faq-menu {
   background: #5037ff;
   border-bottom: 1px solid #0000001a;
+  padding: 1rem 0;
+}
+
+header.faq-menu .container {
   justify-content: space-between;
-  gap: 1.5rem;
-  padding-block: 1.25rem;
-  padding-inline: 5vw;
+  gap: 2.8rem;
   display: flex;
 }
 
@@ -123,25 +125,27 @@ header.faq-menu .logo svg {
 }
 
 header.faq-menu nav {
+  flex: 1;
+  justify-content: flex-end;
   align-items: center;
   display: flex;
 }
 
-@media screen and (max-width: 800px) {
-  header.faq-menu nav {
-    display: none;
-  }
-}
-
 header.faq-menu ul {
-  width: 38.75rem;
   justify-content: space-between;
   align-items: center;
   display: flex;
 }
 
+@media screen and (max-width: 1024px) {
+  header.faq-menu ul {
+    display: none;
+  }
+}
+
 header.faq-menu ul a {
   color: #fff;
+  padding: 0 1rem;
   text-decoration: none;
   transition: all .2s;
 }
@@ -154,6 +158,7 @@ header.faq-menu .social-media {
   max-width: 200px;
   width: 100%;
   justify-content: space-between;
+  margin-left: auto;
   display: flex;
 }
 
@@ -166,6 +171,39 @@ header.faq-menu .social-media {
 header.faq-menu .social-media svg {
   width: 1.5rem;
   height: 1.5rem;
+}
+
+#btn-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  #btn-mobile {
+    display: block;
+  }
+}
+
+#btn-mobile #hamburger {
+  width: 20px;
+  border-top: 2px solid #fff;
+  display: block;
+}
+
+@media screen and (max-width: 1024px) {
+  #btn-mobile #hamburger {
+    display: block;
+  }
+}
+
+#btn-mobile #hamburger:after, #btn-mobile #hamburger:before {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  margin-top: 5px;
+  transition: all .3s;
+  display: block;
+  position: relative;
 }
 
 footer.faq-footer {
@@ -3172,6 +3210,7 @@ main {
 
 .PageContato #contato .grid-wrapper {
   grid-template-columns: .7fr .3fr;
+  align-items: flex-start;
   gap: 2rem;
   display: grid;
 }

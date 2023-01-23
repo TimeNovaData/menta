@@ -1,11 +1,12 @@
 header.faq-menu
   background: $blue-500
   border-bottom: 1px solid rgba(0, 0, 0, 0.1)
-  padding-block: 1.25rem
-  padding-inline: 5vw
-  display: flex
-  justify-content: space-between
-  gap: 1.5rem
+  padding: 1rem 0
+
+  .container
+    display: flex
+    justify-content: space-between
+    gap: 2.8rem
 
   .logo
     svg
@@ -15,19 +16,20 @@ header.faq-menu
   nav
     display: flex
     align-items: center
-    @include d(md)
-      display: none
-
+    justify-content: flex-end
+    flex: 1
   ul
     display: flex
     align-items: center
     justify-content: space-between
-    width: 38.75rem
-
+    // width: 38.75rem
+    @include d(md2)
+     display: none
     a
       text-decoration: none
       color: $white
       transition: all 0.2s
+      padding:  0 1rem 
     a:hover
       color: $green-500
 
@@ -36,9 +38,31 @@ header.faq-menu
     width: 100%
     display: flex
     justify-content: space-between
+    margin-left: auto
     @include d(md2)
       display: none
-
     svg
       width: 1.5rem
       height: 1.5rem
+ 
+#btn-mobile
+  display: none
+  @include d(md2)
+   display: block
+  #hamburger 
+    display: block
+    border-top: 2px solid #fff
+    width: 20px
+  
+    @include d(md2)
+      display: block
+    &::after,&::before 
+      content: ''
+      display: block
+      width: 20px
+      height: 2px
+      background-color: #fff
+      margin-top: 5px
+      transition: .3s
+      position: relative
+    
