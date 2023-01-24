@@ -1,7 +1,14 @@
+.menu-container
+  position: fixed
+  left: 0
+  right: 0
+  top: 0
+  z-index: 999
 header.faq-menu
   background: $blue-500
   border-bottom: 1px solid rgba(0, 0, 0, 0.1)
-  padding: 1rem 0
+  padding: 16px 0
+
 
   .container
     display: flex
@@ -10,8 +17,8 @@ header.faq-menu
 
   .logo
     svg
-      width: 6.0625rem
-      height: 2rem
+      width: 97px
+      height: 32px
 
   nav
     display: flex
@@ -23,8 +30,7 @@ header.faq-menu
     align-items: center
     justify-content: space-between
     // width: 38.75rem
-    @include d(md2)
-     display: none
+   
     a
       text-decoration: none
       color: $white
@@ -39,8 +45,14 @@ header.faq-menu
     display: flex
     justify-content: space-between
     margin-left: auto
+
+    &.social-mobile
+      display: none
     @include d(md2)
       display: none
+      &.social-mobile
+        display: flex
+        margin-left: unset
     svg
       width: 1.5rem
       height: 1.5rem
@@ -66,3 +78,44 @@ header.faq-menu
       transition: .3s
       position: relative
     
+
+// IF MENU IS OPEN 
+.faq-menu.active #btn-mobile #hamburger 
+  border-top-color: transparent
+  color:  #fff
+
+  &::before 
+    transform: rotate(135deg)
+  
+
+  &::after 
+    transform: rotate(-135deg)
+    top: -7px
+
+@include d(md2)
+  header.faq-menu .menu-links
+    padding-top: 2rem
+    position: fixed
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
+    top: 60px
+    left: 0
+    bottom: 0
+    right: 0
+    transform: translateX(-100%)
+    z-index: 1000
+    background: #5037ff
+    // transition: 0.4s ease-in
+    
+    a
+      padding: 16px
+      display: block
+  .social-mobile
+    margin-top: auto
+    margin-bottom: 3rem
+
+  .faq-menu.active .menu-links
+    // transform: translateX(0)
+

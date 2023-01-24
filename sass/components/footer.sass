@@ -3,17 +3,19 @@ footer.faq-footer
   color: $white
 
   .footer-wrapper
-    max-width: 1075px
-    width: 100%
+    // max-width: 1075px
+    // width: 100%
     display: flex
     justify-content: space-between
     align-items: center
+    padding: 2rem 0 
     text-align: center
-    margin-inline: auto
-    padding: 2rem 1.5rem
+    // margin-inline: auto
+    
 
     @include d(sm)
       flex-direction: column
+      
       align-items: flex-start
       text-align: left
       gap: 1.5rem
@@ -39,6 +41,10 @@ footer.faq-footer
     text-decoration: underline
     line-height: 1.25rem
     display: block
+    font-weight: 300
+    transition: 0.2s ease
+    &:hover
+      color: $green-500
 
   .about-col
     display: flex
@@ -53,17 +59,24 @@ footer.faq-footer
   gap: 0.5rem
 
   span
-    font-weight: bold
+    font-weight: 700
+    font-size: 16px
     margin-bottom: .625rem
 
   .social-media
     display: flex
+    align-items: center
     gap: 2rem
-
+    a 
+      display: block
+      height: 24px
+      transition: 0.2s ease
+      &:hover
+        transform: scale(1.1)    
     svg
       color: $white
-      width: 1.5rem
-      height: 1.5rem
+      width: 24px
+      height: 24px
 
 footer.faq-footer
   .all-rights-reserved

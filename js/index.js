@@ -4,6 +4,7 @@ import animation from "./modules/animation.js"
 import homeScripts from "./modules/scriptsPaginas/home.js";
 import modal from "./modules/modal.js";
 import AnimationHome from "./modules/animation/animationHome.js";
+import menu from "./modules/menu.js";
 
 
 const PageEmBreve = document.querySelector("#PageEmBreve");
@@ -16,16 +17,16 @@ const SingleTrabalhe = document.querySelector("#SingleTrabalhe");
 const PageContato = document.querySelector("#PageContato");
 
 
-
 async function init() {
 
   getElementAndappend(".svg-container", "../../templates/parts/svg.html");
   modal()
  
+
   if (PageFaq) {
     document.body.classList.add("PageFaq");
-    getElementAndappend(".footer-container", "../../templates/parts/footer.html");
-    getElementAndappend(".menu-container", "../../templates/parts/menu.html");
+    await getElementAndappend(".footer-container", "../../templates/parts/footer.html");
+    await getElementAndappend(".menu-container", "../../templates/parts/menu.html");
     /*  */
   } else if (PageEmBreve) {
     document.body.classList.add("PageEmBreve");
@@ -35,8 +36,8 @@ async function init() {
 
   } else if (PagePost) {
     document.body.classList.add("PagePost");
-    getElementAndappend(".menu-container", "../../templates/parts/menu.html");
-    getElementAndappend(".footer-container", "../../templates/parts/footer.html");
+    await getElementAndappend(".menu-container", "../../templates/parts/menu.html");
+    await getElementAndappend(".footer-container", "../../templates/parts/footer.html");
     const swiper = new Swiper(".swiper-cards", swiperProps.default);
     //
 
@@ -44,8 +45,8 @@ async function init() {
     window.scrollTo({ top: 0 });
 
     document.body.classList.add("PageBlog");
-    getElementAndappend(".menu-container", "../../templates/parts/menu.html");
-    getElementAndappend(".footer-container", "../../templates/parts/footer.html");
+    await getElementAndappend(".menu-container", "../../templates/parts/menu.html");
+    await getElementAndappend(".footer-container", "../../templates/parts/footer.html");
     const swiper = new Swiper(".swiper-cards", swiperProps.default);
 
     const formFields = {
@@ -71,8 +72,8 @@ async function init() {
 
   }else if (PageHome){
     document.body.classList.add("PageHome");
-    getElementAndappend(".menu-container", "../../templates/parts/menu.html");
-    getElementAndappend(".footer-container", "../../templates/parts/footer.html");
+    await getElementAndappend(".menu-container", "../../templates/parts/menu.html");
+    await getElementAndappend(".footer-container", "../../templates/parts/footer.html");
     homeScripts();
     const swiper = new Swiper(".swiper-cards", swiperProps.default);
 
@@ -102,23 +103,25 @@ async function init() {
     AnimationHome().bannerParallax()
   }else if(PageTrabalhe){
     document.body.classList.add("PageTrabalhe");
-    getElementAndappend(".menu-container", "../../templates/parts/menu.html");
-    getElementAndappend(".footer-container", "../../templates/parts/footer.html");
+    await getElementAndappend(".menu-container", "../../templates/parts/menu.html");
+    await getElementAndappend(".footer-container", "../../templates/parts/footer.html");
   }
   else if(SingleTrabalhe){
     document.body.classList.add("SingleTrabalhe"); 
-    getElementAndappend(".menu-container", "../../templates/parts/menu.html");
-    getElementAndappend(".footer-container", "../../templates/parts/footer.html");
+    await getElementAndappend(".menu-container", "../../templates/parts/menu.html");
+    await getElementAndappend(".footer-container", "../../templates/parts/footer.html");
   }
   else if(PageContato){
     document.body.classList.add("PageContato"); 
-    getElementAndappend(".menu-container", "../../templates/parts/menu.html");
-    getElementAndappend(".footer-container", "../../templates/parts/footer.html");
+    await getElementAndappend(".menu-container", "../../templates/parts/menu.html");
+    await getElementAndappend(".footer-container", "../../templates/parts/footer.html");
   }
 
 
   
+   menu()
 
+  // SWAP SOCION ON MOBILE
   document.body.style.opacity = 1
 
 

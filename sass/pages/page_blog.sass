@@ -3,21 +3,28 @@
 
 .section-header 
   @include section-header
-  align-items: center
-  padding-top: 0
-  @include d(md)
-    padding-top: 1.6rem
-  .title-bg
-    align-self: center
-  .blog-img
-    max-width: 28.3125rem
-    padding-top: 1rem
-    margin-bottom: -1.5rem
-    img
-      width: 100%
+
+  .faq-img
     @include d(md)
+      position: relative
+      left: 1.5rem
+    img
       margin-left: auto
-      padding-top: 0
+  // align-items: center
+  // padding-top: 0
+  // @include d(md)
+  //   padding-top: 1.6rem
+  // .title-bg
+  //   align-self: center
+  // .blog-img
+  //   max-width: 28.3125rem
+  //   padding-top: 1rem
+  //   margin-bottom: -1.5rem
+  //   img
+  //     width: 100%
+  //   @include d(md)
+  //     margin-left: auto
+  //     padding-top: 0
 
 .blog-wrapper
   max-width: 1206px

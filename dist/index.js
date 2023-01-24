@@ -545,6 +545,8 @@ var _modalJs = require("./modules/modal.js");
 var _modalJsDefault = parcelHelpers.interopDefault(_modalJs);
 var _animationHomeJs = require("./modules/animation/animationHome.js");
 var _animationHomeJsDefault = parcelHelpers.interopDefault(_animationHomeJs);
+var _menuJs = require("./modules/menu.js");
+var _menuJsDefault = parcelHelpers.interopDefault(_menuJs);
 const PageEmBreve = document.querySelector("#PageEmBreve");
 const PageFaq = document.querySelector("#PageFaq");
 const PagePost = document.querySelector("#PagePost");
@@ -558,16 +560,16 @@ async function init() {
     (0, _modalJsDefault.default)();
     if (PageFaq) {
         document.body.classList.add("PageFaq");
-        (0, _getElementAndappendJsDefault.default)(".footer-container", "../../templates/parts/footer.html");
-        (0, _getElementAndappendJsDefault.default)(".menu-container", "../../templates/parts/menu.html");
+        await (0, _getElementAndappendJsDefault.default)(".footer-container", "../../templates/parts/footer.html");
+        await (0, _getElementAndappendJsDefault.default)(".menu-container", "../../templates/parts/menu.html");
     /*  */ } else if (PageEmBreve) {
         document.body.classList.add("PageEmBreve");
         document.querySelectorAll(".faq-menu > nav, .faq-menu .social-media").forEach((i)=>i.remove());
         (0, _animationJsDefault.default)().emBreve();
     } else if (PagePost) {
         document.body.classList.add("PagePost");
-        (0, _getElementAndappendJsDefault.default)(".menu-container", "../../templates/parts/menu.html");
-        (0, _getElementAndappendJsDefault.default)(".footer-container", "../../templates/parts/footer.html");
+        await (0, _getElementAndappendJsDefault.default)(".menu-container", "../../templates/parts/menu.html");
+        await (0, _getElementAndappendJsDefault.default)(".footer-container", "../../templates/parts/footer.html");
         const swiper = new Swiper(".swiper-cards", (0, _swiperPropsJsDefault.default).default);
     //
     } else if (PageBlog) {
@@ -575,8 +577,8 @@ async function init() {
             top: 0
         });
         document.body.classList.add("PageBlog");
-        (0, _getElementAndappendJsDefault.default)(".menu-container", "../../templates/parts/menu.html");
-        (0, _getElementAndappendJsDefault.default)(".footer-container", "../../templates/parts/footer.html");
+        await (0, _getElementAndappendJsDefault.default)(".menu-container", "../../templates/parts/menu.html");
+        await (0, _getElementAndappendJsDefault.default)(".footer-container", "../../templates/parts/footer.html");
         const swiper1 = new Swiper(".swiper-cards", (0, _swiperPropsJsDefault.default).default);
         const formFields = {
             nameInput: document.querySelector("#name"),
@@ -591,8 +593,8 @@ async function init() {
         });
     } else if (PageHome) {
         document.body.classList.add("PageHome");
-        (0, _getElementAndappendJsDefault.default)(".menu-container", "../../templates/parts/menu.html");
-        (0, _getElementAndappendJsDefault.default)(".footer-container", "../../templates/parts/footer.html");
+        await (0, _getElementAndappendJsDefault.default)(".menu-container", "../../templates/parts/menu.html");
+        await (0, _getElementAndappendJsDefault.default)(".footer-container", "../../templates/parts/footer.html");
         (0, _homeJsDefault.default)();
         const swiper2 = new Swiper(".swiper-cards", (0, _swiperPropsJsDefault.default).default);
         const formFields1 = {
@@ -610,17 +612,19 @@ async function init() {
         (0, _animationHomeJsDefault.default)().bannerParallax();
     } else if (PageTrabalhe) {
         document.body.classList.add("PageTrabalhe");
-        (0, _getElementAndappendJsDefault.default)(".menu-container", "../../templates/parts/menu.html");
-        (0, _getElementAndappendJsDefault.default)(".footer-container", "../../templates/parts/footer.html");
+        await (0, _getElementAndappendJsDefault.default)(".menu-container", "../../templates/parts/menu.html");
+        await (0, _getElementAndappendJsDefault.default)(".footer-container", "../../templates/parts/footer.html");
     } else if (SingleTrabalhe) {
         document.body.classList.add("SingleTrabalhe");
-        (0, _getElementAndappendJsDefault.default)(".menu-container", "../../templates/parts/menu.html");
-        (0, _getElementAndappendJsDefault.default)(".footer-container", "../../templates/parts/footer.html");
+        await (0, _getElementAndappendJsDefault.default)(".menu-container", "../../templates/parts/menu.html");
+        await (0, _getElementAndappendJsDefault.default)(".footer-container", "../../templates/parts/footer.html");
     } else if (PageContato) {
         document.body.classList.add("PageContato");
-        (0, _getElementAndappendJsDefault.default)(".menu-container", "../../templates/parts/menu.html");
-        (0, _getElementAndappendJsDefault.default)(".footer-container", "../../templates/parts/footer.html");
+        await (0, _getElementAndappendJsDefault.default)(".menu-container", "../../templates/parts/menu.html");
+        await (0, _getElementAndappendJsDefault.default)(".footer-container", "../../templates/parts/footer.html");
     }
+    (0, _menuJsDefault.default)();
+    // SWAP SOCION ON MOBILE
     document.body.style.opacity = 1;
 }
 init() // const switchModal = () => {
@@ -644,7 +648,7 @@ init() // const switchModal = () => {
  // };
 ;
 
-},{"./modules/getElementAndappend.js":"kgt1M","./modules/swiperProps.js":"csy8f","./modules/animation.js":"8x8Rt","./modules/scriptsPaginas/home.js":"2gwvx","./modules/modal.js":"lfRJE","./modules/animation/animationHome.js":"ZmoPg","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kgt1M":[function(require,module,exports) {
+},{"./modules/getElementAndappend.js":"kgt1M","./modules/swiperProps.js":"csy8f","./modules/animation.js":"8x8Rt","./modules/scriptsPaginas/home.js":"2gwvx","./modules/modal.js":"lfRJE","./modules/animation/animationHome.js":"ZmoPg","./modules/menu.js":"hE65G","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kgt1M":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 async function getElemetAndAppend(cont, arquivo, isHead) {
@@ -876,43 +880,7 @@ function AnimationHome() {
     //  gsap.set('#banner-hero', { y: '-800px'})
     }
     function colorImagesPin() {
-        let keepGoing = true;
-        let tl = gsap.timeline({
-        });
-        const scrollT = ScrollTrigger.matchMedia({
-            "(min-width: 1024px)": function() {
-                ScrollTrigger.create({
-                    trigger: "#contato",
-                    // markers: true,
-                    start: "center center-=70px",
-                    // start: "top",
-                    end: "bottom",
-                    pin: ".images-group",
-                    anticipatePin: 1,
-                    scrub: 1,
-                    pinSpacing: true,
-                    onUpdate ({ progress , direction , isActive  }) {
-                        makeItGray(progress, direction, isActive);
-                    }
-                });
-            },
-            "(max-width: 1023px)": function() {
-                ScrollTrigger.create({
-                    trigger: "#contato",
-                    // markers: true,
-                    // start: "center center+=70px",
-                    start: "top",
-                    // end: "bottom",
-                    pin: ".images-group",
-                    anticipatePin: 1,
-                    scrub: 1,
-                    pinSpacing: true,
-                    onUpdate ({ progress , direction , isActive  }) {
-                        makeItGray(progress, direction, isActive);
-                    }
-                });
-            }
-        });
+        return;
         function makeItGray(progress, direction, isActive) {
             let tlp = 100 - progress * 100;
             if (isActive && direction === 1 && keepGoing) {
@@ -936,6 +904,65 @@ function AnimationHome() {
     };
 }
 exports.default = AnimationHome;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hE65G":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function menu() {
+    const btnMobile = document.getElementById("btn-mobile");
+    const headerEl = document.querySelector(".menu-container");
+    let mql = window.matchMedia("(max-width: 1024px)");
+    let estado = true;
+    function animateIt() {
+        if (!mql.matches) return;
+        const tl = gsap.timeline();
+        if (estado) {
+            gsap.set(".menu-links li", {
+                y: 20,
+                opacity: 0
+            });
+            tl.to(".menu-links", {
+                x: 0,
+                ease: Sine.easeOut
+            }).to(".menu-links li", {
+                opacity: 1,
+                y: 0,
+                stagger: 0.08,
+                ease: Back.easeOut.config(3.7)
+            }, "-=0.2");
+            estado = !estado;
+        } else {
+            tl.to(".menu-links li", {
+                opacity: 0,
+                y: 20,
+                stagger: 0.05,
+                duration: 0.2,
+                ease: Sine.easeOut
+            }).to(".menu-links", {
+                x: "-100%"
+            });
+            estado = !estado;
+        }
+    }
+    function toggleMenu(event) {
+        if (event.type === "touchstart") event.preventDefault();
+        const nav = document.querySelector(".faq-menu");
+        nav.classList.toggle("active");
+        const active = nav.classList.contains("active");
+        event.currentTarget.setAttribute("aria-expanded", active);
+        animateIt();
+        if (active) event.currentTarget.setAttribute("aria-label", "Fechar menu");
+        else event.currentTarget.setAttribute("aria-label", "Abrir menu");
+    }
+    btnMobile?.addEventListener("click", toggleMenu);
+    const socialDesktop = document.querySelector(".social-desktop");
+    const socialMobile = document.querySelector(".social-mobile");
+    if (socialMobile && socialMobile) socialMobile.innerHTML = socialDesktop.innerHTML;
+    window.addEventListener("scroll", function() {
+        headerEl.classList.toggle("sticky", window.scrollY > 150);
+    });
+}
+exports.default = menu;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["jfkrW","1Z4Rq"], "1Z4Rq", "parcelRequirec1d0")
 
