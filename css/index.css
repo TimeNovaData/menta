@@ -1730,6 +1730,116 @@ main {
 
 .PageHome {
   background: #ebeaf4;
+  overflow-x: hidden;
+}
+
+.PageHome #banner-hero-2 {
+  overflow: hidden;
+}
+
+.PageHome #banner-hero-2 .container {
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-end;
+  display: flex;
+  position: relative;
+}
+
+.PageHome #banner-hero-2 .content-wrapper {
+  z-index: 10;
+  padding-bottom: 3rem;
+  position: absolute;
+  inset: 0;
+}
+
+.PageHome #banner-hero-2 .intro {
+  max-width: max-content;
+  background-color: #00ff8c;
+  transform: rotate(-10deg);
+}
+
+.PageHome #banner-hero-2 .intro .title {
+  color: #5037ff;
+  padding: 0 1rem;
+  font-size: clamp(1.875rem, 4.4vw, 5.5rem);
+  font-weight: 900;
+  line-height: 150%;
+}
+
+.PageHome #banner-hero-2 .plane-wrapper {
+  margin-bottom: 48px;
+}
+
+.PageHome #banner-hero-2 .plane-wrapper img {
+  margin: 0 auto;
+}
+
+.PageHome #banner-hero-2 .cta-banner-wrapper {
+  max-width: 992px;
+  width: 100%;
+  background: #fff;
+  border-radius: 32px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  display: flex;
+  box-shadow: 0 1px 4px #100b3733, 0 3px 16px #100b371a;
+}
+
+@media screen and (max-width: 1024px) {
+  .PageHome #banner-hero-2 .cta-banner-wrapper {
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+  }
+}
+
+.PageHome #banner-hero-2 .cta-banner-wrapper p {
+  color: #0f0f0f;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+@media screen and (max-width: 800px) {
+  .PageHome #banner-hero-2 .cta-banner-wrapper p {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+}
+
+.PageHome #banner-hero-2 .cta-banner-wrapper .btn-primary {
+  color: #fff;
+  cursor: pointer;
+  background: #5037ff;
+  border-radius: 12px;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 2rem;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all .2s;
+  display: flex;
+  box-shadow: 0 1px 4px #100b371a, 0 1px 2px #100b374d;
+}
+
+.PageHome #banner-hero-2 .cta-banner-wrapper .btn-primary svg {
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+}
+
+.PageHome #banner-hero-2 .cta-banner-wrapper .btn-primary:hover {
+  background: #1d00f5;
+}
+
+@media screen and (max-width: 600px) {
+  .PageHome #banner-hero-2 .cta-banner-wrapper .btn-primary {
+    width: 100%;
+  }
 }
 
 .PageHome #banner-hero {
@@ -1767,6 +1877,7 @@ main {
 }
 
 .PageHome #banner-hero .plane-wrapper {
+  pointer-events: none;
   margin-bottom: 48px;
 }
 

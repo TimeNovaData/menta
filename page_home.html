@@ -36,12 +36,95 @@
       </div>
 
 
-      <section id="banner-hero" style="margin-top: 100px;">
-        <h1>TODO HERE , NEW BANNER </h1> 
+
+
+      <section id="banner-hero-2" style="margin-top: 70px;">
+        <!-- <h1>TODO HERE , NEW BANNER </h1>  -->
+        <div class="ceu-banner-2">
+          <img src="/assets/img/home/full-ceu.png" alt="">
+        </div>
+
+        <div class="to-stay">
+          <div class="segundo-plano">
+            <img src="/assets/img/home/segundo-plano-extended.png" alt="">
+          </div>
+          
+          <div class="pista">
+            <img src="/assets/img/home/pista-extended.png" alt="">
+          </div>
+        </div>
+
+        
+        <div class="content-wrapper">
+          <div class="container"> 
+            <div class="intro">
+              <h1 class="title">Passagem de Avião</h1>
+            </div>
+
+            <div class="plane-wrapper">
+              <img src="/assets/img/airplane.png" alt="">
+            </div>
+            <div class="cta-banner-wrapper">
+               <p>Quer voar pelo Brasil com passagens ultra acessíveis?</p>
+               <button class="btn-primary">Cadastre-se e saiba mais
+
+                <svg>
+                  <use xlink:href="#icon-check-marker"></use>
+                </svg>
+               </button>
+            </div>
+
+          </div>
+        </div>
+
       </section>
 
 
-      <section id="banner-hero" >
+
+
+      <style>
+
+        
+        .ceu-banner-2{
+          height: 2800px;
+          position: relative;
+        
+        }
+        .ceu-banner-2 img {
+          height: 100%;
+          object-fit: cover;
+          width: 100%;
+          transform: scale(1.2);
+          /* transform: translateY(-1920px); */
+        }
+        .to-stay{
+          position: absolute;
+          height: 100vh;
+          /* background-color: red; */
+          top: 0;
+          z-index: 10;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          overflow: hidden
+        }
+
+        .segundo-plano img{
+          height: 400px;
+          object-fit: cover;
+          object-position: left;
+          margin-bottom: -100px;
+        }
+        .pista img{
+          height: 236px;
+          object-fit: cover;
+          object-position: left;
+        }
+      </style>
+
+
+      <section id="banner-hero"  style="display: none;">
 
 
         <div class="parallax-group-images">
