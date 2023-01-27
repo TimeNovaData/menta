@@ -1,157 +1,145 @@
 export default function AnimationHome(){
-  gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger);
 
+
+    // gsap.set('#banner-hero-2 .intro', { clipPath: "inset(0 100% 0 0)" ,})
+    // gsap.set('#banner-hero-2 .intro h1', { opacity: 0})
+    // gsap.timeline({})
+    // .to('#banner-hero-2 .intro', { clipPath: "inset(0px 0.1% 0px 0px)", duration: 1.2,ease: "power1", },)
+    // .to('#banner-hero-2 .intro h1', { opacity: 1}, '<+=0.6')
+    // gsap.fromTo('#banner-hero-2 .intro',{
+    //   with: 0,
+    //   opacity: 0
+    // }, {
+    //   width: '100%' ,
+    //   opacity: 1,
+    //   duration: 1
+    // })
+
+
+   
 
     function bannerParallax(){
-      // gsap.set('#banner-hero', {
-      //   y:'-150vh'
-      // })
-    //   let second = document.querySelector(".to-stay"),
-    // child = document.querySelector(".plane-wrapper");
+      // return
 
-    //   gsap.to(".plane-wrapper", {
-    //     y: () => {
-    //       let containerBounds = second.getBoundingClientRect(),
-    //           textBounds = child.getBoundingClientRect(),
-    //           center = containerBounds.top + containerBounds.height / 2;
-    //       return center - textBounds.top;
-    //     },
-    //     ease: "none",
-    //     scrollTrigger: {
-    //       trigger: ".plane-wrapper",
-    //       start: "top center",
-          
-    //       end: "+=50%",
-    //       invalidateOnRefresh: true,
-    //       scrub: true
-    //     }
-    //   });
-
-   
-
-    gsap.set('.ceu-banner-2',{
-      y: '-1900px'
-    })
-
-    gsap.set('.plane-wrapper img',{
-      x:-100
-    },'<')
-
-    gsap.to(".plane-wrapper", {
-      //  y: () => window.innerHeight / 4 * -1,
-      ease: "none",
-
-      // x: '50%',
+  
       
-      scrollTrigger: {
-        trigger: "#banner-hero-2",
-        start: "top top",
-        endTrigger: '#banner-hero-2',
-        end: "bottom-=100px bottom",
-        pin: '.plane-wrapper',
-        pinSpacing: false,
-        invalidateOnRefresh: true,
-        anticipatePin: 1,
-        // scrub: true
-      }
 
-    });
-   
+  
+
+      gsap.to(".plane-wrapper", {
+        //  y: () => window.innerHeight / 4 * -1,
+        ease: "none",
+        // x: '50%',
+
+        scrollTrigger: {
+          trigger: "#banner-hero-2",
+          start: "top-=70px top",
+          toggleActions: "pause",
+          endTrigger: '#banner-hero-2',
+          end: "bottom-=100px bottom",
+          pin: '.plane-wrapper',
+          pinSpacing: false,
+          // invalidateOnRefresh: true,
+          // anticipatePin: 1,
+          
+          // scrub: true
+        }
+
+      });
+      
+      gsap.to(".intro", {
+        ease: "none",
+        scrollTrigger: {
+          trigger: "#banner-hero-2",
+          start: "top-=70px top",
+          toggleActions: "pause",
+          endTrigger: '#banner-hero-2',
+          end: "bottom-=100px bottom",
+          pin: '.intro',
+          pinSpacing: false,
+          invalidateOnRefresh: true,
+          anticipatePin: 1,
+          
+          onLeave: function (self) {
+              // self.kill(true)     
+           
+          } 
+          // scrub: true
+        }
+
+      });
+
 
       let tl3 = gsap.timeline({ 
+        paused: true,
         scrollTrigger:{
           trigger: ".to-stay",
           markers: true,
-          toggleActions: "play pause",
+          toggleActions: "pause",
           start: "top",
         //   // start: "top",
-          end: 'bottom-=100px bottom',
+          end: 'bottom bottom',
           pin: '.to-stay',
           // anticipatePin: 1,
-          scrub: 2,
+          scrub: 0.01,
           pinSpacing: false,
           endTrigger: '#banner-hero-2',
-          onUpdate({progress, direction, isActive}) {            
-            // console.log(progress)              
-          },
+          
+          onUpdate: ({progress}) => {
+            console.log(progress)
+         
+            return tl3.progress() < progress ? tl3.progress(progress) : null
+          }
         },
         
-      });
+      },)
 
-       
 
-        tl3
-        .to('.ceu-banner-2',{
-          y: () => 1900 - Math.round(window.innerHeight ) + 'px',
-        })
-        .to('.ceu-banner-2 img',{
-          scale: 1
-        }, '<')
+      gsap.set('.plane-wrapper img',{
+        x:-100,
+        rotate: 5
+      },)
+
+      // rotate(10deg)
+
+      tl3
         .to('.plane-wrapper img',{
-          x:100
+          x:20,
+          rotate: 0
+          // rotate: 1900
         },'<')
-   
+       
+        .fromTo('.ceu-banner-2',{
+          y: -1900
+        },{
+          // y: () => 1900 - Math.round(window.innerHeight ) + 'px',
+          y: () => 2700 - Math.round(window.innerHeight ) + 'px',
+        }, '<')
         .to('.pista img', {
         
           ['object-position']: '70%',
           y: 500
         },'<')
+
         .to('.segundo-plano img', {
           ['object-position']: '50%',
           y: 600
         }, '<')
-      
 
-
-
-        return
-      let tl2 = gsap.timeline({ 
-        scrollTrigger:{
-          trigger: "#banner-hero",
-          markers: true,
-          start: "top",
-        //   // start: "top",
-          end: 'bottom-=100px',
-          pin: '#banner-hero',
-          anticipatePin: 1,
-          scrub: 2,
-            pinSpacing: true,
-        onUpdate({progress, direction, isActive}) {            
-          console.log(progress)              
-        },
-        },
-        
-      });
-
-      tl2
-      .to('.plane-wrapper img',{
-        x:20
-      })
-      .to('.ceu-banner img',{
-          y:200,
-        ['object-position']: '100%',
-      },'<')
-      .to('.pista img', {
-        // x: -200,
-        ['object-position']: '50%',
-        y: 200
-      },'<')
-      .to('.segundo-plano img', {
-        ['object-position']: '30%',
-        y: 200
-      }, '<')
-      //  tl2.from('.parallax-group-images', {
-      //    y: 100
-      // })
-
-      //  gsap.set('#banner-hero', { y: '-800px'})
-
-
+        .to('#banner-hero-2 .container-2 .intro',{
+          y: -50
+        },'<')
+ 
+        // .to('#banner-hero-2 .container:not(.container-2) .intro',{
+        //   y: 50
+        // },'<')
     }
 
     function colorImagesPin(){
-
-      return
+      let mql = window.matchMedia('(max-width:1024px)');
+      if(mql.matches) return
+      // return
       let keepGoing = true
 
       let tl = gsap.timeline({ 
