@@ -608,8 +608,8 @@ async function init() {
         if (formFields1) Object.entries(formFields1).map(([_, field])=>{
             field?.addEventListener("change", GLOBAL.validaAi);
         });
-        (0, _animationHomeJsDefault.default)().colorImagesPin();
-        (0, _animationHomeJsDefault.default)().bannerParallax();
+    // AnimationHome().colorImagesPin()
+    // AnimationHome().bannerParallax()
     } else if (PageTrabalhe) {
         document.body.classList.add("PageTrabalhe");
         await (0, _getElementAndappendJsDefault.default)(".menu-container", "../../templates/parts/menu.html");
@@ -624,29 +624,18 @@ async function init() {
         await (0, _getElementAndappendJsDefault.default)(".footer-container", "../../templates/parts/footer.html");
     }
     (0, _menuJsDefault.default)();
-    // SWAP SOCION ON MOBILE
-    document.body.style.opacity = 1;
+// SWAP SOCION ON MOBILE
+// document.body.style.opacity = 1
 }
-init() // const switchModal = () => {
- //   const modal = document.querySelector(".modal");
- //   let actualStyle = modal.style.display;
- //   if (actualStyle == "block") {
- //     modal.style.display = "none";
- //   } else {
- //     modal.style.display = "block";
- //   }
- // };
- // const btn = document.querySelector(".modal-btn");
- // btn.addEventListener("click", switchModal);
- // window.onclick = function (event) {
- //   event.preventDefault()
- //   console.log('Trocou modal!')
- //   const modal = document.querySelector(".modal");
- //   if (event.target == modal) {
- //     switchModal();
- //   }
- // };
-;
+document.addEventListener("DOMContentLoaded", ()=>{
+    init();
+    document.body.classList.add("dcl");
+    document.body.style.opacity = 1;
+});
+window.addEventListener("load", ()=>{
+    (0, _animationHomeJsDefault.default)().colorImagesPin();
+    (0, _animationHomeJsDefault.default)().bannerParallax();
+});
 
 },{"./modules/getElementAndappend.js":"kgt1M","./modules/swiperProps.js":"csy8f","./modules/animation.js":"8x8Rt","./modules/scriptsPaginas/home.js":"2gwvx","./modules/modal.js":"lfRJE","./modules/animation/animationHome.js":"ZmoPg","./modules/menu.js":"hE65G","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kgt1M":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -884,6 +873,10 @@ function AnimationHome() {
     // })
     function bannerParallax() {
         // return
+        gsap.from("#banner-hero-2", {
+            ease: "linear",
+            autoAlpha: 0
+        });
         gsap.to(".plane-wrapper", {
             //  y: () => window.innerHeight / 4 * -1,
             ease: "none",
@@ -930,7 +923,7 @@ function AnimationHome() {
                 pinSpacing: false,
                 endTrigger: "#banner-hero-2",
                 onUpdate: ({ progress  })=>{
-                    console.log(progress);
+                    // console.log(progress)
                     return tl3.progress() < progress ? tl3.progress(progress) : null;
                 }
             }
@@ -977,7 +970,7 @@ function AnimationHome() {
                     // start: "top",
                     end: "bottom",
                     pin: ".images-group",
-                    anticipatePin: 1,
+                    anticipatePin: false,
                     scrub: 1,
                     pinSpacing: true,
                     onUpdate ({ progress , direction , isActive  }) {

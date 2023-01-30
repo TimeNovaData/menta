@@ -5,6 +5,7 @@
 #banner-hero-2
   overflow-x: hidden
   overflow: hidden
+  visibility: hidden
 
   .container:not(.container-2)
     position: relative
@@ -31,6 +32,8 @@
   .intro
    
     transform: rotate(-10deg)
+    position: relative
+    z-index: 5
 
     .title
       // color: #5037FF
@@ -60,6 +63,8 @@
 
   .plane-wrapper
     pointer-events: none
+    position: relative
+    z-index: 5
     // margin-bottom: 48px
     @media (max-width: 1600px)
       max-height: 200px
@@ -106,8 +111,33 @@
       @include d(sm)
        width: 100%
 
+  .ceu-banner-2
+    // height: 2800px
+    pointer-events: none
+    img
+      height: 100%
+      object-fit: cover
+      width: 100%
+  .to-stay
+    position: absolute
+    height: 100vh     
+    top: 0
+    z-index: 10
+    pointer-events: none
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    overflow: hidden
 
-
+  .segundo-plano img
+    height: 400px
+    object-fit: cover
+    object-position: left
+    margin-bottom: -100px
+  .pista img
+    height: 236px
+    object-fit: cover
+    object-position: left
     
 #sobre
   margin-top: 7.5rem
@@ -339,6 +369,7 @@
     display: grid
     grid-template-columns: 1fr 1fr
     align-items: flex-end
+    
     gap: 1rem
     @include d(md2)
       grid-template-columns: 1fr 

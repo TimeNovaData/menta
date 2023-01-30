@@ -97,10 +97,11 @@ async function init() {
           field?.addEventListener("change", GLOBAL.validaAi);
         });
     }
- 
     
-    AnimationHome().colorImagesPin()
-    AnimationHome().bannerParallax()
+    
+    
+    // AnimationHome().colorImagesPin()
+    // AnimationHome().bannerParallax()
   }else if(PageTrabalhe){
     document.body.classList.add("PageTrabalhe");
     await getElementAndappend(".menu-container", "../../templates/parts/menu.html");
@@ -119,37 +120,27 @@ async function init() {
 
 
   
-   menu()
-
+  menu()
+   
   // SWAP SOCION ON MOBILE
-  document.body.style.opacity = 1
-
-
-  
-
+  // document.body.style.opacity = 1
 
 }
-init()
-// const switchModal = () => {
-//   const modal = document.querySelector(".modal");
 
-//   let actualStyle = modal.style.display;
-//   if (actualStyle == "block") {
-//     modal.style.display = "none";
-//   } else {
-//     modal.style.display = "block";
-//   }
-// };
 
-// const btn = document.querySelector(".modal-btn");
-// btn.addEventListener("click", switchModal);
 
-// window.onclick = function (event) {
-//   event.preventDefault()
-//   console.log('Trocou modal!')
 
-//   const modal = document.querySelector(".modal");
-//   if (event.target == modal) {
-//     switchModal();
-//   }
-// };
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  init();
+  document.body.classList.add("dcl");
+  document.body.style.opacity = 1;
+   
+});
+
+window.addEventListener('load', () =>{
+  AnimationHome().colorImagesPin()
+    AnimationHome().bannerParallax()
+})

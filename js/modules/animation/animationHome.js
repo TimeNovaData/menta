@@ -22,10 +22,7 @@ export default function AnimationHome(){
     function bannerParallax(){
       // return
 
-  
-      
-
-  
+      gsap.from("#banner-hero-2",{ ease:"linear",  autoAlpha: 0, })
 
       gsap.to(".plane-wrapper", {
         //  y: () => window.innerHeight / 4 * -1,
@@ -87,7 +84,7 @@ export default function AnimationHome(){
           endTrigger: '#banner-hero-2',
           
           onUpdate: ({progress}) => {
-            console.log(progress)
+            // console.log(progress)
          
             return tl3.progress() < progress ? tl3.progress(progress) : null
           }
@@ -204,7 +201,7 @@ export default function AnimationHome(){
             // start: "top",
             end: "bottom",
             pin: ".images-group",
-            anticipatePin: 1,
+            anticipatePin: false,
             scrub: 1,
             pinSpacing: true,
           

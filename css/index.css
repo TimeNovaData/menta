@@ -688,7 +688,7 @@ body {
 }
 
 main {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .PageFaq {
@@ -1734,6 +1734,7 @@ main {
 }
 
 .PageHome #banner-hero-2 {
+  visibility: hidden;
   overflow: hidden;
 }
 
@@ -1762,6 +1763,8 @@ main {
 }
 
 .PageHome #banner-hero-2 .intro {
+  z-index: 5;
+  position: relative;
   transform: rotate(-10deg);
 }
 
@@ -1798,6 +1801,8 @@ main {
 
 .PageHome #banner-hero-2 .plane-wrapper {
   pointer-events: none;
+  z-index: 5;
+  position: relative;
 }
 
 @media (max-width: 1600px) {
@@ -1877,6 +1882,41 @@ main {
   .PageHome #banner-hero-2 .cta-banner-wrapper .btn-primary {
     width: 100%;
   }
+}
+
+.PageHome #banner-hero-2 .ceu-banner-2 {
+  pointer-events: none;
+}
+
+.PageHome #banner-hero-2 .ceu-banner-2 img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.PageHome #banner-hero-2 .to-stay {
+  height: 100vh;
+  z-index: 10;
+  pointer-events: none;
+  flex-direction: column;
+  justify-content: flex-end;
+  display: flex;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+}
+
+.PageHome #banner-hero-2 .segundo-plano img {
+  height: 400px;
+  object-fit: cover;
+  object-position: left;
+  margin-bottom: -100px;
+}
+
+.PageHome #banner-hero-2 .pista img {
+  height: 236px;
+  object-fit: cover;
+  object-position: left;
 }
 
 .PageHome #sobre {
@@ -3013,8 +3053,9 @@ main {
 }
 
 .SingleTrabalhe #content {
+  margin-top: 69px;
   margin-bottom: 4rem;
-  padding-top: 5rem;
+  padding-top: 2rem;
   position: relative;
 }
 
