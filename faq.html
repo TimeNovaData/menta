@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="./css/index.css" />
 
 
-    
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
       integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
@@ -29,16 +31,16 @@
         <!-- AJAX -->
       </div>
 
-      <div class="section-header">
+      <div class="section-header"  data-aos="fade-down" >
         <div class="container">
-          <div class="section-content">
+          <div class="section-content" data-aos="fade-right" data-aos-delay="300">
             <div class="title-bg">
               <h2>Perguntas</h2>
             </div>
             <h2 class="relative">frequentes</h2>
           </div>
   
-          <div class="faq-img">
+          <div class="faq-img" data-aos="fade-left" data-aos-delay="300">
             <img
               src="./assets/img/mao-faq.png"
               alt="Mão segurando um ponto de interrogação"
@@ -49,7 +51,7 @@
 
      
 
-      <div class="faq-cards">
+      <div class="faq-cards" data-aos="fade-up" data-aos-delay="300">
         <div class="faq-card">
           <div class="faq-card-title">
             <svg>
@@ -128,6 +130,24 @@
         <!-- AJAX -->
       </div>
     </main>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./js/index.js" type="module"></script>
+
+    <script>
+     
+      AOS.init({
+        disable: function () {
+          var maxWidth =  768;
+          return window.innerWidth < maxWidth;
+        },
+
+        duration: 1000, 
+        easing: 'ease',
+        once: true, 
+      });
+
+      document.addEventListener("DOMContentLoaded", () =>     window.scrollTo(0, 0)  );
+    </script>
+
   </body>
 </html>

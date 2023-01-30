@@ -7,9 +7,12 @@
     <title>Menta - Blog</title>
     <link rel="stylesheet" href="./css/index.css" />
 
+
+    
     <!-- FONT VINILA -->
     <link rel="stylesheet" href="https://use.typekit.net/uts8dxl.css" />
 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     
     <script
@@ -35,18 +38,17 @@
       <div class="menu-container">
         <!-- AJAX -->
       </div> 
-
       
-      <div class="section-header">
+      <div class="section-header" data-aos="fade-down">
         <div class="container">
-          <div class="section-content">
+          <div class="section-content" data-aos="fade-right" data-aos-delay="300">
             <div class="title-bg">
               <h2>Blog</h2>
             </div>
             <!-- <h2 class="relative">Conosco</h2> -->
           </div>
   
-          <div class="faq-img">
+          <div class="faq-img" data-aos="fade-left" data-aos-delay="300">
             <img
               src="./assets/img/mao_blog.png"
               alt="Mão segurando um ponto de interrogação"
@@ -55,10 +57,8 @@
         </div>      
       </div>
 
-      
-
       <div class="blog-wrapper">
-        <div class="main-card">
+        <div class="main-card"  data-aos="fade-up" data-aos-delay="100">
           <div class="main-card-img">
             <img src="./assets/img/blog_img1.png" alt="" />
           </div>
@@ -82,7 +82,7 @@
           </div>
         </div>
 
-        <div class="swiper swiper-cards">
+        <div class="swiper swiper-cards"  data-aos="fade-up" data-aos-delay="200">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="blog-card">
@@ -125,7 +125,7 @@
           </div>
         </div>
 
-        <div class="menta-way">
+        <div class="menta-way" data-aos="fade-up" data-aos-delay="100">
           <h3>A Menta vai mudar o jeito de viajar!</h3>
           <span
             >Com passagens ultra acessíveis para todos e para todo o
@@ -136,7 +136,7 @@
           </button>
         </div>
 
-        <div class="swiper swiper-cards">
+        <div class="swiper swiper-cards" data-aos="fade-up" data-aos-delay="100">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="blog-card">
@@ -290,9 +290,29 @@
       </div>
     </div>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
     <script src="https://unpkg.com/imask"></script>
     <script src="https://unpkg.com/just-validate-plugin-date@1.2.0/dist/just-validate-plugin-date.production.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./dist/index.js" type="module"></script>
+
+    
+    <script>
+     
+      AOS.init({
+        disable: function () {
+          var maxWidth =  768;
+          return window.innerWidth < maxWidth;
+        },
+
+        duration: 1000, 
+        easing: 'ease',
+        once: true, 
+      });
+
+      document.addEventListener("DOMContentLoaded", () =>     window.scrollTo(0, 0)  );
+    </script>
+
   </body>
 </html>

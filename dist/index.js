@@ -633,8 +633,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
     document.body.style.opacity = 1;
 });
 window.addEventListener("load", ()=>{
-    (0, _animationHomeJsDefault.default)().colorImagesPin();
-    (0, _animationHomeJsDefault.default)().bannerParallax();
+    if (PageHome) {
+        (0, _animationHomeJsDefault.default)().colorImagesPin();
+        (0, _animationHomeJsDefault.default)().bannerParallax();
+    }
 });
 
 },{"./modules/getElementAndappend.js":"kgt1M","./modules/swiperProps.js":"csy8f","./modules/animation.js":"8x8Rt","./modules/scriptsPaginas/home.js":"2gwvx","./modules/modal.js":"lfRJE","./modules/animation/animationHome.js":"ZmoPg","./modules/menu.js":"hE65G","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kgt1M":[function(require,module,exports) {

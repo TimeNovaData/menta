@@ -141,6 +141,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 window.addEventListener('load', () =>{
-  AnimationHome().colorImagesPin()
+  if(PageHome){
+    AnimationHome().colorImagesPin()
     AnimationHome().bannerParallax()
+  }
 })

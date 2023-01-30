@@ -692,6 +692,7 @@ main {
 }
 
 .PageFaq {
+  background: #ebeaf4;
   font-family: vinila;
   overflow-x: hidden;
 }
@@ -798,7 +799,6 @@ main {
 }
 
 .PageFaq .faq-cards {
-  background: #ebeaf4;
   flex-direction: column;
   justify-content: center;
   align-items: center;

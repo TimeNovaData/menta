@@ -10,6 +10,10 @@
     <!-- FONT VINILA -->
     <link rel="stylesheet" href="https://use.typekit.net/uts8dxl.css" />
 
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
       integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
@@ -26,9 +30,11 @@
     <script  src="./js/GLOBAL.js"></script>
   </head>
   <body>
+
     <div class="svg-container">
       <!-- AJAX -->
     </div>
+
     <main id="PageContato">
       <div class="menu-container">
         <!-- AJAX -->
@@ -36,14 +42,14 @@
 
       <div class="section-header">
         <div class="container">
-          <div class="section-content">
+          <div class="section-content" data-aos="fade-right">
             <div class="title-bg">
               <h2>CONTATO</h2>
             </div>
             <!-- <h2 class="relative">Conosco</h2> -->
           </div>
   
-          <div class="faq-img">
+          <div class="faq-img" data-aos="fade-left">
             <img
               src="./assets/img/mao_contato.png"
               alt="Mão segurando um ponto de interrogação"
@@ -52,10 +58,10 @@
         </div>      
       </div>
       
-      <section id="contato">
+      <section id="contato" >
         <div class="container">
           <div class="grid-wrapper">
-            <div class="col-1">
+            <div class="col-1"  data-aos="fade-up" data-aos-delay="200">
               <h2>Como posso entrar em contato com a Menta?</h2>
 
               <div class="bloco-wrapper">
@@ -151,7 +157,7 @@
 
 
             </div>
-            <div class="col-2">
+            <div class="col-2"  data-aos="fade-left" data-aos-delay="200">
 
               <div class="side-bar">
                 <div class="icon-wrapper">
@@ -218,9 +224,29 @@
 
     
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
     <script src="https://unpkg.com/imask"></script>
     <script src="https://unpkg.com/just-validate-plugin-date@1.2.0/dist/just-validate-plugin-date.production.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./dist/index.js" type="module"></script>
+
+
+    <script>
+     
+      AOS.init({
+        disable: function () {
+          var maxWidth =  768;
+          return window.innerWidth < maxWidth;
+        },
+
+        duration: 1000, 
+        easing: 'ease',
+        once: true, 
+      });
+
+      document.addEventListener("DOMContentLoaded", () =>     window.scrollTo(0, 0)  );
+    </script>
+
   </body>
 </html>

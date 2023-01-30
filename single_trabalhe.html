@@ -10,7 +10,7 @@
     <!-- FONT VINILA -->
     <link rel="stylesheet" href="https://use.typekit.net/uts8dxl.css" />
 
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
@@ -36,13 +36,12 @@
         <!-- AJAX -->
       </div>
 
-
       <section id="content">
         <div class="container">
 
-          <a class="go-back" href="/page_trabalhe-conosco.html">Voltar</a>
+          <a data-aos="fade-up" class="go-back" href="/page_trabalhe-conosco.html">Voltar</a>
 
-          <div class="card-content">
+          <div class="card-content" data-aos="fade-up" data-aos-delay="200">
 
             <header class="header">
               <div class="infos">
@@ -96,18 +95,36 @@
           </div>
         </div>
       </section>
-
-    
+   
       <div class="footer-container">
         <!-- AJAX -->
       </div>
     </main>
 
-    
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
     <script src="https://unpkg.com/imask"></script>
     <script src="https://unpkg.com/just-validate-plugin-date@1.2.0/dist/just-validate-plugin-date.production.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./dist/index.js" type="module"></script>
+
+    <script>
+     
+      AOS.init({
+        disable: function () {
+          var maxWidth =  768;
+          return window.innerWidth < maxWidth;
+        },
+
+        duration: 1000, 
+        easing: 'ease',
+        once: true
+      });
+
+      document.addEventListener("DOMContentLoaded", () => window.scrollTo(0, 0));
+
+    </script>
+
   </body>
 </html>

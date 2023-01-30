@@ -10,6 +10,8 @@
     <!-- FONT VINILA -->
     <link rel="stylesheet" href="https://use.typekit.net/uts8dxl.css" />
 
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
@@ -36,11 +38,13 @@
       </div>
 
 
-      <div class="section-header">
+      <div class="section-header" data-aos="fade-down">
         <div class="container">
-          <div class="section-content">
-            <div class="title-bg">
-              <h2>Trabalhe</h2>
+          <div class="section-content" data-aos="fade-up" data-aos-delay="200">
+            <div class="title-bg" >
+              
+                <h2 >Trabalhe</h2>
+             
             </div>
             <h2 class="relative">Conosco</h2>
           </div>
@@ -55,7 +59,7 @@
       </div>
       
 
-      <section id="vagas">
+      <section id="vagas" data-aos="fade-up" data-aos-delay="300">
         <div class="container">
           <div class="grid-wrapper HEADER">
             <div class="group">
@@ -136,10 +140,29 @@
     </main>
 
     
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
     <script src="https://unpkg.com/imask"></script>
     <script src="https://unpkg.com/just-validate-plugin-date@1.2.0/dist/just-validate-plugin-date.production.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./dist/index.js" type="module"></script>
+
+
+    <script>
+     
+      AOS.init({
+        disable: function () {
+          var maxWidth =  768;
+          return window.innerWidth < maxWidth;
+        },
+
+        duration: 1000, 
+        easing: 'ease',
+        once: true, 
+      });
+
+      document.addEventListener("DOMContentLoaded", () =>     window.scrollTo(0, 0)  );
+    </script>
+ 
   </body>
 </html>
