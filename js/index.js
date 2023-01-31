@@ -85,12 +85,10 @@ async function init() {
       //
     };
 
-    // IMask(formFields.dateInput, { mask: "00/00/0000" });
-    // IMask(formFields.telInput, { mask: "(00) 00000-0000" });
+    IMask(formFields.dateInput, { mask: "00/00/0000" });
+    IMask(formFields.telInput, { mask: "(00) 00000-0000" });
 
     if(formFields){
-
-
       Object
         .entries(formFields)
         .map(([_, field]) => {

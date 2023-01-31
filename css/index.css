@@ -1432,6 +1432,7 @@ main {
 
 .PageBlog .section-header {
   min-height: 164px;
+  min-height: 190px;
   background: #00ff8c;
   justify-content: space-between;
   gap: 4rem;
@@ -1756,14 +1757,13 @@ main {
 }
 
 .PageHome #banner-hero-2 .content-wrapper {
-  z-index: 10;
   padding-bottom: 3rem;
   position: absolute;
   inset: 0;
 }
 
 .PageHome #banner-hero-2 .intro {
-  z-index: 5;
+  z-index: 10;
   position: relative;
   transform: rotate(-10deg);
 }
@@ -1801,7 +1801,7 @@ main {
 
 .PageHome #banner-hero-2 .plane-wrapper {
   pointer-events: none;
-  z-index: 5;
+  z-index: 16;
   position: relative;
 }
 
@@ -1817,6 +1817,7 @@ main {
 }
 
 .PageHome #banner-hero-2 .cta-banner-wrapper {
+  z-index: 15;
   max-width: 992px;
   width: 100%;
   background: #fff;
@@ -1827,6 +1828,7 @@ main {
   margin: 0 auto;
   padding: 1.5rem 2rem;
   display: flex;
+  position: relative;
   box-shadow: 0 1px 4px #100b3733, 0 3px 16px #100b371a;
 }
 
@@ -2721,6 +2723,7 @@ main {
 
 .PageHome #trabalhe-conosco {
   padding: 10rem 0;
+  padding-bottom: 5rem;
 }
 
 .PageHome #trabalhe-conosco .intro {

@@ -603,8 +603,12 @@ async function init() {
             telInput: document.querySelector("#tel"),
             emailInput: document.querySelector("#email")
         };
-        // IMask(formFields.dateInput, { mask: "00/00/0000" });
-        // IMask(formFields.telInput, { mask: "(00) 00000-0000" });
+        IMask(formFields1.dateInput, {
+            mask: "00/00/0000"
+        });
+        IMask(formFields1.telInput, {
+            mask: "(00) 00000-0000"
+        });
         if (formFields1) Object.entries(formFields1).map(([_, field])=>{
             field?.addEventListener("change", GLOBAL.validaAi);
         });
@@ -893,6 +897,43 @@ function AnimationHome() {
                 pinSpacing: false
             }
         });
+        const tlIntro = gsap.timeline({
+            paused: true,
+            scrollTrigger: {
+                trigger: "#banner-hero-2",
+                start: "top-=70px top",
+                toggleActions: "pause",
+                endTrigger: "#banner-hero-2",
+                end: "bottom-=100px bottom",
+                pin: ".cta-banner-wrapper",
+                pinSpacing: false,
+                // scrub: 1,
+                onUpdate: ({ progress  })=>{
+                    // console.log(progress)
+                    if (progress > 0.4) {
+                        console.log("> 0.4");
+                        gsap.to(".cta-banner-wrapper ", {
+                            x: "-110vw",
+                            duration: 0.8
+                        });
+                    } else if (progress < 0.4) {
+                        console.log("<>> 0.4");
+                        gsap.to(".cta-banner-wrapper ", {
+                            x: "0",
+                            duration: 0.8
+                        });
+                    }
+                }
+            }
+        });
+        // tlIntro.to('.cta-banner-wrapper',{                
+        //   x: '-110vw',
+        // },) 
+        // gsap.to('.cta-banner-wrapper',{
+        //   // y: 900,
+        //   delay: 1,
+        //   x: '-110vw',
+        // },'+=1') 
         gsap.to(".intro", {
             ease: "none",
             scrollTrigger: {
@@ -914,13 +955,13 @@ function AnimationHome() {
             paused: true,
             scrollTrigger: {
                 trigger: ".to-stay",
-                markers: true,
+                // markers: true,
                 toggleActions: "pause",
                 start: "top",
-                //   // start: "top",
+                // start: "top",
                 end: "bottom bottom",
                 pin: ".to-stay",
-                // anticipatePin: 1,
+                // anticipatePin: 1,  
                 scrub: 0.01,
                 pinSpacing: false,
                 endTrigger: "#banner-hero-2",
@@ -934,27 +975,53 @@ function AnimationHome() {
             x: -100,
             rotate: 5
         });
+        // gsap.fromTo('.PageHome #banner-hero-2 .intro',{
+        //   y:100
+        // }, {
+        //   y: 0,
+        //   duration: 2
+        // })
+        // gsap.fromTo('.ceu-banner-2',{
+        //   y: -1900
+        // },{
+        //   // y: () => 1900 - Math.round(window.innerHeight ) + 'px',
+        //   y: () => 2700 - Math.round(window.innerHeight ) + 'px',
+        // }, '<')
         // rotate(10deg)
+        // .to('.ceu-banner-2',{
+        //   scale: 1.3
+        // },'<')  
+        // gsap.to('.ceu-banner-2',{
+        //   y: 0
+        // })
+        gsap.set(".ceu-banner-2", {
+            y: -1900
+        });
         tl3.to(".plane-wrapper img", {
             x: 20,
             rotate: 0
-        }, "<").fromTo(".ceu-banner-2", {
-            y: -1900
-        }, {
-            // y: () => 1900 - Math.round(window.innerHeight ) + 'px',
-            y: ()=>2700 - Math.round(window.innerHeight) + "px"
+        }, "<").to(".ceu-banner-2", {
+            scale: 1.1,
+            y: 900
         }, "<").to(".pista img", {
             ["object-position"]: "70%",
-            y: 500
+            y: 600
         }, "<").to(".segundo-plano img", {
             ["object-position"]: "50%",
             y: 600
-        }, "<").to("#banner-hero-2 .container-2 .intro", {
-            y: -50
         }, "<");
-    // .to('#banner-hero-2 .container:not(.container-2) .intro',{
-    //   y: 50
-    // },'<')
+        // .to('#banner-hero-2 .container-2 .intro',{
+        //   y: -50
+        // },'<')
+        // .to('#banner-hero-2 .container:not(.container-2) .intro',{
+        //   y: 50
+        // },'<')
+        // MENU 
+        gsap.from(".menu-links li", {
+            y: 3,
+            // autoAlpha: 0,         
+            stagger: 0.1
+        });
     }
     function colorImagesPin() {
         let mql = window.matchMedia("(max-width:1024px)");
