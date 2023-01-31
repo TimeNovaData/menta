@@ -612,6 +612,35 @@ async function init() {
         if (formFields1) Object.entries(formFields1).map(([_, field])=>{
             field?.addEventListener("change", GLOBAL.validaAi);
         });
+        (0, _animationHomeJsDefault.default)().bannerParallax();
+        (0, _animationHomeJsDefault.default)().colorImagesPin();
+        if (!window.location.hash) {
+            const ios = ()=>{
+                if (typeof window === `undefined` || typeof navigator === `undefined`) return false;
+                return /iPhone|iPad|iPod/i.test(navigator.userAgent || navigator.vendor || window.opera && opera.toString() === `[object Opera]`);
+            };
+            if (ios()) {
+                var root = document.getElementsByTagName("html")[0]; // '0' to assign the first (and only `HTML` tag)
+                root.setAttribute("class", "is-ios");
+            }
+            const banner = document.querySelector("#banner-hero-2");
+            if (banner) setTimeout(()=>{
+                console.log("scroll Up");
+                window.scrollTo(0, 0);
+            }, 100);
+        }
+        if (window.location.hash) setTimeout(()=>{
+            var hash = window.location.hash;
+            const section = document.querySelector(`${hash}`);
+            if (section) {
+                section.scrollIntoView({
+                    behavior: "smooth"
+                });
+                console.log("runned ?");
+                console.log(section);
+            }
+        }, 10);
+        document.body.style.opacity = 1;
     // AnimationHome().colorImagesPin()
     // AnimationHome().bannerParallax()
     } else if (PageTrabalhe) {
@@ -631,17 +660,15 @@ async function init() {
 // SWAP SOCION ON MOBILE
 // document.body.style.opacity = 1
 }
+init();
 document.addEventListener("DOMContentLoaded", ()=>{
-    init();
     document.body.classList.add("dcl");
-    document.body.style.opacity = 1;
-});
-window.addEventListener("load", ()=>{
-    if (PageHome) {
-        (0, _animationHomeJsDefault.default)().colorImagesPin();
-        (0, _animationHomeJsDefault.default)().bannerParallax();
-    }
-});
+    if (!PageHome) document.body.style.opacity = 1;
+}); // window.addEventListener('load', () =>{
+ //   if(PageHome){
+ //     // AnimationHome().blog()
+ //   }
+ // })
 
 },{"./modules/getElementAndappend.js":"kgt1M","./modules/swiperProps.js":"csy8f","./modules/animation.js":"8x8Rt","./modules/scriptsPaginas/home.js":"2gwvx","./modules/modal.js":"lfRJE","./modules/animation/animationHome.js":"ZmoPg","./modules/menu.js":"hE65G","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kgt1M":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -878,96 +905,48 @@ function AnimationHome() {
     //   duration: 1
     // })
     function bannerParallax() {
-        // return
+        let mql = window.matchMedia("(max-width:2500px)");
         gsap.from("#banner-hero-2", {
             ease: "linear",
             autoAlpha: 0
         });
-        gsap.to(".plane-wrapper", {
-            //  y: () => window.innerHeight / 4 * -1,
-            ease: "none",
-            // x: '50%',
-            scrollTrigger: {
-                trigger: "#banner-hero-2",
-                start: "top-=70px top",
-                toggleActions: "pause",
-                endTrigger: "#banner-hero-2",
-                end: "bottom-=100px bottom",
-                pin: ".plane-wrapper",
-                pinSpacing: false
-            }
+        gsap.set("#banner-hero-2 .container:not(.container-1)", {
+            y: 500
         });
-        const tlIntro = gsap.timeline({
-            paused: true,
+        let tlTeste = gsap.timeline({
             scrollTrigger: {
                 trigger: "#banner-hero-2",
-                start: "top-=70px top",
-                toggleActions: "pause",
+                // markers: true,
+                // toggleActions: "pause",
                 endTrigger: "#banner-hero-2",
-                end: "bottom-=100px bottom",
-                pin: ".cta-banner-wrapper",
-                pinSpacing: false,
-                // scrub: 1,
+                start: "top-=70px top",
+                // start: "top",
+                end: "3800px bottom",
+                pin: "#banner-hero-2",
+                // anticipatePin: 1,  
+                scrub: 1,
+                pinSpacing: true,
                 onUpdate: ({ progress  })=>{
                     // console.log(progress)
                     if (progress > 0.4) {
                         console.log("> 0.4");
-                        gsap.to(".cta-banner-wrapper ", {
+                        gsap.to("#banner-hero-2 .cta-banner-wrapper ", {
                             x: "-110vw",
                             duration: 0.8
                         });
+                        gsap.to("#banner-hero-2 .container:not(.container-1)", {
+                            y: "-4vw"
+                        });
                     } else if (progress < 0.4) {
                         console.log("<>> 0.4");
-                        gsap.to(".cta-banner-wrapper ", {
+                        gsap.to("#banner-hero-2 .cta-banner-wrapper ", {
                             x: "0",
                             duration: 0.8
                         });
+                        gsap.to("#banner-hero-2 .container:not(.container-1)", {
+                            y: 500
+                        });
                     }
-                }
-            }
-        });
-        // tlIntro.to('.cta-banner-wrapper',{                
-        //   x: '-110vw',
-        // },) 
-        // gsap.to('.cta-banner-wrapper',{
-        //   // y: 900,
-        //   delay: 1,
-        //   x: '-110vw',
-        // },'+=1') 
-        gsap.to(".intro", {
-            ease: "none",
-            scrollTrigger: {
-                trigger: "#banner-hero-2",
-                start: "top-=70px top",
-                toggleActions: "pause",
-                endTrigger: "#banner-hero-2",
-                end: "bottom-=100px bottom",
-                pin: ".intro",
-                pinSpacing: false,
-                invalidateOnRefresh: true,
-                anticipatePin: 1,
-                onLeave: function(self) {
-                // self.kill(true)     
-                }
-            }
-        });
-        let tl3 = gsap.timeline({
-            paused: true,
-            scrollTrigger: {
-                trigger: ".to-stay",
-                // markers: true,
-                toggleActions: "pause",
-                start: "top",
-                // start: "top",
-                end: "bottom bottom",
-                pin: ".to-stay",
-                // anticipatePin: 1,  
-                scrub: 0.01,
-                pinSpacing: false,
-                endTrigger: "#banner-hero-2",
-                onUpdate: ({ progress  })=>{
-                    // console.log(progress)
-                    return tl3.progress() < progress ? tl3.progress(progress) : null;
                 }
             }
         });
@@ -975,34 +954,19 @@ function AnimationHome() {
             x: -100,
             rotate: 5
         });
-        // gsap.fromTo('.PageHome #banner-hero-2 .intro',{
-        //   y:100
-        // }, {
-        //   y: 0,
-        //   duration: 2
-        // })
-        // gsap.fromTo('.ceu-banner-2',{
-        //   y: -1900
-        // },{
-        //   // y: () => 1900 - Math.round(window.innerHeight ) + 'px',
-        //   y: () => 2700 - Math.round(window.innerHeight ) + 'px',
-        // }, '<')
-        // rotate(10deg)
-        // .to('.ceu-banner-2',{
-        //   scale: 1.3
-        // },'<')  
-        // gsap.to('.ceu-banner-2',{
-        //   y: 0
-        // })
         gsap.set(".ceu-banner-2", {
-            y: -1900
+            y: mql.matches ? -1900 : -500
         });
-        tl3.to(".plane-wrapper img", {
+        tlTeste.to(".plane-wrapper img", {
             x: 20,
+            y: -10,
             rotate: 0
-        }, "<").to(".ceu-banner-2", {
-            scale: 1.1,
-            y: 900
+        }, "<").to("#banner-hero-2 .container:not(.container-2)", {
+            y: "-5vw"
+        }, "<")// .to('#banner-hero-2 .container:not(.container-1)', { y: -200}, '<')
+        .to(".ceu-banner-2", {
+            scale: 1.3,
+            y: -0
         }, "<").to(".pista img", {
             ["object-position"]: "70%",
             y: 600
@@ -1010,26 +974,20 @@ function AnimationHome() {
             ["object-position"]: "50%",
             y: 600
         }, "<");
-        // .to('#banner-hero-2 .container-2 .intro',{
-        //   y: -50
-        // },'<')
-        // .to('#banner-hero-2 .container:not(.container-2) .intro',{
-        //   y: 50
-        // },'<')
         // MENU 
         gsap.from(".menu-links li", {
-            y: 3,
-            // autoAlpha: 0,         
+            y: 30,
+            autoAlpha: 0,
             stagger: 0.1
         });
+        return;
     }
     function colorImagesPin() {
         let mql = window.matchMedia("(max-width:1024px)");
+        // return
         if (mql.matches) return;
         // return
         let keepGoing = true;
-        let tl = gsap.timeline({
-        });
         const scrollT = ScrollTrigger.matchMedia({
             "(min-width: 1024px)": function() {
                 ScrollTrigger.create({
@@ -1074,16 +1032,32 @@ function AnimationHome() {
                     "filter": `grayscale(${tlp - 0.4}%)`,
                     duration: 0.1
                 });
-                if (progress > 0.99) {
-                    keepGoing = false;
-                    scrollT.kill(true);
-                }
+                progress;
             }
         }
     }
+    function blog() {
+        const tlBlog = gsap.timeline({
+            defaults: {
+                opacity: 0,
+                ease: "back"
+            },
+            scrollTrigger: {
+                trigger: ".blog-wrapper",
+                markers: true,
+                // toggleActions: "pause",
+                // start: "top-=70px top",
+                start: "top+=50px top"
+            }
+        });
+        tlBlog.from("#blog", {
+            backgroundColor: "red"
+        });
+    }
     return {
         colorImagesPin,
-        bannerParallax
+        bannerParallax,
+        blog
     };
 }
 exports.default = AnimationHome;
@@ -1094,6 +1068,7 @@ parcelHelpers.defineInteropFlag(exports);
 function menu() {
     const btnMobile = document.getElementById("btn-mobile");
     const headerEl = document.querySelector(".menu-container");
+    const links = document.querySelectorAll(".faq-menu .menu-links li ");
     let mql = window.matchMedia("(max-width: 1024px)");
     let estado = true;
     function animateIt() {
@@ -1138,6 +1113,16 @@ function menu() {
         else event.currentTarget.setAttribute("aria-label", "Abrir menu");
     }
     btnMobile?.addEventListener("click", toggleMenu);
+    links?.forEach((link)=>{
+        link.addEventListener("click", ()=>{
+            const menu = document.querySelector(".faq-menu");
+            menu.classList.remove("active");
+            estado = false;
+            console.log(estado);
+            animateIt();
+        });
+    });
+    // SWAP 
     const socialDesktop = document.querySelector(".social-desktop");
     const socialMobile = document.querySelector(".social-mobile");
     if (socialMobile && socialMobile) socialMobile.innerHTML = socialDesktop.innerHTML;

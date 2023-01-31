@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Menta - Blog</title>
+    <title>Menta </title>
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
@@ -16,7 +16,10 @@
     <!-- FONT VINILA -->
     <link rel="stylesheet" href="https://use.typekit.net/uts8dxl.css" />
 
-
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+  />
     
 
 
@@ -26,14 +29,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
     <script  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 
     <!-- SWIPER -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-    />
-    <script  src="./js/GLOBAL.js"></script>
+  
+    <script defer src="./js/GLOBAL.js"></script>
   </head>
   <body>
     <div class="svg-container">
@@ -45,7 +46,7 @@
         <!-- AJAX -->
       </div>
 
-      <section id="banner-hero-2" style="margin-top: 70px;">
+      <section id="banner-hero-2" >
         <!-- <h1>TODO HERE , NEW BANNER </h1>  -->
         <div class="ceu-banner-2"  style="    height: 2800px">
           <img data-aos="zoom-out-down"style="opacity: 1 !important;" src="/assets/img/home/full-ceu.png" alt="">
@@ -63,7 +64,7 @@
 
         
         <div class="content-wrapper">
-          <div class="container"> 
+          <div class="container container-1"> 
             <div class="intro">
               <!-- <h1 class="title">Passagem de Avião</h1> -->
               <h1 class="title">
@@ -433,16 +434,19 @@
         </div>
       </section>
 
-      <section id="blog">
+      <section id="blog" >
         <div class="container">
 
-          <div class="intro"   >
-            <h1 class="title">
-              <span>Pra não </span><span class="to-break">perder nada...</span>                     
-            </h1>
+          <div data-aos="fade-right">
+            <div class="intro"     >
+              <h1 class="title">
+                <span>Pra não </span><span class="to-break">perder nada...</span>                     
+              </h1>
+            </div>
           </div>
+         
 
-          <div class="blog-wrapper"    data-aos="fade-up" >
+          <div class="blog-wrapper"    data-aos="fade-up"  >
 
             <div class="main-card">
               <div class="main-card-img">
@@ -650,7 +654,7 @@
 
 
     <script>    
-
+     
       AOS.init({
         disable: function () {
           var maxWidth =  768;
@@ -661,9 +665,42 @@
         easing: 'ease',
         once: true, 
       });
-  
+
+      // window.addEventListener('DOMContentLoaded', (event) => {
+      //   if (!window.location.hash) {
+      //     window.scrollTo(0, 0) ;
+      //     const banner = document.querySelector('#banner-hero-2')
+      //     if(banner){
+      //       banner.scrollIntoView()
+      //     }
+      //   }
+      // });
+      // window.addEventListener("load", (event) => {
+      //   // AOS.refresh()
+
+      
+      //     if (window.location.hash) {
+      //       setTimeout(()=>{ 
+      //         var hash = window.location.hash;
+      //       const section = document.querySelector(`${hash}`)
     
-      document.addEventListener("DOMContentLoaded", () =>     window.scrollTo(0, 0)  );
+
+      //       if(section){
+      //         section.scrollIntoView({behavior: "smooth"})
+      //         console.log('runned ?' )
+      //         console.log(section)
+      //       }
+      //       }, 3)
+          
+           
+      //     }
+        
+       
+
+      // });
+     
+
+      
     </script>
  
 

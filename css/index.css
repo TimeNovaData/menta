@@ -794,7 +794,18 @@ main {
 
 @media screen and (max-width: 600px) {
   .PageFaq .section-header .title-bg {
-    padding-inline: .25rem;
+    padding-inline: .45rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .PageFaq .section-header .faq-img {
+    position: relative;
+    left: 1.5rem;
+  }
+
+  .PageFaq .section-header .faq-img img {
+    margin-left: auto;
   }
 }
 
@@ -1735,16 +1746,32 @@ main {
 }
 
 .PageHome #banner-hero-2 {
+  height: 100vh;
   visibility: hidden;
+  max-width: 2560px;
+  margin: 0 auto;
+  position: relative;
   overflow: hidden;
 }
 
 .PageHome #banner-hero-2 .container:not(.container-2) {
   height: 100%;
+  z-index: 15;
   flex-direction: column;
   justify-content: flex-end;
   display: flex;
   position: relative;
+  height: calc(100vh - 100px) !important;
+}
+
+.PageHome #banner-hero-2 .container:not(.container-1) {
+  z-index: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+  display: flex;
+  position: absolute;
+  inset: 0;
+  height: calc(100vh - 70px) !important;
 }
 
 .PageHome #banner-hero-2 .container-2 .intro {
@@ -1787,6 +1814,12 @@ main {
   font-size: clamp(3.5rem, 4.4vw, 5.5rem);
   font-weight: 900;
   display: block;
+}
+
+@media (max-width: 378px) {
+  .PageHome #banner-hero-2 .intro .title span {
+    font-size: 3rem;
+  }
 }
 
 .PageHome #banner-hero-2 .intro .title .to-break {
@@ -1924,6 +1957,7 @@ main {
 .PageHome #sobre {
   margin-top: 7.5rem;
   margin-bottom: 7.5rem;
+  scroll-margin-top: 7.5rem;
 }
 
 .PageHome #sobre .intro {

@@ -1,6 +1,8 @@
 export default function menu() {
   const btnMobile = document.getElementById('btn-mobile');
   const headerEl = document.querySelector('.menu-container');
+
+const links = document.querySelectorAll('.faq-menu .menu-links li ')
   let mql = window.matchMedia('(max-width: 1024px)');
   let estado = true;
 
@@ -71,6 +73,20 @@ export default function menu() {
   btnMobile?.addEventListener('click', toggleMenu);
 
 
+  links?.forEach(link => {
+    link.addEventListener('click', ()=> {
+      const menu = document.querySelector('.faq-menu');
+      menu.classList.remove('active')
+   
+      estado = false
+      console.log(estado)
+      animateIt()
+    })
+  
+  })
+ 
+
+  // SWAP 
   const socialDesktop = document.querySelector('.social-desktop')
   const socialMobile = document.querySelector('.social-mobile')
 

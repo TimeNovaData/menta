@@ -96,7 +96,50 @@ async function init() {
         });
     }
     
+    AnimationHome().bannerParallax()
+    AnimationHome().colorImagesPin()
     
+    
+
+    if (!window.location.hash) {
+
+      const ios = () => {
+        if (typeof window === `undefined` || typeof navigator === `undefined`) return false;
+    
+        return /iPhone|iPad|iPod/i.test(navigator.userAgent || navigator.vendor || (window.opera && opera.toString() === `[object Opera]`));
+    };
+
+    if(ios()){
+      var root = document.getElementsByTagName( 'html' )[0]; // '0' to assign the first (and only `HTML` tag)
+
+      root.setAttribute( 'class', 'is-ios' );
+    }
+    
+      const banner = document.querySelector('#banner-hero-2')
+      if(banner){
+        setTimeout(()=>{ 
+          console.log('scroll Up')
+          window.scrollTo(0, 0) ;
+          
+        },100)
+      }
+    }
+
+    if (window.location.hash) {
+          setTimeout(()=>{ 
+            var hash = window.location.hash;
+          const section = document.querySelector(`${hash}`)
+
+
+          if(section){
+            section.scrollIntoView({behavior: "smooth"})
+            console.log('runned ?' )
+            console.log(section)
+          }
+        }, 10)
+    }
+
+       document.body.style.opacity = 1;
     
     // AnimationHome().colorImagesPin()
     // AnimationHome().bannerParallax()
@@ -128,19 +171,27 @@ async function init() {
 
 
 
-
+init();
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  init();
+
   document.body.classList.add("dcl");
-  document.body.style.opacity = 1;
+
+
+
+  if(!PageHome){
+
+    document.body.style.opacity = 1;
+  }
+
    
 });
 
-window.addEventListener('load', () =>{
-  if(PageHome){
-    AnimationHome().colorImagesPin()
-    AnimationHome().bannerParallax()
-  }
-})
+// window.addEventListener('load', () =>{
+//   if(PageHome){
+    
+//     // AnimationHome().blog()
+   
+//   }
+// })
