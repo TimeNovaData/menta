@@ -1920,6 +1920,7 @@ main {
 }
 
 .PageHome #banner-hero-2 .ceu-banner-2 {
+  height: 100%;
   pointer-events: none;
 }
 

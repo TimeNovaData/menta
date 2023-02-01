@@ -40,7 +40,7 @@ export default function AnimationHome(){
           start: "top-=70px top",
 
           // start: "top",
-          end: '3800px bottom',
+          end: 'bottom+=100% bottom',
           pin: '#banner-hero-2',
           // anticipatePin: 1,  
           scrub: 1,
@@ -91,7 +91,7 @@ export default function AnimationHome(){
       })
 
 
-      tlTeste
+    tlTeste
       .to('.plane-wrapper img',{
         x:20,
         y:-10,
@@ -104,15 +104,12 @@ export default function AnimationHome(){
       .to('.ceu-banner-2',{
         scale: 1.3,
         y: -0,
-      },'<')
-          
-        
+      },'<')                 
       .to('.pista img', {
       
         ['object-position']: '70%',
         y: 600
       },'<')
-
       .to('.segundo-plano img', {
         ['object-position']: '50%',
         y: 600
@@ -130,12 +127,6 @@ export default function AnimationHome(){
 
    
       return
-
-      
-
- 
-
-
 
     }
 

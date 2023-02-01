@@ -556,7 +556,7 @@ const PageTrabalhe = document.querySelector("#PageTrabalhe");
 const SingleTrabalhe = document.querySelector("#SingleTrabalhe");
 const PageContato = document.querySelector("#PageContato");
 async function init() {
-    (0, _getElementAndappendJsDefault.default)(".svg-container", "../../templates/parts/svg.html");
+    await (0, _getElementAndappendJsDefault.default)(".svg-container", "../../templates/parts/svg.html");
     (0, _modalJsDefault.default)();
     if (PageFaq) {
         document.body.classList.add("PageFaq");
@@ -640,7 +640,6 @@ async function init() {
                 console.log(section);
             }
         }, 10);
-        document.body.style.opacity = 1;
     // AnimationHome().colorImagesPin()
     // AnimationHome().bannerParallax()
     } else if (PageTrabalhe) {
@@ -663,12 +662,14 @@ async function init() {
 init();
 document.addEventListener("DOMContentLoaded", ()=>{
     document.body.classList.add("dcl");
-    if (!PageHome) document.body.style.opacity = 1;
-}); // window.addEventListener('load', () =>{
- //   if(PageHome){
- //     // AnimationHome().blog()
- //   }
- // })
+    document.body.style.opacity = 1;
+// if(!PageHome){
+//   document.body.style.opacity = 1;
+// }
+});
+window.addEventListener("load", ()=>{
+    if (PageHome) console.log("oie");
+});
 
 },{"./modules/getElementAndappend.js":"kgt1M","./modules/swiperProps.js":"csy8f","./modules/animation.js":"8x8Rt","./modules/scriptsPaginas/home.js":"2gwvx","./modules/modal.js":"lfRJE","./modules/animation/animationHome.js":"ZmoPg","./modules/menu.js":"hE65G","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kgt1M":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -921,7 +922,7 @@ function AnimationHome() {
                 endTrigger: "#banner-hero-2",
                 start: "top-=70px top",
                 // start: "top",
-                end: "3800px bottom",
+                end: "bottom+=100% bottom",
                 pin: "#banner-hero-2",
                 // anticipatePin: 1,  
                 scrub: 1,
