@@ -110,20 +110,20 @@ async function init() {
         return /iPhone|iPad|iPod/i.test(navigator.userAgent || navigator.vendor || (window.opera && opera.toString() === `[object Opera]`));
     };
 
-    if(ios()){
-      var root = document.getElementsByTagName( 'html' )[0]; // '0' to assign the first (and only `HTML` tag)
+    // if(ios()){
+    //   var root = document.getElementsByTagName( 'html' )[0]; // '0' to assign the first (and only `HTML` tag)
 
-      root.setAttribute( 'class', 'is-ios' );
-    }
+    //   root.setAttribute( 'class', 'is-ios' );
+    // }
     
-      const banner = document.querySelector('#banner-hero-2')
-      if(banner){
-        setTimeout(()=>{ 
-          console.log('scroll Up')
-          window.scrollTo(0, 0) ;
+    //   const banner = document.querySelector('#banner-hero-2')
+    //   if(banner){
+    //     setTimeout(()=>{ 
+    //       console.log('scroll Up')
+    //       window.scrollTo(0, 0) ;
           
-        },100)
-      }
+    //     },100)
+    //   }
     }
 
     if (window.location.hash) {
@@ -172,19 +172,25 @@ async function init() {
 
 
 
-init();
 
 
-  document.addEventListener("DOMContentLoaded", () => {
 
+  document.addEventListener("DOMContentLoaded", async () => {
+    await init();
     document.body.classList.add("dcl");
 
 
     document.body.style.opacity = 1;
-    // if(!PageHome){
+    if(PageHome){
 
-    //   document.body.style.opacity = 1;
-    // }
+      document.body.style.opacity = 1;
+      window.scrollTo(0, 0) ;
+      setTimeout(()=>{ 
+              console.log('scroll Up')
+              window.scrollTo(0, 0) ;
+              
+            },2)
+    }
 
     
   });
@@ -197,6 +203,6 @@ init();
       
       
     console.log('oie')
-    // document.body.style.opacity = 1;
+    document.body.style.opacity = 1;
     }
   })

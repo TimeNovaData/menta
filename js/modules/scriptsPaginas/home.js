@@ -5,6 +5,10 @@ export default function homeScripts(){
     slidesPerView: 1.4,
     spaceBetween: 16,
 
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false
+    },
     breakpoints:{
       540:{
         slidesPerView: 2.2
@@ -41,4 +45,20 @@ export default function homeScripts(){
       }
     }
   })
+
+  const btnBanner = document.querySelector('#banner-hero-2 .cta-banner-wrapper .btn-primary');
+  const btnBanner2 = document.querySelector('#sobre .cta-banner-wrapper .btn-primary');
+
+  
+  const contato = document.querySelector('#contato')
+  const teste = [btnBanner , btnBanner2]
+  console.log(teste)
+  teste.forEach(btn => {
+
+    btn.addEventListener('click', ()=>{
+      contato.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"})
+    })
+
+  });
+
 }

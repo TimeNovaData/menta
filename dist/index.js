@@ -142,10 +142,10 @@
       this[globalName] = mainExports;
     }
   }
-})({"jfkrW":[function(require,module,exports) {
+})({"gTd4y":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
-var HMR_PORT = 2368;
+var HMR_PORT = 2362;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
 module.bundle.HMR_BUNDLE_ID = "ee62429a5d9dacde";
@@ -619,15 +619,17 @@ async function init() {
                 if (typeof window === `undefined` || typeof navigator === `undefined`) return false;
                 return /iPhone|iPad|iPod/i.test(navigator.userAgent || navigator.vendor || window.opera && opera.toString() === `[object Opera]`);
             };
-            if (ios()) {
-                var root = document.getElementsByTagName("html")[0]; // '0' to assign the first (and only `HTML` tag)
-                root.setAttribute("class", "is-ios");
-            }
-            const banner = document.querySelector("#banner-hero-2");
-            if (banner) setTimeout(()=>{
-                console.log("scroll Up");
-                window.scrollTo(0, 0);
-            }, 100);
+        // if(ios()){
+        //   var root = document.getElementsByTagName( 'html' )[0]; // '0' to assign the first (and only `HTML` tag)
+        //   root.setAttribute( 'class', 'is-ios' );
+        // }
+        //   const banner = document.querySelector('#banner-hero-2')
+        //   if(banner){
+        //     setTimeout(()=>{ 
+        //       console.log('scroll Up')
+        //       window.scrollTo(0, 0) ;
+        //     },100)
+        //   }
         }
         if (window.location.hash) setTimeout(()=>{
             var hash = window.location.hash;
@@ -659,16 +661,24 @@ async function init() {
 // SWAP SOCION ON MOBILE
 // document.body.style.opacity = 1
 }
-init();
-document.addEventListener("DOMContentLoaded", ()=>{
+document.addEventListener("DOMContentLoaded", async ()=>{
+    await init();
     document.body.classList.add("dcl");
     document.body.style.opacity = 1;
-// if(!PageHome){
-//   document.body.style.opacity = 1;
-// }
+    if (PageHome) {
+        document.body.style.opacity = 1;
+        window.scrollTo(0, 0);
+        setTimeout(()=>{
+            console.log("scroll Up");
+            window.scrollTo(0, 0);
+        }, 2);
+    }
 });
 window.addEventListener("load", ()=>{
-    if (PageHome) console.log("oie");
+    if (PageHome) {
+        console.log("oie");
+        document.body.style.opacity = 1;
+    }
 });
 
 },{"./modules/getElementAndappend.js":"kgt1M","./modules/swiperProps.js":"csy8f","./modules/animation.js":"8x8Rt","./modules/scriptsPaginas/home.js":"2gwvx","./modules/modal.js":"lfRJE","./modules/animation/animationHome.js":"ZmoPg","./modules/menu.js":"hE65G","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kgt1M":[function(require,module,exports) {
@@ -830,6 +840,10 @@ function homeScripts() {
     const swiperFaq = new Swiper(".swiper-faq", {
         slidesPerView: 1.4,
         spaceBetween: 16,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false
+        },
         breakpoints: {
             540: {
                 slidesPerView: 2.2
@@ -860,6 +874,23 @@ function homeScripts() {
                 spaceBetween: 32
             }
         }
+    });
+    const btnBanner = document.querySelector("#banner-hero-2 .cta-banner-wrapper .btn-primary");
+    const btnBanner2 = document.querySelector("#sobre .cta-banner-wrapper .btn-primary");
+    const contato = document.querySelector("#contato");
+    const teste = [
+        btnBanner,
+        btnBanner2
+    ];
+    console.log(teste);
+    teste.forEach((btn)=>{
+        btn.addEventListener("click", ()=>{
+            contato.scrollIntoView({
+                behavior: "smooth",
+                block: "end",
+                inline: "nearest"
+            });
+        });
     });
 }
 exports.default = homeScripts;
@@ -1133,6 +1164,6 @@ function menu() {
 }
 exports.default = menu;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["jfkrW","1Z4Rq"], "1Z4Rq", "parcelRequirec1d0")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["gTd4y","1Z4Rq"], "1Z4Rq", "parcelRequirec1d0")
 
 //# sourceMappingURL=index.js.map
